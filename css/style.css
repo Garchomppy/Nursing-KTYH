@@ -45,7 +45,7 @@ a {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--spacing-sm);
 }
@@ -85,6 +85,13 @@ a {
     letter-spacing: 1px;
 }
 
+.image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -106,10 +113,10 @@ a {
 .hero {
     position: relative;
     background-color: var(--primary-strong);
-    background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=2070');
+    background-image: url('../assets/images/4. Sinh hoat khoa 2026-1.jpg');
     background-size: cover;
-    background-position: center;
-    height: 400px;
+    background-position: center 80%;
+    height: 600px;
     display: flex;
     align-items: center;
     color: var(--inverse-on-surface);
@@ -118,7 +125,7 @@ a {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(14, 78, 134, 0.8);
+    background: linear-gradient(rgba(14, 78, 134, 0.8));
     z-index: 1;
 }
 
