@@ -6,7 +6,7 @@
     <title>Khoa Điều Dưỡng - Kỹ Thuật Y Học</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="top">
     <!-- Navbar (App Shell) -->
     <nav class="navbar">
         <div class="container nav-container">
@@ -38,18 +38,44 @@
     </main>
 
     <!-- Footer (App Shell) -->
-    <footer id="lien-he" class="footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <h3>Liên hệ Khoa Điều Dưỡng - Kỹ Thuật Y Học</h3>
-                <p><strong>Địa chỉ:</strong> Khu đô thị Đại học Đà Nẵng, P. Hòa Quý, Q. Ngũ Hành Sơn, TP. Đà Nẵng</p>
-                <p><strong>Điện thoại:</strong> 0236 3 xxx xxx</p>
-                <p><strong>Email:</strong> khoadieuduong@smp.udn.vn</p>
-            </div>
-            <div class="footer-links">
-                <a href="#/home">Trang chủ</a> | <a href="#/gioi-thieu">Giới thiệu</a> | <a href="#/chuc-nang">Tuyển sinh</a>
+    <footer id="lien-he" class="site-footer">
+        <div class="footer-brand-bar">
+            <div class="container footer-brand-inner">
+                <a class="footer-brand" href="#/home" aria-label="Trường Y Dược - Đại học Đà Nẵng">
+                    <img src="assets/logo/logoUD-SMPBOTTOM.png" alt="Trường Y Dược - Đại học Đà Nẵng">
+                </a>
+                <div class="footer-actions">
+                    <nav class="social-links" aria-label="Mạng xã hội">
+                        <a href="https://www.facebook.com/smp.udn.vn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/@truongyduoc.daihocdanang" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="https://www.tiktok.com/@www.smp.udn.vn" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                        <a href="https://maps.app.goo.gl/rG6j5GTABoovEP2y8" target="_blank" rel="noopener noreferrer" aria-label="Google Maps"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></a>
+                    </nav>
+                    <a class="contact-button" href="mailto:smp@ac.udn.vn">LIÊN HỆ</a>
+                </div>
             </div>
         </div>
+
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <section class="footer-column footer-contact" aria-labelledby="footer-contact-title">
+                    <h2 id="footer-contact-title">THÔNG TIN LIÊN HỆ</h2>
+                    <p class="school-name">TRƯỜNG Y DƯỢC - ĐẠI HỌC ĐÀ NẴNG</p>
+                    <p>Khu đô thị Đại học Đà Nẵng, P.Ngũ Hành Sơn, TP. Đà Nẵng</p>
+                    <p class="footer-contact-row"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+842367109357">(+84) 0236 7 109 357</a></p>
+                    <p class="footer-contact-row"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:smp@ac.udn.vn">smp@ac.udn.vn</a></p>
+                </section>
+                <nav class="footer-column" aria-labelledby="footer-training-title"><h2 id="footer-training-title">Đào Tạo</h2><ul><li><a href="#/chuc-nang">Chính quy</a></li><li><a href="#/chuc-nang">Liên thông</a></li><li><a href="#/chuc-nang">Liên tục</a></li><li><a href="#/chuc-nang">Sau đại học</a></li></ul></nav>
+                <nav class="footer-column" aria-labelledby="footer-science-title"><h2 id="footer-science-title">KH - CN</h2><ul><li><a href="#/gioi-thieu">Người học</a></li><li><a href="#/lanh-dao">Giảng viên</a></li><li><a href="#/so-do">Cán bộ</a></li></ul></nav>
+                <nav class="footer-column" aria-labelledby="footer-cooperate-title"><h2 id="footer-cooperate-title">Hợp Tác</h2><ul><li><a href="#/gioi-thieu">Quốc tế</a></li><li><a href="#/gioi-thieu">Doanh nghiệp</a></li><li><a href="#/gioi-thieu">Viện - Trường</a></li></ul></nav>
+                <section class="footer-column footer-map" aria-labelledby="footer-map-title">
+                    <h2 id="footer-map-title">Đường Đi Đến UD-SMP</h2>
+                    <div class="map-frame"><iframe title="Bản đồ Trường Y Dược - Đại học Đà Nẵng" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7620154040264!2d108.24544147620983!3d15.973799741983493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421836b6e22e3b%3A0xdd738c5d59cdffd6!2sSchool%20of%20medicine%20and%20pharmacy%20%E2%80%93%20The%20university%20of%20danang!5e0!3m2!1sen!2s!4v1735716119014!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+                </section>
+            </div>
+        </div>
+        <div class="footer-copyright"><p>BẢN QUYỀN THUỘC VỀ TRƯỜNG Y DƯỢC - ĐẠI HỌC ĐÀ NẴNG</p></div>
+        <button class="back-to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
     </footer>
 
     <!-- Router Script -->
