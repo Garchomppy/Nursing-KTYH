@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khoa Điều Dưỡng - Kỹ Thuật Y Học</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body id="top">
     <!-- Navbar (App Shell) -->
@@ -37,49 +38,10 @@
         <!-- Content will be injected here by router.js -->
     </main>
 
-    <!-- Footer (App Shell) -->
-    <footer class="site-footer">
-        <div class="footer-brand-bar">
-            <div class="container footer-brand-inner">
-                <a class="footer-brand" href="#/home" aria-label="Khoa Điều Dưỡng - Kỹ Thuật Y Học">
-                    <img src="assets/logo/logoUD-SMPBOTTOM.png" alt="Khoa Điều Dưỡng - Kỹ Thuật Y Học">
-                </a>
-                <div class="footer-actions">
-                    <nav class="social-links" aria-label="Mạng xã hội">
-                        <a href="https://www.facebook.com/smp.udn.vn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
-                        <a href="https://www.youtube.com/@truongyduoc.daihocdanang" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-                        <a href="https://www.tiktok.com/@www.smp.udn.vn" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-                        <a href="https://maps.app.goo.gl/rG6j5GTABoovEP2y8" target="_blank" rel="noopener noreferrer" aria-label="Google Maps"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></a>
-                    </nav>
-                    <a class="contact-button" href="mailto:khoadieuduong@smp.udn.vn">LIÊN HỆ</a>
-                </div>
-            </div>
-        </div>
+    <!-- Footer Web Component -->
+    <site-footer></site-footer>
 
-        <div class="footer-main">
-            <div class="container footer-grid">
-                <section class="footer-column footer-contact" aria-labelledby="footer-contact-title">
-                    <h2 id="footer-contact-title">THÔNG TIN LIÊN HỆ</h2>
-                    <p class="school-name" style="margin-bottom: 5px;">KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC</p>
-                    <p style="font-weight: 500; margin-bottom: 15px; font-size: 14px; color: var(--primary);">Trường Y Dược - Đại học Đà Nẵng</p>
-                    <p>Khu đô thị Đại học Đà Nẵng, P.Ngũ Hành Sơn, TP. Đà Nẵng</p>
-                    <p class="footer-contact-row"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+842363xxxxxx">(+84) 0236 3 xxx xxx</a></p>
-                    <p class="footer-contact-row"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:khoadieuduong@smp.udn.vn">khoadieuduong@smp.udn.vn</a></p>
-                </section>
-                <nav class="footer-column" aria-labelledby="footer-training-title"><h2 id="footer-training-title">Đào Tạo</h2><ul><li><a href="#/chuc-nang">Chính quy</a></li><li><a href="#/chuc-nang">Liên thông</a></li><li><a href="#/chuc-nang">Liên tục</a></li><li><a href="#/chuc-nang">Sau đại học</a></li></ul></nav>
-                <nav class="footer-column" aria-labelledby="footer-science-title"><h2 id="footer-science-title">KH - CN</h2><ul><li><a href="#/gioi-thieu">Người học</a></li><li><a href="#/lanh-dao">Giảng viên</a></li><li><a href="#/so-do">Cán bộ</a></li></ul></nav>
-                <nav class="footer-column" aria-labelledby="footer-cooperate-title"><h2 id="footer-cooperate-title">Hợp Tác</h2><ul><li><a href="#/gioi-thieu">Quốc tế</a></li><li><a href="#/gioi-thieu">Doanh nghiệp</a></li><li><a href="#/gioi-thieu">Viện - Trường</a></li></ul></nav>
-                <section class="footer-column footer-map" aria-labelledby="footer-map-title">
-                    <h2 id="footer-map-title">Đường Đi Đến UD-SMP</h2>
-                    <div class="map-frame"><iframe title="Bản đồ Trường Y Dược - Đại học Đà Nẵng" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7620154040264!2d108.24544147620983!3d15.973799741983493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421836b6e22e3b%3A0xdd738c5d59cdffd6!2sSchool%20of%20medicine%20and%20pharmacy%20%E2%80%93%20The%20university%20of%20danang!5e0!3m2!1sen!2s!4v1735716119014!5m2!1sen!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
-                </section>
-            </div>
-        </div>
-        <div class="footer-copyright"><p>BẢN QUYỀN THUỘC VỀ KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC | TRƯỜNG Y DƯỢC - ĐẠI HỌC ĐÀ NẴNG</p></div>
-        <button class="back-to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
-    </footer>
-
-    <!-- Router Script -->
-    <script type="module" src="js/router.js"></script>
+    <script type="module" src="js/components/site-footer.js"></script>
+    <script src="js/router.js"></script>
 </body>
 </html>

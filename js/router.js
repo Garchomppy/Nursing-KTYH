@@ -1,10 +1,10 @@
-import { home } from './pages/home.js';
-import { gioiThieu } from './pages/gioi-thieu.js';
-import { chucNang } from './pages/chuc-nang.js';
-import { soDo } from './pages/so-do.js';
-import { lanhDao } from './pages/lanh-dao.js';
-import { lienHe } from './pages/lien-he.js';
-import { initBackToTop } from './components/back-to-top.js';
+import { home } from "./pages/home.js";
+import { gioiThieu } from "./pages/gioi-thieu.js";
+import { chucNang } from "./pages/chuc-nang.js";
+import { soDo } from "./pages/so-do.js";
+import { lanhDao } from "./pages/lanh-dao.js";
+import { lienHe } from "./pages/lien-he.js";
+import { initBackToTop } from "./components/back-to-top.js";
 
 const pages = {
   home: home,
@@ -12,7 +12,7 @@ const pages = {
   "chuc-nang": chucNang,
   "so-do": soDo,
   "lanh-dao": lanhDao,
-  "lien-he": lienHe
+  "lien-he": lienHe,
 };
 
 function renderPage() {
