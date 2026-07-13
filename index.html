@@ -8,30 +8,11 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body id="top">
-    <!-- Navbar (App Shell) -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="#/home"><img src="./assets/images/logoUD-SMPTOP.png" alt="Logo" class="image"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#/gioi-thieu">Giới thiệu chung</a></li>
-                <li><a href="#/chuc-nang">Chức năng - Nhiệm vụ</a></li>
-                <li><a href="#/so-do">Cơ cấu tổ chức</a></li>
-                <li><a href="#/lanh-dao">Ban lãnh đạo</a></li>
-                <li><a href="#/lien-he">Liên hệ</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navbar Web Component -->
+    <site-navbar></site-navbar>
 
-    <!-- Hero Banner (Shared Header) -->
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1>Khoa Điều Dưỡng - Kỹ Thuật Y Học</h1>
-            <p>Trở thành đơn vị tiên phong trong đào tạo, nghiên cứu khoa học và chăm sóc sức khỏe cộng đồng.</p>
-        </div>
-    </header>
+    <!-- Hero Web Component -->
+    <site-hero></site-hero>
 
     <!-- Dynamic Content Area -->
     <main id="app">
@@ -41,7 +22,10 @@
     <!-- Footer Web Component -->
     <site-footer></site-footer>
 
+    <!-- Web Components & Scripts -->
+    <script type="module" src="js/components/site-navbar.js"></script>
+    <script type="module" src="js/components/site-hero.js"></script>
     <script type="module" src="js/components/site-footer.js"></script>
-    <script src="js/router.js"></script>
+    <script type="module" src="js/router.js"></script>
 </body>
 </html>
