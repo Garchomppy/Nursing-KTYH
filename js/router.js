@@ -32,21 +32,28 @@ const pages = {
         <section id="chuc-nang" class="section bg-muted">
             <div class="container">
                 <h2 class="section-title">Chức năng - Nhiệm vụ</h2>
-                <div class="grid-2">
-                    <div class="card">
-                        <h3>Chức năng</h3>
-                        <ul>
-                            <li>Tổ chức và quản lý quá trình đào tạo các ngành Điều dưỡng và Kỹ thuật y học ở bậc Đại học và Sau Đại học.</li>
-                            <li>Nghiên cứu khoa học trong lĩnh vực y khoa, điều dưỡng và kỹ thuật y học.</li>
-                            <li>Phối hợp với các bệnh viện thực hành để đảm bảo chất lượng đào tạo lâm sàng.</li>
+                <div class="content-block" style="max-width: 1000px;">
+                    <div  style="margin-bottom: 30px;">
+                        <h3 style="color: var(--secondary); font-size: 22px;">I. Chức năng</h3>
+                        <p style="text-align: justify; margin-bottom: 12px; font-size: 16px;">Khoa Điều dưỡng và Kỹ thuật Y học là đơn vị chuyên môn của Trường, chịu sự chỉ đạo trực tiếp của Hiệu trưởng, có chức năng:</p>
+                        <ul style="text-align: justify; list-style-type: square; margin-left: 20px; font-size: 16px;">
+                            <li style="margin-bottom: 8px;">Giúp Hiệu trưởng xây dựng chiến lược đào tạo của Khoa theo định hướng chiến lược chung của Nhà trường.</li>
+                            <li style="margin-bottom: 8px;">Quản lý và điều hành các hoạt động chuyên môn của các bộ môn trực thuộc.</li>
+                            <li>Chịu trách nhiệm quản lý ngành đào tạo mà Khoa phụ trách.</li>
                         </ul>
                     </div>
-                    <div class="card">
-                        <h3>Nhiệm vụ</h3>
-                        <ul>
-                            <li>Xây dựng chương trình, kế hoạch giảng dạy, học tập và chủ trì tổ chức quá trình đào tạo một hoặc một số ngành.</li>
-                            <li>Quản lý giảng viên, người lao động và người học thuộc Khoa.</li>
-                            <li>Quản lý chất lượng, nội dung, phương pháp đào tạo và nghiên cứu khoa học.</li>
+                    
+                    <div >
+                        <h3 style="color: var(--secondary); font-size: 22px;">II. Nhiệm vụ và quyền hạn</h3>
+                        <ul style="text-align: justify; list-style-type: decimal; margin-left: 20px; font-size: 16px;">
+                            <li style="margin-bottom: 14px;"><strong>Quản lý nhân sự và tổ chức:</strong> Quản lý tất cả các bộ môn thuộc khoa Điều dưỡng và Kỹ thuật Y học và quản lý giảng viên, người lao động khác và người học thuộc khoa theo phân cấp của Hiệu trưởng.</li>
+                            <li style="margin-bottom: 14px;"><strong>Hoạt động giáo dục đào tạo:</strong> Lập kế hoạch và tổ chức thực hiện các hoạt động giáo dục đào tạo theo kế hoạch chung của Trường: Xây dựng chương trình đào tạo, biên soạn tài liệu, cải tiến phương pháp giảng dạy và đánh giá kết quả học tập của sinh viên, đảm bảo chuẩn đầu ra đáp ứng nhu cầu thị trường lao động.</li>
+                            <li style="margin-bottom: 14px;"><strong>Nghiên cứu khoa học & Hợp tác:</strong> Lập kế hoạch và tổ chức thực hiện các hoạt động nghiên cứu KH&CN, hợp tác quốc tế; hợp tác với các tổ chức KH&CN, cơ sở sản xuất kinh doanh và huy động sự tham gia của doanh nghiệp vào quá trình đào tạo.</li>
+                            <li style="margin-bottom: 14px;"><strong>Phát triển thực hành lâm sàng:</strong> Chủ động phối hợp với các bệnh viện, các tổ chức khoa học công nghệ để nghiên cứu và ứng dụng đổi mới vào chăm sóc sức khỏe cộng đồng.</li>
+                            <li style="margin-bottom: 14px;"><strong>Phát triển đội ngũ và cơ sở vật chất:</strong> Xây dựng kế hoạch phát triển đội ngũ giảng viên, cơ sở vật chất phục vụ cho đào tạo và nghiên cứu. Tổ chức thực hiện công tác giáo dục chính trị, tư tưởng, đạo đức, lối sống và bồi dưỡng chuyên môn nghiệp vụ.</li>
+                            <li style="margin-bottom: 14px;"><strong>Đánh giá cán bộ:</strong> Tổ chức đánh giá cán bộ quản lý, giảng viên, nghiên cứu viên trong khoa và tham gia đánh giá cán bộ quản lý trong Trường.</li>
+                            <li style="margin-bottom: 14px;"><strong>Quản lý trang thiết bị:</strong> Phối hợp với Trung tâm Thí nghiệm – Tiền lâm sàng sử dụng và bảo quản cơ sở vật chất, trang thiết bị. Đề xuất mua sắm, sửa chữa máy móc phục vụ đào tạo.</li>
+                            <li style="margin-bottom: 14px;"><strong>Mở rộng mạng lưới thực hành:</strong> Phối hợp với Phòng Hành chính – Tổng hợp, Phòng Đào tạo trong việc kết nối quan hệ hợp tác Viện – Trường với các cơ sở thực hành. Phân công nhân sự công tác khám chữa bệnh tại Trung tâm Y khoa.</li>
                         </ul>
                     </div>
                 </div>
@@ -214,13 +221,67 @@ const pages = {
     `,
   "lien-he": `
         <!-- Liên hệ -->
-        <section id="lien-he" class="section bg-white">
+        <section id="lien-he-page" class="section bg-white">
             <div class="container">
-                <h2 class="section-title">Liên hệ Khoa</h2>
-                <div class="content-block" style="text-align: center;">
-                    <p><strong>Địa chỉ:</strong> Khu đô thị Đại học Đà Nẵng, P. Hòa Quý, Q. Ngũ Hành Sơn, TP. Đà Nẵng</p>
-                    <p><strong>Điện thoại:</strong> 0236 3 xxx xxx</p>
-                    <p><strong>Email:</strong> khoadieuduong@smp.udn.vn</p>
+                <h2 class="section-title">Liên hệ với chúng tôi</h2>
+                <div class="grid-2" style="gap: 40px; margin-top: 30px;">
+                    <!-- Thông tin liên hệ -->
+                    <div>
+                        <h3 style="color: var(--primary-strong); margin-bottom: 20px; font-size: 24px;">Thông tin Khoa</h3>
+                        <p style="margin-bottom: 25px; color: var(--on-surface-variant); line-height: 1.6;">
+                            Nếu bạn có bất kỳ câu hỏi nào về chương trình đào tạo, tuyển sinh hay hợp tác, đừng ngần ngại liên hệ với Khoa Điều Dưỡng - Kỹ Thuật Y Học. Chúng tôi luôn sẵn sàng hỗ trợ bạn!
+                        </p>
+                        
+                        <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+                            <div style="background-color: var(--primary-container); color: var(--primary); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 5px; color: var(--on-surface);">Địa chỉ</h4>
+                                <p style="color: var(--on-surface-variant); line-height: 1.4;">Khu đô thị Đại học Đà Nẵng, P. Hòa Quý, Q. Ngũ Hành Sơn, TP. Đà Nẵng</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+                            <div style="background-color: var(--primary-container); color: var(--primary); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 5px; color: var(--on-surface);">Điện thoại</h4>
+                                <p style="color: var(--on-surface-variant);"><a href="tel:+842363xxxxxx" style="color: inherit; text-decoration: none;">(+84) 0236 3 xxx xxx</a></p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+                            <div style="background-color: var(--primary-container); color: var(--primary); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 5px; color: var(--on-surface);">Email</h4>
+                                <p style="color: var(--on-surface-variant);"><a href="mailto:khoadieuduong@smp.udn.vn" style="color: inherit; text-decoration: none;">khoadieuduong@smp.udn.vn</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Liên hệ -->
+                    <div style="background-color: var(--surface); padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border);">
+                        <h3 style="color: var(--primary-strong); margin-bottom: 20px; font-size: 24px;">Gửi tin nhắn</h3>
+                        <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã liên hệ! Tin nhắn của bạn đã được gửi đến Khoa.');">
+                            <div style="margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--on-surface);">Họ và tên</label>
+                                <input type="text" placeholder="Nhập họ tên của bạn" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box;" required>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--on-surface);">Email</label>
+                                <input type="email" placeholder="Địa chỉ email của bạn" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box;" required>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--on-surface);">Nội dung</label>
+                                <textarea placeholder="Bạn cần hỗ trợ gì?" rows="4" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; resize: vertical; box-sizing: border-box;" required></textarea>
+                            </div>
+                            <button type="submit" style="background-color: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; transition: background-color 0.3s; margin-top: 10px;">Gửi tin nhắn</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -249,19 +310,21 @@ function renderPage() {
 window.addEventListener("hashchange", renderPage);
 
 // Chạy lần đầu khi load trang
-window.addEventListener('DOMContentLoaded', renderPage);
+window.addEventListener("DOMContentLoaded", renderPage);
 
-const backToTopButton = document.querySelector('.back-to-top');
+const backToTopButton = document.querySelector(".back-to-top");
 
 if (backToTopButton) {
-    const updateBackToTopVisibility = () => {
-        backToTopButton.classList.toggle('is-visible', window.scrollY > 300);
-    };
+  const updateBackToTopVisibility = () => {
+    backToTopButton.classList.toggle("is-visible", window.scrollY > 300);
+  };
 
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-    window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
-    updateBackToTopVisibility();
+  window.addEventListener("scroll", updateBackToTopVisibility, {
+    passive: true,
+  });
+  updateBackToTopVisibility();
 }

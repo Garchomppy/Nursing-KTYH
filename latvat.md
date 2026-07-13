@@ -1,48 +1,14 @@
-1. GIỚI THIỆU TRƯỜNG ĐIỀU DƯỠNG – KỸ THUẬT Y HỌC
+I. Chức năng của Khoa Điều dưỡng và Kỹ thuật y học
+Khoa Điều dưỡng và Kỹ thuật Y học là đơn vị chuyên môn của Trường, chịu sự chỉ đạo trực tiếp của Hiệu trưởng, có chức năng giúp Hiệu trưởng xây dựng chiến lược đào tạo của khoa theo định hướng chiến lược chung của Nhà trường; Quản lý và điều hành các hoạt động chuyên môn của các bộ môn trực thuộc; Chịu trách nhiệm quản lý ngành đào tạo mà Khoa phụ trách.
 
-Sau ngày thống nhất đất nước 30/4/1975, Trường Trung học Y tế Thành phố Hồ Chí Minh được thành lập theo Quyết định số 02/TCCB ngày 16/10/1975 của Ban Y tế Xã hội thuộc Ủy ban Quân quản thành phố Hồ Chí Minh trên cơ sở sáp nhập các trường y tế của chế độ cũ đã được tiếp quản gồm 8 trường: Trường Cán sự Điều dưỡng, Trường Cán sự Hộ sinh, Trường Cán sự và Tá viên Thí nghiệm, Trường Cán sự và Tá viên Nha, Trường Cán sự Vật lý Trị liệu, Trường Cán sự Gây mê, Trường Tá viên Quang tuyến X, Trường Thủ thư bệnh viện. Trường Trung học Y tế Thành phố Hồ Chí Minh có nhiệm vụ đào tạo và bổ túc các cán bộ y tế có trình độ trung học theo chủ trương kế hoạch của Bộ.
-
-Năm 1977, theo chỉ đạo của Bộ Y tế, Trường Trung học Y tế Thành phố Hồ Chí Minh tiếp nhận Trường tá viên Dược thuộc Phân viện Kiểm nghiệm của Bộ Y tế.
-
-Trong thời gian hoạt động theo mục tiêu đào tạo và phân cấp quản lý, trường nhiều lần đổi tên thành:
-
-    Trường Trung học Y tế TP. Hồ Chí Minh thành trường Trung học Kỹ thuật Y tế TP. Hồ Chí Minh theo Quyết định số 396/BYT-QĐ của Bộ Y tế ngày 30/7/1977.
-    Trường Trung học Kỹ thuật Y tế TP. Hồ Chí Minh thành trường Trung học Kỹ thuật Y tế TW 3 trực thuộc Bộ Y tế theo Quyết định số 1004/BYT-QĐ của Bộ Y tế ngày 11/9/1985.
-    Trường Trung học Kỹ thuật Y tế TW 3 đổi tên thành trường Trung học Kỹ thuật Y tế 3 – Bộ Y tế theo Quyết định số 06/BYT-QĐ ngày 03/01/1997.
-
-Ngày 03/9/1998, Thủ tướng chính phủ đã ký Quyết định số 156/1998/QĐ –TTg sáp nhập Trường Trung học Kỹ thuật Y tế 3 – Bộ Y tế vào Trường Đại học Y Dược Thành phố Hồ Chí Minh và đổi tên thành Khoa Điều dưỡng – Kỹ thuật Y học.
-
-Khoa Điều dưỡng – Kỹ thuật Y học Đại học Y Dược TP.HCM là đơn vị tiên phong trong cả nước về đào tạo thạc sĩ Điều dưỡng (năm 2007), thạc sĩ Xét nghiệm Y học (năm 2015), thạc sĩ Kỹ thuật Phục hồi chức năng (2019), tiến sĩ Kỹ thuật Xét nghiệm Y học (2019). Khoa có mối liên hệ chặt chẽ với các tổ chức đào tạo và hội nghề nghiệp trong nước cũng như quốc tế trong việc xây dựng và triển khai chương trình đào tạo. Khoa luôn chú trọng đẩy mạnh công tác gắn kết Trường – Viện với hơn 30 cơ sở thực hành tại thành phố Hồ Chí Minh và các tỉnh lân cận, góp phần nâng cao chất lượng giảng dạy cho sinh viên.
-
-Từ khi thành lập, Khoa Điều dưỡng - Kỹ thuật Y học luôn hoàn thành xuất sắc nhiệm vụ được giao. Năm 2008, Khoa vinh dự đón nhận Huân chương lao động hạng 3 của Chủ tịch nước CHXHCN Việt Nam và rất nhiều bằng khen của Thủ tướng chính phủ, bằng khen của Bộ trưởng Bộ Y tế, bằng khen UBND Thành phố Hồ Chí Minh.
-
-2. TRƯỞNG KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC QUA CÁC THỜI KỲ
-
-   Năm 1998 – 2007: GS. Đỗ Đình Hồ  
-   Năm 2007 – 2010: PGS. Võ Tấn Sơn  
-   Năm 2010 – 4.2019: GS. Trần Thiện Trung
-   Từ 12.2019 đến 2024 : PGS. Nguyễn Văn Chinh
-   Tháng 4.2025 – 6.2025: TS. Trần Thuỵ Khánh Linh
-
-Ngày 06/6/2025, Hội đồng trường Đại học Y Dược Thành phố Hồ Chí Minh đã ban hành nghị quyết số 39/NQ-HĐT về Thành lập Trường Điều dưỡng - Kỹ thuật y học thuộc Đại học Y Dược Thành phố Hồ Chí Minh trên cơ sở tổ chức lại khoa Điều dưỡng - Kỹ thuật y học
-
-Trường có 8 bộ môn, 3 phòng chức năng và 1 trung tâm:
-
-Các phòng chức năng
-
-    Phòng Quản trị tổng hợp
-    Phòng Khoa học – Đào tạo – Đối ngoại
-    Phòng Đảm bảo chất lượng giáo dục - Khảo thí
-
-Các Bộ môn
-
-    Điều dưỡng
-    Gây mê hồi sức
-    Hộ sinh
-    Xét nghiệm
-    Phục hồi chức năng
-    Kỹ thuật hình ảnh
-    Giải phẫu sinh lý
-    Bệnh học lâm sàng
-
-Trung tâm huấn luyện kỹ năng Điều dưỡng – Kỹ thuật y học
+II. Nhiệm vụ và quyền hạn của Khoa Điều dưỡng và Kỹ thuật Y học
+a) Quản lý tất cả các bộ môn thuộc khoa Điều dưỡng và Kỹ thuật Y học và quản lý giảng viên, người lao động khác và người học thuộc khoa Điều dưỡng và Kỹ thuật Y học theo phân cấp của Hiệu trưởng.
+b) Lập kế hoạch và tổ chức thực hiện các hoạt động giáo dục đào tạo của khoa Điều dưỡng và Kỹ thuật Y học theo kế hoạch chung của TYD, bao gồm: Xây dựng chương trình đào tạo của ngành, chuyên ngành được Trường giao nhiệm vụ; tổ chức biên soạn đề cương chi tiết các môn học liên quan bảo đảm tính thống nhất, tránh chồng chéo giữa các môn học của chương trình đào tạo hoặc giữa các trình độ đào tạo; tổ chức phát triển chương trình đào tạo, xây dựng các đề án, biên soạn tài liệu, giáo trình theo định hướng phát triển của nhà trường; tổ chức nghiên cứu cải tiến phương pháp giảng dạy, học tập; xây dựng và thực hiện phương pháp kiểm tra, đánh giá kết quả học tập, rèn luyện của sinh viên, bảo đảm chuẩn đầu ra của người học theo cam kết đã được công bố, đáp ứng nhu cầu sử dụng của thị trường lao động. Việc phát triển chương trình đào tạo, giáo trình, tài liệu giảng dạy phải thực hiện theo quy định của Bộ GDĐT.
+c) Lập kế hoạch và tổ chức thực hiện các hoạt động KH&CN, hợp tác quốc tế; hợp tác với các tổ chức KH&CN, cơ sở sản xuất, kinh doanh liên quan đến ngành Điều dưỡng và Kỹ thuật Y học và huy động sự tham gia của doanh nghiệp vào quá trình đào tạo của khoa Điều dưỡng và Kỹ thuật Y học.
+d) Chủ động phối hợp với các bệnh viện, các khoa có cùng chuyên môn trong các bệnh viện có ký kết hợp tác, các tổ chức khoa học công nghệ để nghiên cứu, ứng dụng các kết quả nghiên cứu vào việc đổi mới và cải tiến cách thức chăm sóc sức khỏe, tham gia tích cực các hoạt động hợp tác quốc tế theo sự phân công của Hiệu trưởng.
+đ) Xây dựng kế hoạch phát triển đội ngũ giảng viên, ngành nghề đào tạo và cơ sở vật chất phục vụ cho đào tạo và NCKH, tăng cường điều kiện bảo đảm chất lượng đào tạo của khoa Điều dưỡng và Kỹ thuật Y học.
+e) Xây dựng kế hoạch và tổ chức thực hiện công tác giáo dục chính trị, tư tưởng, đạo đức, lối sống cho giảng viên, người lao động, người học; có kế hoạch đào tạo, bồi dưỡng nâng cao trình độ chuyên môn, nghiệp vụ cho giảng viên và người lao động khác thuộc khoa Điều dưỡng và Kỹ thuật Y học.
+g) Tổ chức đánh giá cán bộ quản lý, giảng viên, nghiên cứu viên trong khoa Điều dưỡng và Kỹ thuật Y học và tham gia đánh giá cán bộ quản lý trong Trường theo quy định của TYD.
+h) Phối hợp với Trung tâm Thí nghiệm – Tiền lâm sàng sử dụng và có trách nhiệm bảo quản cơ sở vật chất, trang thiết bị theo quy định của TYD. Đề xuất mua sắm, sửa chữa máy móc, trang thiết bị, cơ sở vật chất phục vụ cho đào tạo.
+i) Phối hợp với Phòng Hành chính – Tổng hợp, Phòng Đào tạo trong việc phát triển, kết nối quan hệ hợp tác Viện – Trường với các cơ sở thực hành.
+k) Phối hợp với Trung tâm Y khoa phân công nhân sự thực hiện công tác khám chữa bệnh tại Trung tâm Y khoa.
