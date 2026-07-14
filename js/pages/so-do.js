@@ -23,6 +23,24 @@ export const soDo = `
         .custom-node.main {
             font-weight: bold;
         }
+        a.custom-node {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+        }
+        a.custom-node:hover {
+            background-color: var(--primary);
+            color: white !important;
+            transform: translateY(-1px);
+        }
+        a.custom-node:focus-visible {
+            outline: 3px solid rgba(22, 143, 153, 0.35);
+            outline-offset: 3px;
+        }
+        a.custom-node:active {
+            transform: translateY(0);
+        }
         .tree-row {
             display: flex;
             justify-content: center;
@@ -86,17 +104,17 @@ export const soDo = `
                             
                             <!-- Col 2 -->
                             <div style="display: flex; flex-direction: column; align-items: center; width: 220px;">
-                                <div class="custom-node main" style="width: 100%;">Bộ môn điều dưỡng</div>
+                                <a class="custom-node main" href="#/bo-mon-dieu-duong" style="width: 100%; color: var(--primary);">Bộ môn điều dưỡng</a>
                                 <div class="line-down"></div>
-                                <div class="custom-node" style="width: 100%;">Danh sách GV</div>
+                                <a class="custom-node" href="#/bo-mon-dieu-duong/danh-sach-giang-vien" style="width: 100%;">Danh sách GV</a>
                                 
                                 <div style="margin-top: 15px; width: 100%;">
                                     <details class="custom-node" style="cursor: pointer; text-align: left; padding: 10px; box-sizing: border-box;">
                                         <summary style="font-weight: bold; outline: none; color: var(--primary); user-select: none;">Nhiệm vụ chính</summary>
                                         <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Giảng dạy</div>
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Nghiên cứu KH</div>
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Phục vụ cộng đồng</div>
+                                            <a class="custom-node" href="#/bo-mon-dieu-duong/giang-day" style="font-weight: normal; font-size: 14px; padding: 6px;">Giảng dạy</a>
+                                            <a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc" style="font-weight: normal; font-size: 14px; padding: 6px;">Nghiên cứu KH</a>
+                                            <a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong" style="font-weight: normal; font-size: 14px; padding: 6px;">Phục vụ cộng đồng</a>
                                         </div>
                                     </details>
                                 </div>
