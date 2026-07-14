@@ -106,12 +106,32 @@
   .middle-links-container,
   .logo-container {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     text-align: center;
   }
+  
+  .top-meta-left,
+  .top-meta-right,
+  .middle-left,
+  .middle-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
   .quick-links {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
+  }
+  
+  .quick-links li {
+    border-right: none;
+    padding-right: 0;
+  }
+  
+  .social-search-area {
+    margin-top: 10px;
   }
 }
