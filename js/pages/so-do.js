@@ -23,6 +23,24 @@ export const soDo = `
         .custom-node.main {
             font-weight: bold;
         }
+        a.custom-node {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+        }
+        a.custom-node:hover {
+            background-color: var(--primary);
+            color: white !important;
+            transform: translateY(-1px);
+        }
+        a.custom-node:focus-visible {
+            outline: 3px solid rgba(22, 143, 153, 0.35);
+            outline-offset: 3px;
+        }
+        a.custom-node:active {
+            transform: translateY(0);
+        }
         .tree-row {
             display: flex;
             justify-content: center;
@@ -198,18 +216,18 @@ export const soDo = `
                         <!-- Col 2 -->
                         <div class="branch-item">
                             <div class="branch-col">
-                                <div class="custom-node main">Bộ môn điều dưỡng</div>
+                                <a class="custom-node main" href="#/bo-mon-dieu-duong">Bộ môn điều dưỡng</a>
                                 <div class="line-down"></div>
-                                <div class="custom-node">Danh sách GV</div>
+                                <a class="custom-node" href="#/bo-mon-dieu-duong/danh-sach-giang-vien">Danh sách GV</a>
                                 <div class="line-down"></div>
                                 <div class="task-label">Nhiệm vụ chính</div>
                                 <div class="line-down"></div>
                                 <div class="task-list">
-                                    <div class="custom-node">Giảng dạy</div>
+                                    <a class="custom-node" href="#/bo-mon-dieu-duong/giang-day">Giảng dạy</a>
                                     <div class="line-down"></div>
-                                    <div class="custom-node">Nghiên cứu KH</div>
+                                    <a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc">Nghiên cứu KH</a>
                                     <div class="line-down"></div>
-                                    <div class="custom-node">Phục vụ cộng đồng</div>
+                                    <a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong">Phục vụ cộng đồng</a>
                                 </div>
                             </div>
                         </div>
