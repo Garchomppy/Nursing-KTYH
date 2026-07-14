@@ -361,9 +361,15 @@
     min-width: 107px;
   }
 
-  .social-links,
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
   .footer-grid > nav {
-    display: none;
+    display: block;
+    margin-bottom: 20px;
   }
 
   .contact-button {

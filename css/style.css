@@ -333,7 +333,14 @@ a {
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .navbar {
+    height: auto;
+    padding: 10px 0;
   }
 
   .grid-2,
