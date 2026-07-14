@@ -68,59 +68,171 @@ export const soDo = `
             margin-bottom: 10px;
             color: var(--primary);
         }
+        .branch-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+        }
+        .branch-col.solo {
+            width: 200px;
+            justify-content: flex-start;
+            padding-top: 0;
+        }
+        .branch-col > .custom-node {
+            width: 100%;
+        }
+        .task-label {
+            font-weight: bold;
+            color: var(--primary);
+            width: 100%;
+            text-align: left;
+            padding: 10px 15px;
+            box-sizing: border-box;
+        }
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .task-list .custom-node {
+            font-weight: normal;
+            font-size: 14px;
+            padding: 6px;
+            width: 100%;
+        }
+        .root-node {
+            width: 320px;
+        }
+        .branch-row {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            padding-top: 30px;
+        }
+        .branch-row::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: calc(50% / var(--cols) / 2 + (100% / var(--cols)) * 0);
+            width: 0;
+            height: 0;
+        }
+        .branch-row {
+            border-top: 2px solid var(--primary);
+        }
+        .branch-row-outer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .branch-row-outer > .line-down {
+            order: -1;
+        }
+        .branch-item {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        .branch-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 30px;
+            background: var(--primary);
+        }
+        .top-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .top-row .custom-node {
+            width: 200px;
+        }
+        .top-row a.custom-node {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .top-row a.custom-node:hover {
+            background: var(--primary-container, #eef4ff);
+        }
         </style>
 
         <section id="so-do" class="section bg-white">
             <div class="container">
                 <h2 class="section-title">Sơ đồ cơ cấu tổ chức</h2>
                 <div class="custom-tree">
-                    
-                    <!-- Branches level -->
-                    <div style="position: relative; width: 100%; max-width: 800px;">
-                        <div class="tree-row" style="gap: 40px; justify-content: space-between;">
-                            
-                            <!-- Col 1 -->
-                            <div style="display: flex; flex-direction: column; align-items: center; width: 200px;">
+
+                    <!-- Root level -->
+                    <div class="custom-node main root-node">Khoa Điều dưỡng - Kỹ thuật Y học</div>
+                    <div class="line-down"></div>
+
+                    <!-- Top-level nav row, branched from root -->
+                    <div class="branch-row" style="width: 100%; max-width: 900px;">
+                        <div class="branch-item"><a href="#/gioi-thieu" class="custom-node">Giới thiệu</a></div>
+                        <div class="branch-item"><a href="#/chuc-nang" class="custom-node">Chức năng - Nhiệm vụ</a></div>
+                        <div class="branch-item"><div class="custom-node main">Cơ cấu tổ chức</div></div>
+                        <div class="branch-item"><a href="#/lanh-dao" class="custom-node">Lãnh đạo khoa</a></div>
+                    </div>
+
+                    <div class="line-down"></div>
+
+                    <!-- Branches level, branched from Cơ cấu tổ chức -->
+                    <div class="branch-row" style="width: 100%; max-width: 800px;">
+
+                        <!-- Col 1 -->
+                        <div class="branch-item">
+                            <div class="branch-col solo">
                                 <div class="custom-node">Liên đoàn khoa</div>
                             </div>
-                            
-                            <!-- Col 2 -->
-                            <div style="display: flex; flex-direction: column; align-items: center; width: 220px;">
-                                <div class="custom-node main" style="width: 100%;">Bộ môn điều dưỡng</div>
-                                <div class="line-down"></div>
-                                <div class="custom-node" style="width: 100%;">Danh sách GV</div>
-                                
-                                <div style="margin-top: 15px; width: 100%;">
-                                    <details class="custom-node" style="cursor: pointer; text-align: left; padding: 10px; box-sizing: border-box;">
-                                        <summary style="font-weight: bold; outline: none; color: var(--primary); user-select: none;">Nhiệm vụ chính</summary>
-                                        <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Giảng dạy</div>
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Nghiên cứu KH</div>
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Phục vụ cộng đồng</div>
-                                        </div>
-                                    </details>
-                                </div>
-                            </div>
-                            
-                            <!-- Col 3 -->
-                            <div style="display: flex; flex-direction: column; align-items: center; width: 220px;">
-                                <div class="custom-node main" style="width: 100%;">Bộ môn KTYH</div>
-                                <div class="line-down"></div>
-                                <div class="custom-node" style="width: 100%;">Danh sách GV</div>
-                                
-                                <div style="margin-top: 15px; width: 100%;">
-                                    <details class="custom-node" style="cursor: pointer; text-align: left; padding: 10px; box-sizing: border-box;">
-                                        <summary style="font-weight: bold; outline: none; color: var(--primary); user-select: none;">Nhiệm vụ chính</summary>
-                                        <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Giảng dạy</div>
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Nghiên cứu KH</div>
-                                            <div class="custom-node" style="font-weight: normal; font-size: 14px; padding: 6px;">Phục vụ cộng đồng</div>
-                                        </div>
-                                    </details>
-                                </div>
-                            </div>
-                            
                         </div>
+
+                        <!-- Col 2 -->
+                        <div class="branch-item">
+                            <div class="branch-col">
+                                <div class="custom-node main">Bộ môn điều dưỡng</div>
+                                <div class="line-down"></div>
+                                <div class="custom-node">Danh sách GV</div>
+                                <div class="line-down"></div>
+                                <div class="task-label">Nhiệm vụ chính</div>
+                                <div class="line-down"></div>
+                                <div class="task-list">
+                                    <div class="custom-node">Giảng dạy</div>
+                                    <div class="line-down"></div>
+                                    <div class="custom-node">Nghiên cứu KH</div>
+                                    <div class="line-down"></div>
+                                    <div class="custom-node">Phục vụ cộng đồng</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div class="branch-item">
+                            <div class="branch-col">
+                                <div class="custom-node main">Bộ môn KTYH</div>
+                                <div class="line-down"></div>
+                                <div class="custom-node">Danh sách GV</div>
+                                <div class="line-down"></div>
+                                <div class="task-label">Nhiệm vụ chính</div>
+                                <div class="line-down"></div>
+                                <div class="task-list">
+                                    <div class="custom-node">Giảng dạy</div>
+                                    <div class="line-down"></div>
+                                    <div class="custom-node">Nghiên cứu KH</div>
+                                    <div class="line-down"></div>
+                                    <div class="custom-node">Phục vụ cộng đồng</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
