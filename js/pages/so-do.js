@@ -260,16 +260,16 @@ export const soDo = `
                         <!-- Col 3 -->
                         <div class="branch-item">
                             <div class="branch-col">
-                                <div class="custom-node main">Bộ môn KTYH</div>
+                                <a class="custom-node main" href="#/bo-mon-ktyh">Bộ môn KTYH</a>
                                 <div class="line-down"></div>
-                                <div class="custom-node">Danh sách GV</div>
+                                <a class="custom-node" href="#/bo-mon-ktyh/danh-sach-giang-vien">Danh sách GV</a>
                                 <div class="line-down"></div>
                                 <div class="task-bracket">
                                     <div class="bracket-label">Nhiệm vụ chính</div>
                                     <div class="bracket-list">
-                                        <div class="bracket-item"><div class="custom-node">Giảng dạy</div></div>
-                                        <div class="bracket-item"><div class="custom-node">Nghiên cứu KH</div></div>
-                                        <div class="bracket-item"><div class="custom-node">Phục vụ cộng đồng</div></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktyh/giang-day">Giảng dạy</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktyh/nghien-cuu-khoa-hoc">Nghiên cứu KH</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktyh/phuc-vu-cong-dong">Phục vụ cộng đồng</a></div>
                                     </div>
                                 </div>
                             </div>
