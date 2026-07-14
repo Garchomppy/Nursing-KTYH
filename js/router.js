@@ -1,4 +1,3 @@
-import { home } from "./pages/home.js";
 import { gioiThieu } from "./pages/gioi-thieu.js";
 import { chucNang } from "./pages/chuc-nang.js";
 import { soDo } from "./pages/so-do.js";
@@ -12,7 +11,6 @@ import { nursingResearch } from "./pages/nursing-department/research.js";
 import { nursingCommunity } from "./pages/nursing-department/community.js";
 
 const pages = {
-  home: home,
   "gioi-thieu": gioiThieu,
   "chuc-nang": chucNang,
   "so-do": soDo,
@@ -30,10 +28,12 @@ const pages = {
 const departmentPageTitles = {
   "bo-mon-dieu-duong": "Giới thiệu Bộ môn Điều dưỡng",
   "bo-mon-dieu-duong/gioi-thieu": "Giới thiệu Bộ môn Điều dưỡng",
-  "bo-mon-dieu-duong/danh-sach-giang-vien": "Danh sách giảng viên Bộ môn Điều dưỡng",
+  "bo-mon-dieu-duong/danh-sach-giang-vien":
+    "Danh sách giảng viên Bộ môn Điều dưỡng",
   "bo-mon-dieu-duong/giang-vien": "Giảng viên Bộ môn Điều dưỡng",
   "bo-mon-dieu-duong/giang-day": "Hoạt động giảng dạy Bộ môn Điều dưỡng",
-  "bo-mon-dieu-duong/nghien-cuu-khoa-hoc": "Nghiên cứu khoa học Bộ môn Điều dưỡng",
+  "bo-mon-dieu-duong/nghien-cuu-khoa-hoc":
+    "Nghiên cứu khoa học Bộ môn Điều dưỡng",
   "bo-mon-dieu-duong/phuc-vu-cong-dong": "Phục vụ cộng đồng Bộ môn Điều dưỡng",
 };
 
@@ -41,11 +41,12 @@ function renderPage() {
   // Lấy hash hiện tại (vd: #/gioi-thieu -> gioi-thieu)
   let hash = window.location.hash.replace("#/", "");
   if (!hash || hash === "") {
-    hash = "home"; // Mặc định là trang chủ
+    hash = "gioi-thieu"; // Mặc định là trang giới thiệu
   }
 
   const appDiv = document.getElementById("app");
-  const isDepartmentPage = hash === "bo-mon-dieu-duong" || hash.startsWith("bo-mon-dieu-duong/");
+  const isDepartmentPage =
+    hash === "bo-mon-dieu-duong" || hash.startsWith("bo-mon-dieu-duong/");
   document.body.classList.toggle("is-department-page", isDepartmentPage);
 
   // Kiểm tra xem route có tồn tại không, nếu có thì render nội dung, nếu không thì hiển thị lỗi

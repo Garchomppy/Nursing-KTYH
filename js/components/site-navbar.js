@@ -3,9 +3,6 @@ class SiteNavbar extends HTMLElement {
     this.innerHTML = `
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <a href="#/home"><img src="./assets/images/logoUD-SMPTOP.png" alt="Logo" class="image"></a>
-            </div>
             <ul class="nav-links">
                 <li><a href="#/gioi-thieu">Giới thiệu chung</a></li>
                 <li><a href="#/chuc-nang">Chức năng - Nhiệm vụ</a></li>
