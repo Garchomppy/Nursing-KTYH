@@ -15,6 +15,8 @@ import { ktyhTeaching } from "./pages/ktyh-department/teaching.js";
 import { ktyhResearch } from "./pages/ktyh-department/research.js";
 import { ktyhCommunity } from "./pages/ktyh-department/community.js";
 
+import { hoSo } from "./pages/ho-so.js";
+
 const pages = {
   "gioi-thieu": gioiThieu,
   "chuc-nang": chucNang,
@@ -68,6 +70,16 @@ function renderPage() {
     hash === "bo-mon-dieu-duong" || hash.startsWith("bo-mon-dieu-duong/") ||
     hash === "bo-mon-ktyh" || hash.startsWith("bo-mon-ktyh/");
   document.body.classList.toggle("is-department-page", isDepartmentPage);
+
+  // Xử lý route động cho Hồ Sơ Cá Nhân (Tạm thời ẩn theo yêu cầu)
+  /*
+  if (hash.startsWith("ho-so/")) {
+    const profileId = hash.split("/")[1];
+    appDiv.innerHTML = hoSo(profileId);
+    document.title = "Lý lịch khoa học | Trường Y Dược - Đại học Đà Nẵng";
+    return;
+  }
+  */
 
   // Kiểm tra xem route có tồn tại không, nếu có thì render nội dung, nếu không thì hiển thị lỗi
   if (pages[hash]) {
