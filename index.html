@@ -7,21 +7,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
-    <!-- Navbar (App Shell) -->
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
                 <a href="#/home"><img src="./assets/images/logoUD-SMPTOP.png" alt="Logo" class="image"></a>
             </div>
-            <ul class="nav-links">
+            <!-- Hamburger Toggle Button -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#/gioi-thieu">Giới thiệu chung</a></li>
                 <li><a href="#/chuc-nang">Chức năng - Nhiệm vụ</a></li>
                 <li><a href="#/so-do">Cơ cấu tổ chức</a></li>
+                <li class="dropdown" id="ktyh-dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" id="dropdown-toggle">Bộ môn KTYH <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 4px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/ktyh-gioi-thieu">Giới thiệu & CN-MV</a></li>
+                        <li><a href="#/ktyh-giang-day">Hoạt động Giảng dạy</a></li>
+                        <li><a href="#/ktyh-cong-dong">Phục vụ cộng đồng</a></li>
+                    </ul>
+                </li>
                 <li><a href="#/lanh-dao">Ban lãnh đạo</a></li>
                 <li><a href="#/lien-he">Liên hệ</a></li>
             </ul>
         </div>
     </nav>
+    <div class="menu-backdrop" id="menu-backdrop"></div>
 
     <!-- Hero Banner (Shared Header) -->
     <header class="hero">
