@@ -63,7 +63,6 @@ export const soDo = `
         }
         /* Bracket list */
         .bracket-list {
-            border-left: 2px solid var(--primary);
             padding-left: 15px;
             position: relative;
             margin-top: 10px;
@@ -75,16 +74,36 @@ export const soDo = `
         .bracket-item::before {
             content: '';
             position: absolute;
-            left: -17px;
+            left: -15px;
+            top: 0;
+            width: 2px;
+            height: 50%;
+            background-color: var(--primary);
+        }
+        .bracket-item::after {
+            content: '';
+            position: absolute;
+            left: -15px;
             top: 50%;
             width: 15px;
             height: 2px;
             background-color: var(--primary);
         }
+        .bracket-item:last-child {
+            margin-bottom: 0;
+        }
+        .bracket-item:not(:last-child)::before {
+            height: calc(50% + 15px + 100%);
+        }
+        .bracket-item .custom-node {
+            width: 100%;
+        }
         .bracket-label {
             font-weight: bold;
             margin-bottom: 10px;
             color: var(--primary);
+            text-align: left;
+            width: 100%;
         }
         .branch-col {
             display: flex;
@@ -100,53 +119,39 @@ export const soDo = `
         .branch-col > .custom-node {
             width: 100%;
         }
-        .task-label {
-            font-weight: bold;
-            color: var(--primary);
+        .task-bracket {
             width: 100%;
-            text-align: left;
-            padding: 10px 15px;
             box-sizing: border-box;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            padding: 12px 15px;
+            background: rgba(22, 143, 153, 0.04);
         }
-        .task-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .task-list .custom-node {
+        .task-bracket .custom-node {
             font-weight: normal;
             font-size: 14px;
-            padding: 6px;
-            width: 100%;
+            padding: 6px 10px;
         }
         .root-node {
             width: 320px;
+            position: relative;
+        }
+        .root-node::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 2px;
+            height: 60px;
+            background: var(--primary);
+            z-index: 1;
         }
         .branch-row {
             display: flex;
             justify-content: center;
-            position: relative;
-            padding-top: 30px;
         }
-        .branch-row::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: calc(50% / var(--cols) / 2 + (100% / var(--cols)) * 0);
-            width: 0;
-            height: 0;
-        }
-        .branch-row {
-            border-top: 2px solid var(--primary);
-        }
-        .branch-row-outer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .branch-row-outer > .line-down {
-            order: -1;
+        .branch-row + .branch-row {
+            margin-top: 60px;
         }
         .branch-item {
             position: relative;
@@ -154,6 +159,10 @@ export const soDo = `
             display: flex;
             justify-content: center;
             padding-top: 30px;
+        }
+        .branch-item.branch-item-anchor::before {
+            top: 0px;
+            height: 141px;
         }
         .branch-item::before {
             content: '';
@@ -163,6 +172,26 @@ export const soDo = `
             width: 2px;
             height: 30px;
             background: var(--primary);
+            z-index: 1;
+        }
+        .branch-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary);
+            z-index: 1;
+        }
+        .branch-item:first-child::after {
+            left: 50%;
+        }
+        .branch-item:last-child::after {
+            right: 50%;
+        }
+        .branch-row > .branch-item:only-child::after {
+            display: none;
         }
         .top-row {
             display: flex;
@@ -191,17 +220,14 @@ export const soDo = `
 
                     <!-- Root level -->
                     <div class="custom-node main root-node">Khoa Điều dưỡng - Kỹ thuật Y học</div>
-                    <div class="line-down"></div>
 
                     <!-- Top-level nav row, branched from root -->
-                    <div class="branch-row" style="width: 100%; max-width: 900px;">
+                    <div class="branch-row" style="width: 100%; max-width: 900px; margin-top: 60px;">
                         <div class="branch-item"><a href="#/gioi-thieu" class="custom-node">Giới thiệu</a></div>
                         <div class="branch-item"><a href="#/chuc-nang" class="custom-node">Chức năng - Nhiệm vụ</a></div>
-                        <div class="branch-item"><div class="custom-node main">Cơ cấu tổ chức</div></div>
+                        <div class="branch-item branch-item-anchor"><div class="custom-node main">Cơ cấu tổ chức</div></div>
                         <div class="branch-item"><a href="#/lanh-dao" class="custom-node">Lãnh đạo khoa</a></div>
                     </div>
-
-                    <div class="line-down"></div>
 
                     <!-- Branches level, branched from Cơ cấu tổ chức -->
                     <div class="branch-row" style="width: 100%; max-width: 800px;">
@@ -220,14 +246,13 @@ export const soDo = `
                                 <div class="line-down"></div>
                                 <a class="custom-node" href="#/bo-mon-dieu-duong/danh-sach-giang-vien">Danh sách GV</a>
                                 <div class="line-down"></div>
-                                <div class="task-label">Nhiệm vụ chính</div>
-                                <div class="line-down"></div>
-                                <div class="task-list">
-                                    <a class="custom-node" href="#/bo-mon-dieu-duong/giang-day">Giảng dạy</a>
-                                    <div class="line-down"></div>
-                                    <a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc">Nghiên cứu KH</a>
-                                    <div class="line-down"></div>
-                                    <a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong">Phục vụ cộng đồng</a>
+                                <div class="task-bracket">
+                                    <div class="bracket-label">Nhiệm vụ chính</div>
+                                    <div class="bracket-list">
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/giang-day">Giảng dạy</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc">Nghiên cứu KH</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong">Phục vụ cộng đồng</a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -239,14 +264,13 @@ export const soDo = `
                                 <div class="line-down"></div>
                                 <div class="custom-node">Danh sách GV</div>
                                 <div class="line-down"></div>
-                                <div class="task-label">Nhiệm vụ chính</div>
-                                <div class="line-down"></div>
-                                <div class="task-list">
-                                    <div class="custom-node">Giảng dạy</div>
-                                    <div class="line-down"></div>
-                                    <div class="custom-node">Nghiên cứu KH</div>
-                                    <div class="line-down"></div>
-                                    <div class="custom-node">Phục vụ cộng đồng</div>
+                                <div class="task-bracket">
+                                    <div class="bracket-label">Nhiệm vụ chính</div>
+                                    <div class="bracket-list">
+                                        <div class="bracket-item"><div class="custom-node">Giảng dạy</div></div>
+                                        <div class="bracket-item"><div class="custom-node">Nghiên cứu KH</div></div>
+                                        <div class="bracket-item"><div class="custom-node">Phục vụ cộng đồng</div></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
