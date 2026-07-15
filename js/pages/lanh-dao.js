@@ -144,7 +144,7 @@ export const lanhDao = `
                         <!-- Phó Trưởng Khoa 2 -->
                         <div class="card profile-card">
                             <div class="avatar placeholder-avatar" style="background-image: url('assets/images/ths-bs-pham-quoc-do.jpg')" title="ThS. BS. Phạm Quốc Đô"></div>
-                            <h3>ThS. BS. Phạm Quốc Đô</h3>
+                            <h3>Phó trưởng khoa 2</h3>
                             <p class="role">Phó Trưởng Khoa</p>
                             <!-- <a href="#/ho-so/pqdo" class="btn-link">Xem hồ sơ &rarr;</a> -->
                         </div>
