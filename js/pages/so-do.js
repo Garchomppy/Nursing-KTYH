@@ -1,4 +1,7 @@
-export const soDo = `
+import { t } from "../i18n.js";
+
+export function soDo() {
+  return `
         <!-- Sơ đồ cơ cấu tổ chức -->
         <style>
         .custom-tree {
@@ -215,18 +218,18 @@ export const soDo = `
 
         <section id="so-do" class="section bg-white">
             <div class="container">
-                <h2 class="section-title">Sơ đồ cơ cấu tổ chức</h2>
+                <h2 class="section-title">${t("orgchart.title")}</h2>
                 <div class="custom-tree">
 
                     <!-- Root level -->
-                    <div class="custom-node main root-node">Khoa Điều dưỡng - Kỹ thuật Y học</div>
+                    <div class="custom-node main root-node">${t("orgchart.root")}</div>
 
                     <!-- Top-level nav row, branched from root -->
                     <div class="branch-row" style="width: 100%; max-width: 900px; margin-top: 60px;">
-                        <div class="branch-item"><a href="#/gioi-thieu" class="custom-node">Giới thiệu</a></div>
-                        <div class="branch-item"><a href="#/chuc-nang" class="custom-node">Chức năng - Nhiệm vụ</a></div>
-                        <div class="branch-item branch-item-anchor"><div class="custom-node main">Cơ cấu tổ chức</div></div>
-                        <div class="branch-item"><a href="#/lanh-dao" class="custom-node">Lãnh đạo khoa</a></div>
+                        <div class="branch-item"><a href="#/gioi-thieu" class="custom-node">${t("orgchart.intro")}</a></div>
+                        <div class="branch-item"><a href="#/chuc-nang" class="custom-node">${t("orgchart.functions")}</a></div>
+                        <div class="branch-item branch-item-anchor"><div class="custom-node main">${t("orgchart.self")}</div></div>
+                        <div class="branch-item"><a href="#/lanh-dao" class="custom-node">${t("orgchart.leadership")}</a></div>
                     </div>
 
                     <!-- Branches level, branched from Cơ cấu tổ chức -->
@@ -235,23 +238,23 @@ export const soDo = `
                         <!-- Col 1 -->
                         <div class="branch-item">
                             <div class="branch-col solo">
-                                <div class="custom-node">Liên đoàn khoa</div>
+                                <div class="custom-node">${t("orgchart.union")}</div>
                             </div>
                         </div>
 
                         <!-- Col 2 -->
                         <div class="branch-item">
                             <div class="branch-col">
-                                <a class="custom-node main" href="#/bo-mon-dieu-duong">Bộ môn điều dưỡng</a>
+                                <a class="custom-node main" href="#/bo-mon-dieu-duong">${t("orgchart.dieuduong")}</a>
                                 <div class="line-down"></div>
-                                <a class="custom-node" href="#/bo-mon-dieu-duong/danh-sach-giang-vien">Danh sách GV</a>
+                                <a class="custom-node" href="#/bo-mon-dieu-duong/danh-sach-giang-vien">${t("orgchart.lecturer_list")}</a>
                                 <div class="line-down"></div>
                                 <div class="task-bracket">
-                                    <div class="bracket-label">Nhiệm vụ chính</div>
+                                    <div class="bracket-label">${t("orgchart.main_tasks")}</div>
                                     <div class="bracket-list">
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/giang-day">Giảng dạy</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc">Nghiên cứu KH</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong">Phục vụ cộng đồng</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/giang-day">${t("orgchart.teaching")}</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc">${t("orgchart.research")}</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong">${t("orgchart.community")}</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -260,16 +263,16 @@ export const soDo = `
                         <!-- Col 3 -->
                         <div class="branch-item">
                             <div class="branch-col">
-                                <a class="custom-node main" href="#/bo-mon-ktyh">Bộ môn KTYH</a>
+                                <a class="custom-node main" href="#/bo-mon-ktxn-hayh">${t("orgchart.ktxnhayh")}</a>
                                 <div class="line-down"></div>
-                                <a class="custom-node" href="#/bo-mon-ktyh/danh-sach-giang-vien">Danh sách GV</a>
+                                <a class="custom-node" href="#/bo-mon-ktxn-hayh/danh-sach-giang-vien">${t("orgchart.lecturer_list")}</a>
                                 <div class="line-down"></div>
                                 <div class="task-bracket">
-                                    <div class="bracket-label">Nhiệm vụ chính</div>
+                                    <div class="bracket-label">${t("orgchart.main_tasks")}</div>
                                     <div class="bracket-list">
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktyh/giang-day">Giảng dạy</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktyh/nghien-cuu-khoa-hoc">Nghiên cứu KH</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktyh/phuc-vu-cong-dong">Phục vụ cộng đồng</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktxn-hayh/giang-day">${t("orgchart.teaching")}</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktxn-hayh/nghien-cuu-khoa-hoc">${t("orgchart.research")}</a></div>
+                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktxn-hayh/phuc-vu-cong-dong">${t("orgchart.community")}</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -280,3 +283,4 @@ export const soDo = `
             </div>
         </section>
 `;
+}

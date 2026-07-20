@@ -1,9 +1,13 @@
 import "../../components/teaching-tabs.js";
-import { TEACHING_AREAS } from "../../data/ktyh-department.js";
+import { getTeachingAreas } from "../../data/ktyh-department.js";
 import { renderDepartmentPage } from "../../components/department-body.js";
+import { t } from "../../i18n.js";
 
-const tabButtons = TEACHING_AREAS.map(
-  (area, index) => `
+export function ktyhTeaching() {
+  const TEACHING_AREAS = getTeachingAreas();
+
+  const tabButtons = TEACHING_AREAS.map(
+    (area, index) => `
     <button
       class="teaching-tabs__tab"
       id="teaching-tab-${area.id}"
@@ -15,25 +19,29 @@ const tabButtons = TEACHING_AREAS.map(
     >
       ${area.tabLabel}
     </button>`,
-).join("");
+  ).join("");
 
-const tabPanels = TEACHING_AREAS.map(
-  (area, index) => {
-    const details = area.details
-      .map(
-        (detail) => `
+  const tabPanels = TEACHING_AREAS.map(
+    (area, index) => {
+      const points = area.points.length
+        ? `<ul>${area.points.map((point) => `<li>${point}</li>`).join("")}</ul>`
+        : "";
+
+      const details = area.details
+        .map(
+          (detail) => `
           <article>
             <h3>${detail.title}</h3>
             <p>${detail.description}</p>
           </article>`,
-      )
-      .join("");
+        )
+        .join("");
 
-    const gallery = area.gallery.length
-      ? `<section class="teaching-gallery" aria-label="Hình ảnh ${area.tabLabel}">
+      const gallery = area.gallery.length
+        ? `<section class="teaching-gallery" aria-label="${t("dept.activity_images_label")} ${area.tabLabel}">
           <div class="teaching-gallery__heading">
-            <p class="department-kicker">Hình ảnh hoạt động</p>
-            <h3>Không gian học tập và trải nghiệm thực tế</h3>
+            <p class="department-kicker">${t("dept.activity_images_label")}</p>
+            <h3>${t("dept.learning_space_title")}</h3>
           </div>
           <div class="teaching-gallery__grid">
             ${area.gallery
@@ -47,9 +55,9 @@ const tabPanels = TEACHING_AREAS.map(
               .join("")}
           </div>
         </section>`
-      : "";
+        : "";
 
-    return `
+      return `
     <article
       class="teaching-tab-panel"
       id="teaching-panel-${area.id}"
@@ -64,26 +72,26 @@ const tabPanels = TEACHING_AREAS.map(
           <h2>${area.title}</h2>
           <p>${area.description}</p>
           <p>${area.secondaryDescription}</p>
-          <ul>${area.points.map((point) => `<li>${point}</li>`).join("")}</ul>
+          ${points}
         </div>
         <figure class="teaching-tab-panel__media">
           <img src="${area.image.src}" alt="${area.image.alt}" width="${area.image.width}" height="${area.image.height}" loading="lazy">
           <figcaption>${area.imageCaption}</figcaption>
         </figure>
       </div>
-      <section class="teaching-tab-panel__details" aria-label="Cách tổ chức ${area.tabLabel}">
+      <section class="teaching-tab-panel__details" aria-label="${t("dept.how_organized")} ${area.tabLabel}">
         ${details}
       </section>
       ${gallery}
     </article>`;
-  },
-).join("");
+    },
+  ).join("");
 
-const content = `
-  <section class="department-section department-section--muted teaching-experience-section" aria-label="Môi trường giảng dạy">
+  const content = `
+  <section class="department-section department-section--muted teaching-experience-section" aria-label="${t("dept.teaching_environments")}">
     <div class="department-shell">
       <teaching-tabs class="teaching-tabs">
-        <div class="teaching-tabs__list" role="tablist" aria-label="Môi trường giảng dạy">
+        <div class="teaching-tabs__list" role="tablist" aria-label="${t("dept.teaching_environments")}">
           ${tabButtons}
         </div>
         <div class="teaching-tabs__panels">${tabPanels}</div>
@@ -91,12 +99,13 @@ const content = `
     </div>
   </section>`;
 
-export const ktyhTeaching = renderDepartmentPage({
-  activeKey: "teaching",
-  hero: {
-    title: "Hoạt động giảng dạy",
-    summary: "Phương pháp giảng dạy gắn liền với thực tiễn lâm sàng, phòng lab hiện đại và mạng lưới bệnh viện thực hành uy tín.",
-    context: "Khoa Điều dưỡng - Kỹ thuật Y học",
-  },
-  content,
-});
+  return renderDepartmentPage({
+    activeKey: "teaching",
+    hero: {
+      title: t("ktyh.teaching.hero_title"),
+      summary: t("ktyh.teaching.hero_summary"),
+      context: t("ktyh.unit_context"),
+    },
+    content,
+  });
+}
