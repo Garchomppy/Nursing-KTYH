@@ -100,7 +100,7 @@ export function ktyhTeaching() {
     hero: {
       title: t("ktyh.teaching.hero_title"),
       summary: t("ktyh.teaching.hero_summary"),
-      context: t("dept.default_context"),
+      context: t("ktyh.unit_context"),
     },
     content,
   });

@@ -101,7 +101,7 @@ export function ktyhResearch() {
     activeKey: "research",
     hero: {
       title: t("ktyh.research.hero_title"),
-      context: t("ktyh.research.hero_context"),
+      context: t("ktyh.unit_context"),
       summary: t("ktyh.research.hero_summary"),
       image: DEPARTMENT_IMAGES.research.hero,
       imageCaption: t("ktyh.research.hero_image_caption"),

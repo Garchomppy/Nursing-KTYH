@@ -23,13 +23,13 @@ export default {
   "nav.contact": "Liên hệ",
 
   // Hero
-  "hero.title": "Khoa Điều Dưỡng - Kỹ Thuật Y Học",
+  "hero.title": "Khoa Điều Dưỡng và Kỹ Thuật Y Học",
   "hero.desc": "Chung tay đào tạo nguồn nhân lực Y tế chất lượng cao, nâng cao năng lực nghiên cứu khoa học, hội nhập khu vực và quốc tế, góp phần chăm sóc sức khỏe cộng đồng.",
 
   // Footer
   "footer.contact_title": "THÔNG TIN LIÊN HỆ",
   "footer.school": "Trường Y Dược - Đại học Đà Nẵng",
-  "footer.copyright": "BẢN QUYỀN THUỘC VỀ KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC | TRƯỜNG Y DƯỢC - ĐẠI HỌC ĐÀ NẴNG",
+  "footer.copyright": "BẢN QUYỀN THUỘC VỀ KHOA ĐIỀU DƯỠNG VÀ KỸ THUẬT Y HỌC | TRƯỜNG Y DƯỢC - ĐẠI HỌC ĐÀ NẴNG",
   "footer.map_title": "Đường Đi Đến UD-SMP",
   "footer.contact_btn": "LIÊN HỆ",
   
@@ -74,11 +74,11 @@ export default {
 
   // Giới thiệu chung
   "about.title": "Giới thiệu chung",
-  "about.p1": "Khoa Điều dưỡng – Kỹ thuật Y học thuộc Trường Y Dược - Đại học Đà Nẵng được hình thành và phát triển nhằm đáp ứng nhu cầu cấp thiết về nguồn nhân lực y tế chất lượng cao cho khu vực miền Trung - Tây Nguyên và cả nước.",
-  "about.image_alt": "Tập thể giảng viên Khoa Điều dưỡng - KTXN & HAYH",
+  "about.p1": "Bộ môn Kỹ thuật xét nghiệm và Hình ảnh y học thuộc Khoa Điều dưỡng và Kỹ thuật y học, Trường Y Dược - Đại học Đà Nẵng. Khoa được hình thành và phát triển nhằm đáp ứng nhu cầu cấp thiết về nguồn nhân lực y tế chất lượng cao cho khu vực miền Trung - Tây Nguyên và cả nước.",
+  "about.image_alt": "Tập thể giảng viên Khoa Điều dưỡng và Kỹ thuật y học",
   "about.p2": "Trải qua quá trình phát triển, Khoa đã khẳng định được vị thế là một trong những đơn vị đào tạo trọng điểm. Khoa luôn tiên phong trong việc đổi mới chương trình đào tạo Cử nhân Điều dưỡng, Cử nhân Kỹ thuật Xét nghiệm Y học và các chuyên ngành kỹ thuật y học khác theo chuẩn năng lực, đáp ứng yêu cầu hội nhập quốc tế.",
   "about.p3": "Đặc biệt, Khoa có mối liên hệ chặt chẽ với các tổ chức y tế và mạng lưới các bệnh viện lớn trên địa bàn như Bệnh viện Đà Nẵng, Bệnh viện C Đà Nẵng, Bệnh viện Phụ sản - Nhi Đà Nẵng. Việc đẩy mạnh mô hình gắn kết Viện – Trường với hàng chục cơ sở thực hành chất lượng giúp sinh viên có môi trường rèn luyện lâm sàng chuyên sâu, sát với thực tế nhất.",
-  "about.p4": "Từ khi thành lập đến nay, Khoa Điều dưỡng - Kỹ thuật Y học luôn hoàn thành xuất sắc nhiệm vụ giảng dạy và nghiên cứu khoa học. Tập thể giảng viên và sinh viên của Khoa đã liên tục đạt nhiều thành tích đáng tự hào, nhận được các bằng khen, giấy khen của Giám đốc Đại học Đà Nẵng, UBND Thành phố Đà Nẵng và Bộ Giáo dục & Đào tạo.",
+  "about.p4": "Từ khi thành lập đến nay, Khoa Điều dưỡng và Kỹ thuật y học luôn hoàn thành xuất sắc nhiệm vụ giảng dạy và nghiên cứu khoa học. Tập thể giảng viên và sinh viên của Khoa đã liên tục đạt nhiều thành tích đáng tự hào, nhận được các bằng khen, giấy khen của Giám đốc Đại học Đà Nẵng, UBND Thành phố Đà Nẵng và Bộ Giáo dục & Đào tạo.",
 
   // Ban lãnh đạo
   "leadership.title": "Ban lãnh đạo",
@@ -193,12 +193,15 @@ export default {
   "nursing.lecturers.hero_image_caption": "Tập thể giảng viên Bộ môn Điều dưỡng năm 2026",
   "nursing.lecturer.pos1": "Phó Trưởng Khoa / Trưởng Bộ môn",
   "nursing.lecturer.pos2": "Phó Trưởng Bộ môn",
-  "nursing.lecturer.pos3": "Giảng viên chính",
-  "nursing.lecturer.pos4": "Giảng viên kiêm nhiệm",
-  "nursing.lecturer.pos5": "Giảng viên chính",
+  "nursing.lecturer.pos3": "Giảng viên",
+  "nursing.lecturer.pos4": "Giảng viên",
+  "nursing.lecturer.pos5": "Giảng viên",
   "nursing.lecturer.pos6": "Giảng viên",
-  "nursing.lecturer.pos7": "Giảng viên",
+  "nursing.lecturer.pos7": "Giảng viên / Giáo vụ Bộ môn",
   "nursing.lecturer.pos8": "Giảng viên",
+  "nursing.lecturer.pos9": "Giảng viên",
+  "nursing.lecturer.pos10": "Trưởng phòng Phòng Hành chính - tổng hợp / Giảng viên kiêm nhiệm",
+  "nursing.lecturer.pos11": "Giảng viên kiêm nhiệm",
 
   "nursing.teaching.hero_title": "Hoạt động giảng dạy",
   "nursing.teaching.hero_summary": "Kết nối kiến thức nền tảng, thực hành kỹ năng và trải nghiệm lâm sàng trong quá trình đào tạo điều dưỡng.",
@@ -347,6 +350,7 @@ export default {
   "dept.default_context": "Khoa Điều dưỡng - Kỹ thuật Y học",
 
   // ===== Bộ môn KTXN & HAYH (ktyh-department) =====
+  "ktyh.unit_context": "Bộ môn Kỹ thuật xét nghiệm và Hình ảnh y học thuộc Khoa Điều dưỡng và Kỹ thuật y học",
   "ktyh.route.overview": "Bộ môn KTXN & HAYH",
   "ktyh.route.lecturers": "Danh sách giảng viên",
   "ktyh.route.teaching": "Giảng dạy",
@@ -402,18 +406,19 @@ export default {
   "ktyh.overview.dev_item3_desc": "Đẩy mạnh các đề tài nghiên cứu ứng dụng kỹ thuật xét nghiệm mới vào sàng lọc, chẩn đoán sớm bệnh lý ở người học và cộng đồng.",
 
   "ktyh.lecturers.hero_title": "Đội ngũ giảng viên",
-  "ktyh.lecturers.hero_summary": "Sơ đồ tổ chức nhân sự giảng dạy và quản lý chuyên môn tại Bộ môn Kỹ thuật Y học.",
+  "ktyh.lecturers.hero_summary": "Danh sách nhân sự giảng dạy và quản lý chuyên môn tại Bộ môn Kỹ thuật Y học.",
   "ktyh.lecturers.hero_image_caption": "Tập thể giảng viên Bộ môn Kỹ thuật Y học năm 2026",
-  "ktyh.lecturers.aria_label": "Sơ đồ tổ chức giảng viên Bộ môn Kỹ thuật Y học",
+  "ktyh.lecturers.aria_label": "Danh sách giảng viên Bộ môn Kỹ thuật Y học",
   "ktyh.lecturers.branch1_title": "Giảng viên Chuyên trách",
   "ktyh.lecturers.branch2_title": "Giảng viên kiêm Giáo vụ",
   "ktyh.lecturers.view_profile_title": "Xem lý lịch khoa học",
   "ktyh.lecturers.no_profile_title": "Lý lịch khoa học chưa cập nhật",
-  "ktyh.lecturer.pos1": "Trưởng Khoa / Trưởng Bộ môn",
+  "ktyh.lecturer.position_head": "Trưởng khoa / Trưởng bộ môn",
+  "ktyh.lecturer.position_deputy": "Phó trưởng Bộ môn",
+  "ktyh.lecturer.position_lecturer": "Giảng viên",
+  "ktyh.lecturer.position_faculty_affairs": "Giảng viên / Giáo vụ khoa",
+  "ktyh.lecturer.position_department_affairs": "Giảng viên / Giáo vụ bộ môn",
   "ktyh.lecturer.specialty1": "Kỹ thuật Xét nghiệm Y học",
-  "ktyh.lecturer.pos_dedicated": "Giảng viên chuyên trách",
-  "ktyh.lecturer.pos7": "Giảng viên / Giáo vụ Khoa",
-  "ktyh.lecturer.pos8": "Giảng viên / Giáo vụ Bộ môn",
 
   "ktyh.teaching.hero_title": "Hoạt động giảng dạy",
   "ktyh.teaching.hero_summary": "Phương pháp giảng dạy gắn liền với thực tiễn lâm sàng, phòng lab hiện đại và mạng lưới bệnh viện thực hành uy tín.",
