@@ -42,10 +42,10 @@ export function getDepartmentImages() {
     },
     teaching: {
       lecture: {
-        src: "https://picsum.photos/seed/ktyh-lecture-hall/800/600",
+        src: "./assets/images/4. Khác ( CME, Hợp tác, hội nghị...)/Lớp CME _Ứng dụng SHPT trong chẩn đoán_/XN-CME Ung dung SHPT.jpg",
         alt: t("ktyh.img.teaching_lecture_alt"),
-        width: 800,
-        height: 600,
+        width: 1280,
+        height: 960,
       },
       lab: {
         src: "./assets/images/KTYH-Giang day/SV TT lấy máu_.jpg",
@@ -261,12 +261,7 @@ export function getTeachingAreas() {
       title: t("ktyh.teaching.area1_title"),
       description: t("ktyh.teaching.area1_desc"),
       secondaryDescription: t("ktyh.teaching.area1_desc2"),
-      points: [
-        t("ktyh.teaching.area1_point1"),
-        t("ktyh.teaching.area1_point2"),
-        t("ktyh.teaching.area1_point3"),
-        t("ktyh.teaching.area1_point4"),
-      ],
+      points: [],
       image: DEPARTMENT_IMAGES.teaching.lecture,
       imageCaption: t("ktyh.teaching.area1_image_caption"),
       details: [
@@ -357,18 +352,88 @@ export function getResearchGroups() {
       title: t("ktyh.research.group1_title"),
       description: t("ktyh.research.group1_desc"),
       categories: [
-        t("ktyh.research.group1_cat1"),
-        t("ktyh.research.group1_cat2"),
-        t("ktyh.research.group1_cat3"),
-        t("ktyh.research.group1_cat4"),
-        t("ktyh.research.group1_cat5"),
+        { title: t("ktyh.research.group1_cat1"), items: [] },
+        { title: t("ktyh.research.group1_cat2"), items: [] },
+        {
+          title: t("ktyh.research.group1_cat3"),
+          items: [
+            {
+              title: "Thực trạng nhiễm Helicobacter pylori trên người có triệu chứng viêm loét dạ dày, tá tràng và sự phân bố genotype",
+              authors: "Nguyễn Văn Song",
+              period: "2025-2026",
+            },
+          ],
+        },
+        {
+          title: t("ktyh.research.group1_cat4"),
+          items: [
+            {
+              title: "Frequency Of Helicobacter Pylori Infection And Associated Factors Among Patients With Peptic Ulcer Disease At Hospital 199, Da Nang, Viet Nam.",
+              authors: "Nguyễn Văn Song",
+              period: "2026",
+              url: "https://doi.org/10.31130/ud-jst.2026.24(5A).193E",
+            },
+            {
+              title: "Saccharomyces cerevisiae’s culture conditions for heterologous expression: A detailed investigation using reporter gene eGFP and Escherichia coli’s heat-labile toxin B subunit.",
+              authors: "Nguyễn Văn Song",
+              period: "2026",
+              url: "https://doi.org/10.26459/hueunijns.v135i1B.8195",
+            },
+          ],
+        },
+        { title: t("ktyh.research.group1_cat5"), items: [] },
       ],
     },
     {
       id: "student-research",
       title: t("ktyh.research.group2_title"),
       description: t("ktyh.research.group2_desc"),
-      categories: [t("ktyh.research.group2_cat1"), t("ktyh.research.group2_cat2")],
+      categories: [
+        {
+          title: t("ktyh.research.group2_cat1"),
+          items: [
+            {
+              title: "Khảo sát trị số triglyceride-glucose (TyG) trong đánh giá tình trạng kiểm soát đường huyết ở bệnh nhân đái tháo đường típ 2.",
+              authors: "Bùi Đức Độ",
+              period: "2026-2027",
+              note: t("dept.research.ongoing_note"),
+            },
+            {
+              title: "Sàng lọc kháng thể bất thường ở người bệnh thalassemia tại Bệnh viện Đà Nẵng.",
+              authors: "Lương Thị Hòa",
+              period: "2026-2027",
+              note: t("dept.research.ongoing_note"),
+            },
+            {
+              title: "Mối liên quan giữa đa dạng thực phẩm tối thiểu và thiếu máu ở thai phụ 3 tháng cuối.",
+              authors: "Nguyễn Hà Như Ý",
+              period: "2026-2027",
+              note: t("dept.research.ongoing_note"),
+            },
+            {
+              title: "Khảo sát tỷ lệ nhiễm Helicobacter pylori ở sinh viên bằng kỹ thuật PCR trên mảng bám vôi răng và một số yếu tố liên quan.",
+              authors: "Bùi Hoàng Nhân",
+              period: "2026-2027",
+              note: t("dept.research.ongoing_note"),
+            },
+          ],
+        },
+        {
+          title: t("ktyh.research.group2_cat2"),
+          items: [
+            {
+              title: "Nghiên cứu tỷ lệ nhiễm Helicobacter pylori trên người bệnh có triệu chứng viêm loét dạ dày, tá tràng và các yếu tố liên quan.",
+              authors: "Nguyễn Thanh Phong",
+              period: "2025-2026",
+            },
+            {
+              title: "Khảo sát kiến thức, thái độ, thực hành phòng chống bệnh viêm gan vi rút B của sinh viên Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn năm 2025 và một số yếu tố liên quan.",
+              authors: "Ngô Thị Minh Thời",
+              period: "2025-2026",
+            },
+          ],
+        },
+      ],
     },
   ];
 }

@@ -358,18 +358,59 @@ export function getResearchGroups() {
       title: t("nursing.research.group1_title"),
       description: t("nursing.research.group1_desc"),
       categories: [
-        t("nursing.research.group1_cat1"),
-        t("nursing.research.group1_cat2"),
-        t("nursing.research.group1_cat3"),
-        t("nursing.research.group1_cat4"),
-        t("nursing.research.group1_cat5"),
+        { title: t("nursing.research.group1_cat1"), items: [] },
+        {
+          title: t("nursing.research.group1_cat2"),
+          items: [
+            {
+              title: "Tuân thủ điều trị dự phòng trước phơi nhiễm HIV (PrEP) ở nhóm nam quan hệ tình dục đồng giới tại Đà Nẵng: vai trò của sức khỏe tâm thần, hỗ trợ xã hội và tự kỳ thị tình dục",
+              authors: "Trương Thị Mỹ Phượng",
+              period: t("dept.research.not_updated"),
+            },
+            {
+              title: "Thực trạng suy yếu theo tiêu chuẩn đánh giá lão khoa toàn diện ở người cao tuổi tại thành phố Đà Nẵng và thí điểm mô hình chăm sóc toàn diện",
+              authors: "Nguyễn Thị Hà",
+              period: "8/2025 đến 7/2027",
+            },
+          ],
+        },
+        { title: t("nursing.research.group1_cat3"), items: [] },
+        { title: t("nursing.research.group1_cat4"), items: [] },
+        { title: t("nursing.research.group1_cat5"), items: [] },
       ],
     },
     {
       id: "student-research",
       title: t("nursing.research.group2_title"),
       description: t("nursing.research.group2_desc"),
-      categories: [t("nursing.research.group2_cat1"), t("nursing.research.group2_cat2")],
+      categories: [
+        {
+          title: t("nursing.research.group2_cat1"),
+          items: [
+            {
+              title: "Đánh giá tự kỳ thị tính dục ở nhóm nam quan hệ tình dục đồng giới đang điều trị dự phòng trước phơi nhiễm HIV (PrEP).",
+              authors: "Trần Thị Như Quỳnh",
+              period: "2026-2027",
+              note: t("dept.research.ongoing_note"),
+            },
+          ],
+        },
+        {
+          title: t("nursing.research.group2_cat2"),
+          items: [
+            {
+              title: "Sức khỏe tâm thần và các yếu tố liên quan đến tuân thủ điều trị dự phòng trước lây nhiễm HIV ở nam quan hệ đồng giới tại thành phố Đà Nẵng.",
+              authors: "Hà Thị Huệ",
+              period: "2025-2026",
+            },
+            {
+              title: "Hiểu biết về sức khỏe tâm thần và các yếu tố liên quan ở người bệnh HIV đang điều trị ARV tại Bệnh viện Da Liễu Đà Nẵng.",
+              authors: "Hoàng Quốc Vương Ánh",
+              period: "2025-2026",
+            },
+          ],
+        },
+      ],
     },
   ];
 }

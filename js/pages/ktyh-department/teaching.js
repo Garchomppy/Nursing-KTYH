@@ -23,6 +23,10 @@ export function ktyhTeaching() {
 
   const tabPanels = TEACHING_AREAS.map(
     (area, index) => {
+      const points = area.points.length
+        ? `<ul>${area.points.map((point) => `<li>${point}</li>`).join("")}</ul>`
+        : "";
+
       const details = area.details
         .map(
           (detail) => `
@@ -68,7 +72,7 @@ export function ktyhTeaching() {
           <h2>${area.title}</h2>
           <p>${area.description}</p>
           <p>${area.secondaryDescription}</p>
-          <ul>${area.points.map((point) => `<li>${point}</li>`).join("")}</ul>
+          ${points}
         </div>
         <figure class="teaching-tab-panel__media">
           <img src="${area.image.src}" alt="${area.image.alt}" width="${area.image.width}" height="${area.image.height}" loading="lazy">

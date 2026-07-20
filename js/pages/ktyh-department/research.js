@@ -38,6 +38,27 @@ export function ktyhResearch() {
     </figure>`,
   ).join("");
 
+  const renderResearchRecord = (item) => `
+    <article class="research-record">
+      <h4>${item.title}</h4>
+      <dl class="research-record__meta">
+        <div>
+          <dt>${t("dept.research.authors")}</dt>
+          <dd>${item.authors}</dd>
+        </div>
+        <div>
+          <dt>${t("dept.research.period")}</dt>
+          <dd>${item.period}</dd>
+        </div>
+      </dl>
+      ${
+        item.url
+          ? `<a class="research-record__link" href="${item.url}" target="_blank" rel="noopener noreferrer">${t("dept.research.view_article")}</a>`
+          : ""
+      }
+      ${item.note ? `<p class="research-record__note">${item.note}</p>` : ""}
+    </article>`;
+
   const researchGroups = RESEARCH_GROUPS.map(
     (group) => `
     <section class="research-group" aria-labelledby="${group.id}-title">
@@ -51,11 +72,18 @@ export function ktyhResearch() {
           .map(
             (category) => `
               <details>
-                <summary><span>${category}</span><small>${t("dept.updating")}</small></summary>
-                <div class="research-empty">
-                  <h3>${t("dept.category_updating_title")}</h3>
-                  <p>${t("ktyh.research.category_updating_desc")}</p>
-                </div>
+                <summary>
+                  <span>${category.title}</span>
+                  <small>${category.items.length ? `${category.items.length} ${t("dept.research.item_count")}` : t("dept.updating")}</small>
+                </summary>
+                ${
+                  category.items.length
+                    ? `<div class="research-record-list">${category.items.map(renderResearchRecord).join("")}</div>`
+                    : `<div class="research-empty">
+                      <h3>${t("dept.category_updating_title")}</h3>
+                      <p>${t("ktyh.research.category_updating_desc")}</p>
+                    </div>`
+                }
               </details>`,
           )
           .join("")}
