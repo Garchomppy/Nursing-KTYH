@@ -84,7 +84,7 @@ export function ktyhOverview() {
       summary: t("ktyh.overview.hero_summary"),
       image: DEPARTMENT_IMAGES.overview.hero,
       imageCaption: t("ktyh.overview.hero_image_caption"),
-      context: t("dept.default_context"),
+      context: t("ktyh.unit_context"),
     },
     content,
   });
