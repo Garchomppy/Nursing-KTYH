@@ -1,9 +1,21 @@
 export const DEPARTMENT_ROUTES = [
   { key: "overview", label: "Bộ môn Kỹ thuật Y học", href: "#/bo-mon-ktyh" },
-  { key: "lecturers", label: "Danh sách giảng viên", href: "#/bo-mon-ktyh/danh-sach-giang-vien" },
+  {
+    key: "lecturers",
+    label: "Danh sách giảng viên",
+    href: "#/bo-mon-ktyh/danh-sach-giang-vien",
+  },
   { key: "teaching", label: "Giảng dạy", href: "#/bo-mon-ktyh/giang-day" },
-  { key: "research", label: "Nghiên cứu khoa học", href: "#/bo-mon-ktyh/nghien-cuu-khoa-hoc" },
-  { key: "community", label: "Phục vụ cộng đồng", href: "#/bo-mon-ktyh/phuc-vu-cong-dong" },
+  {
+    key: "research",
+    label: "Nghiên cứu khoa học",
+    href: "#/bo-mon-ktyh/nghien-cuu-khoa-hoc",
+  },
+  {
+    key: "community",
+    label: "Phục vụ cộng đồng",
+    href: "#/bo-mon-ktyh/phuc-vu-cong-dong",
+  },
 ];
 
 export const DEPARTMENT_IMAGES = {
@@ -137,12 +149,12 @@ export const DEPARTMENT_OVERVIEW = {
       {
         title: "Giảng dạy và hướng dẫn thực hành",
         description:
-          "Tổ chức đào tạo lý thuyết, kỹ năng thực hành tiền lâm sàng tại lab và hướng dẫn thực tập lâm sàng tại bệnh viện liên kết cho sinh viên.",
+          "Tổ chức giảng dạy các học phần lý thuyết; đào tạo, hướng dẫn kỹ năng thực hành tiền lâm sàng tại phòng thực hành (Lab); đồng thời tổ chức và hướng dẫn thực hành, thực tập lâm sàng cho sinh viên tại các cơ sở y tế và bệnh viện thực hành liên kết theo chương trình đào tạo.",
       },
       {
         title: "Nghiên cứu khoa học & cải tiến",
         description:
-          "Thực hiện nghiên cứu khoa học, cải tiến các kỹ thuật xét nghiệm phục vụ chẩn đoán bệnh lý và hỗ trợ chăm sóc sức khỏe lâm sàng.",
+          "Thực hiện nghiên cứu khoa học, cải tiến các kỹ thuật xét nghiệm phục vụ chẩn đoán bệnh lý và hỗ trợ chăm sóc người bệnh và bảo vệ sức khỏe cộng đồng.",
       },
       {
         title: "Biên soạn tài liệu & phát triển",
@@ -359,7 +371,8 @@ export const RESEARCH_GROUPS = [
   {
     id: "lecturer-research",
     title: "Nghiên cứu của giảng viên",
-    description: "Danh mục đề tài và công bố khoa học do giảng viên Bộ môn KTYH thực hiện hoặc tham gia.",
+    description:
+      "Danh mục đề tài và công bố khoa học do giảng viên Bộ môn KTYH thực hiện hoặc tham gia.",
     categories: [
       "Đề tài cấp Bộ",
       "Đề tài cấp Đại học Đà Nẵng",
@@ -371,7 +384,8 @@ export const RESEARCH_GROUPS = [
   {
     id: "student-research",
     title: "Nghiên cứu của sinh viên",
-    description: "Danh mục đề tài nghiên cứu khoa học sinh viên chuyên ngành Kỹ thuật Xét nghiệm Y học.",
+    description:
+      "Danh mục đề tài nghiên cứu khoa học sinh viên chuyên ngành Kỹ thuật Xét nghiệm Y học.",
     categories: ["Đề tài sinh viên năm 2026", "Đề tài sinh viên năm 2025"],
   },
 ];
@@ -420,25 +434,30 @@ export const COMMUNITY_AREAS = [
   {
     id: "health-screening",
     title: "Xét nghiệm thiện nguyện",
-    description: "Đo huyết áp, sàng lọc đường huyết nhanh và tư vấn sức khỏe cơ bản cho bà con vùng sâu, vùng khó khăn.",
-    focus: "Sàng lọc đường huyết, kiểm tra huyết áp và tư vấn lối sống phòng bệnh.",
+    description:
+      "Đo huyết áp, sàng lọc đường huyết nhanh và tư vấn sức khỏe cơ bản cho bà con vùng sâu, vùng khó khăn.",
+    focus:
+      "Sàng lọc đường huyết, kiểm tra huyết áp và tư vấn lối sống phòng bệnh.",
   },
   {
     id: "health-education",
     title: "Tư vấn & Tuyên truyền",
-    description: "Hướng dẫn cộng đồng phòng tránh bệnh truyền nhiễm, cách xem kết quả xét nghiệm định kỳ và chăm sóc bản thân.",
+    description:
+      "Hướng dẫn cộng đồng phòng tránh bệnh truyền nhiễm, cách xem kết quả xét nghiệm định kỳ và chăm sóc bản thân.",
     focus: "Vệ sinh phòng dịch và giải thích các chỉ số xét nghiệm thường gặp.",
   },
   {
     id: "technology-transfer",
     title: "Tập huấn và Chuyển giao",
-    description: "Hỗ trợ đào tạo kỹ thuật viên cơ bản và tập huấn quy trình lấy mẫu an toàn cho các cơ sở y tế tuyến dưới.",
+    description:
+      "Hỗ trợ đào tạo kỹ thuật viên cơ bản và tập huấn quy trình lấy mẫu an toàn cho các cơ sở y tế tuyến dưới.",
     focus: "Quy trình lấy mẫu chuẩn xác, bảo quản mẫu bệnh phẩm lâm sàng.",
   },
   {
     id: "bio-safety-awareness",
     title: "Bảo vệ môi trường y tế",
-    description: "Tuyên truyền an toàn sinh học và nâng cao nhận thức xử lý chất thải y tế trong cộng đồng.",
+    description:
+      "Tuyên truyền an toàn sinh học và nâng cao nhận thức xử lý chất thải y tế trong cộng đồng.",
     focus: "Phòng chống lây nhiễm chéo và phân loại rác thải y tế.",
   },
 ];
@@ -446,19 +465,23 @@ export const COMMUNITY_AREAS = [
 export const COMMUNITY_PROCESS = [
   {
     title: "Lắng nghe nhu cầu",
-    description: "Phối hợp với địa phương xác định nhu cầu sàng lọc xét nghiệm (đường huyết, ký sinh trùng...).",
+    description:
+      "Phối hợp với địa phương xác định nhu cầu sàng lọc xét nghiệm (đường huyết, ký sinh trùng...).",
   },
   {
     title: "Chuẩn bị chuyên môn",
-    description: "Chuẩn bị máy đo cầm tay, sinh phẩm xét nghiệm nhanh và các trang thiết bị bảo hộ an toàn sinh học.",
+    description:
+      "Chuẩn bị máy đo cầm tay, sinh phẩm xét nghiệm nhanh và các trang thiết bị bảo hộ an toàn sinh học.",
   },
   {
     title: "Thực hiện sàng lọc",
-    description: "Tổ chức các trạm lấy mẫu và đo đạc nhanh tại chỗ, đảm bảo an toàn sinh học tuyệt đối cho người dân.",
+    description:
+      "Tổ chức các trạm lấy mẫu và đo đạc nhanh tại chỗ, đảm bảo an toàn sinh học tuyệt đối cho người dân.",
   },
   {
     title: "Tư vấn và phản hồi",
-    description: "Giải thích ý nghĩa kết quả xét nghiệm trực tiếp cho người dân, hướng dẫn chế độ ăn uống và theo dõi y tế phù hợp.",
+    description:
+      "Giải thích ý nghĩa kết quả xét nghiệm trực tiếp cho người dân, hướng dẫn chế độ ăn uống và theo dõi y tế phù hợp.",
   },
 ];
 

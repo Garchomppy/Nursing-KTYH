@@ -93,7 +93,7 @@ function getFooterTemplate() {
             <nav class="social-links" aria-label="Mạng xã hội">
               ${renderSocialLinks()}
             </nav>
-            <a class="contact-button" href="mailto:khoadieuduong@smp.udn.vn">${t('footer.contact_btn') || "LIÊN HỆ"}</a>
+            <a class="contact-button" href="mailto:khoa.dieuduong.ktyh@smp.udn.vn">${t('footer.contact_btn') || "LIÊN HỆ"}</a>
           </div>
         </div>
       </div>
@@ -107,11 +107,11 @@ function getFooterTemplate() {
             <p>Khu đô thị Đại học Đà Nẵng, P.Ngũ Hành Sơn, TP. Đà Nẵng</p>
             <p class="footer-contact-row">
               <i class="fas fa-phone" aria-hidden="true"></i>
-              <a href="tel:+842363xxxxxx">(+84) 0236 3 xxx xxx</a>
+              <a href="tel:+842363xxxxxx">(+84) 02367109357</a>
             </p>
             <p class="footer-contact-row">
               <i class="fas fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:khoadieuduong@smp.udn.vn">khoadieuduong@smp.udn.vn</a>
+              <a href="mailto:khoa.dieuduong.ktyh@smp.udn.vn">khoa.dieuduong.ktyh@smp.udn.vn</a>
             </p>
           </section>
 
