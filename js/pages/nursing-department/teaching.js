@@ -1,9 +1,13 @@
 import "../../components/teaching-tabs.js";
-import { TEACHING_AREAS } from "../../data/nursing-department.js";
+import { getTeachingAreas } from "../../data/nursing-department.js";
 import { renderDepartmentPage } from "../../components/department-body.js";
+import { t } from "../../i18n.js";
 
-const tabButtons = TEACHING_AREAS.map(
-  (area, index) => `
+export function nursingTeaching() {
+  const TEACHING_AREAS = getTeachingAreas();
+
+  const tabButtons = TEACHING_AREAS.map(
+    (area, index) => `
     <button
       class="teaching-tabs__tab"
       id="teaching-tab-${area.id}"
@@ -15,25 +19,25 @@ const tabButtons = TEACHING_AREAS.map(
     >
       ${area.tabLabel}
     </button>`,
-).join("");
+  ).join("");
 
-const tabPanels = TEACHING_AREAS.map(
-  (area, index) => {
-    const details = area.details
-      .map(
-        (detail) => `
+  const tabPanels = TEACHING_AREAS.map(
+    (area, index) => {
+      const details = area.details
+        .map(
+          (detail) => `
           <article>
             <h3>${detail.title}</h3>
             <p>${detail.description}</p>
           </article>`,
-      )
-      .join("");
+        )
+        .join("");
 
-    const gallery = area.gallery.length
-      ? `<section class="teaching-gallery" aria-label="Hình ảnh ${area.tabLabel}">
+      const gallery = area.gallery.length
+        ? `<section class="teaching-gallery" aria-label="${t("dept.activity_images_label")} ${area.tabLabel}">
           <div class="teaching-gallery__heading">
-            <p class="department-kicker">Hình ảnh hoạt động</p>
-            <h3>Không gian học tập và trải nghiệm thực tế</h3>
+            <p class="department-kicker">${t("dept.activity_images_label")}</p>
+            <h3>${t("dept.learning_space_title")}</h3>
           </div>
           <div class="teaching-gallery__grid">
             ${area.gallery
@@ -47,9 +51,9 @@ const tabPanels = TEACHING_AREAS.map(
               .join("")}
           </div>
         </section>`
-      : "";
+        : "";
 
-    return `
+      return `
     <article
       class="teaching-tab-panel"
       id="teaching-panel-${area.id}"
@@ -71,19 +75,19 @@ const tabPanels = TEACHING_AREAS.map(
           <figcaption>${area.imageCaption}</figcaption>
         </figure>
       </div>
-      <section class="teaching-tab-panel__details" aria-label="Cách tổ chức ${area.tabLabel}">
+      <section class="teaching-tab-panel__details" aria-label="${t("dept.how_organized")} ${area.tabLabel}">
         ${details}
       </section>
       ${gallery}
     </article>`;
-  },
-).join("");
+    },
+  ).join("");
 
-const content = `
-  <section class="department-section department-section--muted teaching-experience-section" aria-label="Ba môi trường giảng dạy">
+  const content = `
+  <section class="department-section department-section--muted teaching-experience-section" aria-label="${t("dept.teaching_environments")}">
     <div class="department-shell">
       <teaching-tabs class="teaching-tabs">
-        <div class="teaching-tabs__list" role="tablist" aria-label="Môi trường giảng dạy">
+        <div class="teaching-tabs__list" role="tablist" aria-label="${t("dept.teaching_environments")}">
           ${tabButtons}
         </div>
         <div class="teaching-tabs__panels">${tabPanels}</div>
@@ -91,11 +95,12 @@ const content = `
     </div>
   </section>`;
 
-export const nursingTeaching = renderDepartmentPage({
-  activeKey: "teaching",
-  hero: {
-    title: "Hoạt động giảng dạy",
-    summary: "Kết nối kiến thức nền tảng, thực hành kỹ năng và trải nghiệm lâm sàng trong quá trình đào tạo điều dưỡng.",
-  },
-  content,
-});
+  return renderDepartmentPage({
+    activeKey: "teaching",
+    hero: {
+      title: t("nursing.teaching.hero_title"),
+      summary: t("nursing.teaching.hero_summary"),
+    },
+    content,
+  });
+}

@@ -1,14 +1,11 @@
-import { LECTURERS, DEPARTMENT_IMAGES } from "../../data/ktyh-department.js";
+import { getLecturers, getDepartmentImages } from "../../data/ktyh-department.js";
 import { renderDepartmentPage } from "../../components/department-body.js";
-
-const rootLecturer = LECTURERS.find((l) => l.order === 1);
-const branch1Lecturers = LECTURERS.filter((l) => l.order >= 2 && l.order <= 6);
-const branch2Lecturers = LECTURERS.filter((l) => l.order >= 7 && l.order <= 8);
+import { t } from "../../i18n.js";
 
 function renderNode(lecturer, defaultIcon = "fa-user") {
   const href = lecturer.profileUrl || "javascript:void(0)";
   const target = lecturer.profileUrl ? 'target="_blank" rel="noopener noreferrer"' : "";
-  const title = lecturer.profileUrl ? "Xem lý lịch khoa học" : "Lý lịch khoa học chưa cập nhật";
+  const title = lecturer.profileUrl ? t("ktyh.lecturers.view_profile_title") : t("ktyh.lecturers.no_profile_title");
   const activeClass = lecturer.profileUrl ? "active-node" : "";
 
   let icon = defaultIcon;
@@ -30,35 +27,43 @@ function renderNode(lecturer, defaultIcon = "fa-user") {
   `;
 }
 
-const branch1Nodes = branch1Lecturers.map((l) => renderNode(l, "fa-user")).join("");
-const branch2Nodes = branch2Lecturers.map((l) => renderNode(l, "fa-user")).join("");
+export function ktyhLecturers() {
+  const LECTURERS = getLecturers();
+  const DEPARTMENT_IMAGES = getDepartmentImages();
 
-const content = `
-  <section class="department-section department-section--muted lecturer-directory-section" aria-label="Sơ đồ tổ chức giảng viên Bộ môn Kỹ thuật Y học">
+  const rootLecturer = LECTURERS.find((l) => l.order === 1);
+  const branch1Lecturers = LECTURERS.filter((l) => l.order >= 2 && l.order <= 6);
+  const branch2Lecturers = LECTURERS.filter((l) => l.order >= 7 && l.order <= 8);
+
+  const branch1Nodes = branch1Lecturers.map((l) => renderNode(l, "fa-user")).join("");
+  const branch2Nodes = branch2Lecturers.map((l) => renderNode(l, "fa-user")).join("");
+
+  const content = `
+  <section class="department-section department-section--muted lecturer-directory-section" aria-label="${t("ktyh.lecturers.aria_label")}">
     <div class="department-shell">
       <div class="lecturer-tree-container">
-        
+
         <!-- Root Node -->
         <div class="tree-root">
           ${renderNode(rootLecturer, "fa-user-tie")}
         </div>
-        
+
         <div class="tree-line-vertical"></div>
-        
+
         <!-- Sub-branches -->
         <div class="tree-branches-container">
           <!-- Branch 1: Giảng viên chuyên trách -->
           <div class="tree-branch">
-            <div class="branch-title">Giảng viên Chuyên trách</div>
+            <div class="branch-title">${t("ktyh.lecturers.branch1_title")}</div>
             <div class="tree-line-vertical-small"></div>
             <div class="branch-nodes-grid">
               ${branch1Nodes}
             </div>
           </div>
-          
+
           <!-- Branch 2: Giảng viên kiêm Giáo vụ -->
           <div class="tree-branch">
-            <div class="branch-title">Giảng viên kiêm Giáo vụ</div>
+            <div class="branch-title">${t("ktyh.lecturers.branch2_title")}</div>
             <div class="tree-line-vertical-small"></div>
             <div class="branch-nodes-grid">
               ${branch2Nodes}
@@ -70,14 +75,15 @@ const content = `
     </div>
   </section>`;
 
-export const ktyhLecturers = renderDepartmentPage({
-  activeKey: "lecturers",
-  hero: {
-    title: "Đội ngũ giảng viên",
-    summary: "Sơ đồ tổ chức nhân sự giảng dạy và quản lý chuyên môn tại Bộ môn Kỹ thuật Y học.",
-    image: DEPARTMENT_IMAGES.lecturers.hero,
-    imageCaption: "Tập thể giảng viên Bộ môn Kỹ thuật Y học năm 2026",
-    context: "Khoa Điều dưỡng - Kỹ thuật Y học",
-  },
-  content,
-});
+  return renderDepartmentPage({
+    activeKey: "lecturers",
+    hero: {
+      title: t("ktyh.lecturers.hero_title"),
+      summary: t("ktyh.lecturers.hero_summary"),
+      image: DEPARTMENT_IMAGES.lecturers.hero,
+      imageCaption: t("ktyh.lecturers.hero_image_caption"),
+      context: t("dept.default_context"),
+    },
+    content,
+  });
+}
