@@ -1,13 +1,20 @@
 import {
-  DEPARTMENT_IMAGES,
-  RESEARCH_ACTIVITIES,
-  RESEARCH_GROUPS,
-  RESEARCH_PATHWAYS,
+  getDepartmentImages,
+  getResearchActivities,
+  getResearchGroups,
+  getResearchPathways,
 } from "../../data/nursing-department.js";
 import { renderDepartmentPage } from "../../components/department-body.js";
+import { t } from "../../i18n.js";
 
-const researchPathways = RESEARCH_PATHWAYS.map(
-  (pathway) => `
+export function nursingResearch() {
+  const DEPARTMENT_IMAGES = getDepartmentImages();
+  const RESEARCH_PATHWAYS = getResearchPathways();
+  const RESEARCH_ACTIVITIES = getResearchActivities();
+  const RESEARCH_GROUPS = getResearchGroups();
+
+  const researchPathways = RESEARCH_PATHWAYS.map(
+    (pathway) => `
     <article class="research-pathway">
       <figure>
         <img src="${pathway.image.src}" alt="${pathway.image.alt}" width="2560" height="1707" loading="lazy">
@@ -18,10 +25,10 @@ const researchPathways = RESEARCH_PATHWAYS.map(
         <p>${pathway.description}</p>
       </div>
     </article>`,
-).join("");
+  ).join("");
 
-const researchActivities = RESEARCH_ACTIVITIES.map(
-  (activity) => `
+  const researchActivities = RESEARCH_ACTIVITIES.map(
+    (activity) => `
     <figure class="research-activity">
       <img src="${activity.image.src}" alt="${activity.image.alt}" width="1280" height="720" loading="lazy">
       <figcaption>
@@ -29,13 +36,13 @@ const researchActivities = RESEARCH_ACTIVITIES.map(
         <strong>${activity.title}</strong>
       </figcaption>
     </figure>`,
-).join("");
+  ).join("");
 
-const researchGroups = RESEARCH_GROUPS.map(
-  (group, groupIndex) => `
+  const researchGroups = RESEARCH_GROUPS.map(
+    (group) => `
     <section class="research-group" aria-labelledby="${group.id}-title">
       <div class="research-group__heading">
-        <p class="department-section-label">${groupIndex === 0 ? "Giảng viên" : "Sinh viên"}</p>
+        <p class="department-section-label">${group.title}</p>
         <h3 id="${group.id}-title">${group.title}</h3>
         <p>${group.description}</p>
       </div>
@@ -44,25 +51,25 @@ const researchGroups = RESEARCH_GROUPS.map(
           .map(
             (category) => `
               <details>
-                <summary><span>${category}</span><small>Đang cập nhật</small></summary>
+                <summary><span>${category}</span><small>${t("dept.updating")}</small></summary>
                 <div class="research-empty">
-                  <h3>Danh mục đang được cập nhật</h3>
-                  <p>Thông tin tiêu đề, tác giả, năm công bố và đường dẫn tài liệu sẽ được bổ sung từ hồ sơ chính thức.</p>
+                  <h3>${t("dept.category_updating_title")}</h3>
+                  <p>${t("dept.category_updating_desc")}</p>
                 </div>
               </details>`,
           )
           .join("")}
       </div>
     </section>`,
-).join("");
+  ).join("");
 
-const content = `
+  const content = `
   <section class="department-section research-pathways-section" aria-labelledby="research-pathways-title">
     <div class="department-shell">
       <div class="department-section-heading research-section-heading">
-        <p class="department-kicker">Nghiên cứu gắn với thực hành</p>
-        <h2 id="research-pathways-title">Hai mạch hoạt động nghiên cứu</h2>
-        <p>Hoạt động nghiên cứu được phát triển đồng thời ở đội ngũ giảng viên và người học, hướng đến chia sẻ tri thức và nâng cao chất lượng chăm sóc.</p>
+        <p class="department-kicker">${t("nursing.research.pathways_kicker")}</p>
+        <h2 id="research-pathways-title">${t("nursing.research.pathways_title")}</h2>
+        <p>${t("nursing.research.pathways_desc")}</p>
       </div>
       <div class="research-pathways">${researchPathways}</div>
     </div>
@@ -71,9 +78,9 @@ const content = `
   <div class="department-section department-section--research department-section--muted">
     <div class="department-shell">
       <div class="department-section-heading research-section-heading">
-        <p class="department-kicker">Công trình và đề tài</p>
-        <h2>Danh mục nghiên cứu</h2>
-        <p>Các đề tài và công bố được tổ chức theo đối tượng thực hiện và loại hình học thuật để thuận tiện tra cứu, cập nhật.</p>
+        <p class="department-kicker">${t("nursing.research.groups_kicker")}</p>
+        <h2>${t("nursing.research.groups_title")}</h2>
+        <p>${t("nursing.research.groups_desc")}</p>
       </div>
       <div class="research-layout">${researchGroups}</div>
     </div>
@@ -82,22 +89,23 @@ const content = `
   <section class="department-section research-activities-section" aria-labelledby="research-activities-title">
     <div class="department-shell">
       <div class="department-section-heading research-section-heading">
-        <p class="department-kicker">Hình ảnh hoạt động</p>
-        <h2 id="research-activities-title">Dấu ấn học thuật</h2>
-        <p>Một số hoạt động báo cáo, hội nghị và trình bày kết quả nghiên cứu của giảng viên, sinh viên Bộ môn.</p>
+        <p class="department-kicker">${t("nursing.research.activities_kicker")}</p>
+        <h2 id="research-activities-title">${t("nursing.research.activities_title")}</h2>
+        <p>${t("nursing.research.activities_desc")}</p>
       </div>
       <div class="research-activities">${researchActivities}</div>
     </div>
   </section>`;
 
-export const nursingResearch = renderDepartmentPage({
-  activeKey: "research",
-  hero: {
-    title: "Nghiên cứu khoa học",
-    context: "Học thuật và đổi mới",
-    summary: "Phát triển thực hành dựa trên bằng chứng thông qua hoạt động nghiên cứu, chia sẻ kết quả chuyên môn và sự tham gia của giảng viên, sinh viên Bộ môn Điều dưỡng.",
-    image: DEPARTMENT_IMAGES.research.hero,
-    imageCaption: "Giảng viên Bộ môn trình bày báo cáo tại hội nghị khoa học",
-  },
-  content,
-});
+  return renderDepartmentPage({
+    activeKey: "research",
+    hero: {
+      title: t("nursing.research.hero_title"),
+      context: t("nursing.research.hero_context"),
+      summary: t("nursing.research.hero_summary"),
+      image: DEPARTMENT_IMAGES.research.hero,
+      imageCaption: t("nursing.research.hero_image_caption"),
+    },
+    content,
+  });
+}

@@ -1,29 +1,32 @@
-import { DEPARTMENT_IMAGES, DEPARTMENT_OVERVIEW } from "../../data/nursing-department.js";
+import { getDepartmentImages, getDepartmentOverview } from "../../data/nursing-department.js";
 import { renderDepartmentPage } from "../../components/department-body.js";
+import { t } from "../../i18n.js";
 
-const { introduction, responsibilities, development } = DEPARTMENT_OVERVIEW;
+export function nursingOverview() {
+  const DEPARTMENT_IMAGES = getDepartmentImages();
+  const { introduction, responsibilities, development } = getDepartmentOverview();
 
-const responsibilityItems = responsibilities.items
-  .map(
-    ({ title, description }) => `
+  const responsibilityItems = responsibilities.items
+    .map(
+      ({ title, description }) => `
       <article class="department-responsibility">
         <h3>${title}</h3>
         <p>${description}</p>
       </article>`,
-  )
-  .join("");
+    )
+    .join("");
 
-const developmentItems = development.items
-  .map(
-    ({ title, description }) => `
+  const developmentItems = development.items
+    .map(
+      ({ title, description }) => `
       <article>
         <h3>${title}</h3>
         <p>${description}</p>
       </article>`,
-  )
-  .join("");
+    )
+    .join("");
 
-const content = `
+  const content = `
   <section class="department-section department-section--intro" aria-labelledby="department-overview-title">
     <div class="department-shell department-intro-grid">
       <div class="department-prose">
@@ -75,13 +78,14 @@ const content = `
 
   `;
 
-export const nursingOverview = renderDepartmentPage({
-  activeKey: "overview",
-  hero: {
-    title: "Bộ môn Điều dưỡng",
-    summary: "Đào tạo gắn với thực hành, nghiên cứu khoa học và chăm sóc sức khỏe cộng đồng.",
-    image: DEPARTMENT_IMAGES.overview.hero,
-    imageCaption: "Giảng viên Bộ môn Điều dưỡng cùng sinh viên tốt nghiệp năm 2026",
-  },
-  content,
-});
+  return renderDepartmentPage({
+    activeKey: "overview",
+    hero: {
+      title: t("nursing.overview.hero_title"),
+      summary: t("nursing.overview.hero_summary"),
+      image: DEPARTMENT_IMAGES.overview.hero,
+      imageCaption: t("nursing.overview.hero_image_caption"),
+    },
+    content,
+  });
+}

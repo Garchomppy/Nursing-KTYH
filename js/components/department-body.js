@@ -1,7 +1,9 @@
+import { t } from "../i18n.js";
+
 function renderHero({
   title,
   summary,
-  context = "Khoa Điều dưỡng - Kỹ thuật Y học",
+  context = t("dept.default_context"),
   image = null,
   imageCaption = "",
 }) {
@@ -29,7 +31,7 @@ export function renderImageOrPlaceholder(image, note) {
   if (!image) {
     return `
       <div class="department-image-placeholder" role="img" aria-label="${note}">
-        <span>Ảnh đang được cập nhật</span>
+        <span>${t("dept.image_updating")}</span>
         <small>${note}</small>
       </div>`;
   }
