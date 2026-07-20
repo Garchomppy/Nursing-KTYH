@@ -104,10 +104,10 @@ function getFooterTemplate() {
             <h2 id="footer-contact-title">${t('footer.contact_title') || "THÔNG TIN LIÊN HỆ"}</h2>
             <p class="school-name">${t('hero.title') || "KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC"}</p>
             <p class="footer-school-parent">${t('footer.school') || "Trường Y Dược - Đại học Đà Nẵng"}</p>
-            <p>Khu đô thị Đại học Đà Nẵng, P.Ngũ Hành Sơn, TP. Đà Nẵng</p>
+            <p>Phòng B.303, Trường Y Dược Đại học Đà Nẵng, P. Hòa Quý, Q. Ngũ Hành Sơn, TP. Đà Nẵng</p>
             <p class="footer-contact-row">
               <i class="fas fa-phone" aria-hidden="true"></i>
-              <a href="tel:+842363xxxxxx">(+84) 02367109357</a>
+              <a href="tel:+842367109357">(+84) 02367109357</a>
             </p>
             <p class="footer-contact-row">
               <i class="fas fa-envelope" aria-hidden="true"></i>
