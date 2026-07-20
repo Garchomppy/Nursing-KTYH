@@ -99,7 +99,7 @@ export function ktyhCommunity() {
       summary: t("ktyh.community.hero_summary"),
       image: COMMUNITY_IMAGES.hero,
       imageCaption: t("ktyh.community.hero_image_caption"),
-      context: t("dept.default_context"),
+      context: t("ktyh.unit_context"),
     },
     content,
   });
