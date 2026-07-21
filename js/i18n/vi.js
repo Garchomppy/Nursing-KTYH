@@ -551,9 +551,9 @@ export default {
   "ktyh.overview.resp_item2_title": "Nghiên cứu khoa học & cải tiến",
   "ktyh.overview.resp_item2_desc":
     "Thực hiện nghiên cứu khoa học, cải tiến các kỹ thuật xét nghiệm phục vụ chẩn đoán bệnh lý và hỗ trợ chăm sóc người bệnh và bảo vệ sức khỏe cộng đồng.",
-  "ktyh.overview.resp_item3_title": "Biên soạn tài liệu & phát triển",
+  "ktyh.overview.resp_item3_title": "Phục vụ cộng đồng",
   "ktyh.overview.resp_item3_desc":
-    "Phát triển và biên soạn ngân hàng đề thi, tài liệu học tập, sách giáo trình chuyên ngành Kỹ thuật Xét nghiệm Y học.",
+    "Tổ chức các lớp đào tạo liên tục (CME) cập nhật công nghệ y học, tập huấn chuyển giao kỹ thuật và thực hiện các chương trình xét nghiệm sàng lọc thiện nguyện.",
   "ktyh.overview.dev_title": "Định hướng phát triển",
   "ktyh.overview.dev_desc":
     "Bộ môn Kỹ thuật Y học hướng tới nâng cao chất lượng đào tạo, đổi mới công nghệ và phát triển nghiên cứu khoa học phục vụ chẩn đoán lâm sàng.",
