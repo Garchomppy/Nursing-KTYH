@@ -134,6 +134,7 @@ export function soDo() {
             font-weight: normal;
             font-size: 14px;
             padding: 6px 10px;
+            text-align: left;       
         }
         .root-node {
             width: 320px;
