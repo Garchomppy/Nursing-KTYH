@@ -405,8 +405,8 @@ export default {
   "ktyh.overview.resp_item1_desc": "Organize theoretical training, pre-clinical skills practice in the lab, and guide clinical internships at partner hospitals for students.",
   "ktyh.overview.resp_item2_title": "Scientific Research & Improvement",
   "ktyh.overview.resp_item2_desc": "Conduct scientific research, improving laboratory testing techniques that serve disease diagnosis and support clinical health care.",
-  "ktyh.overview.resp_item3_title": "Materials Development",
-  "ktyh.overview.resp_item3_desc": "Develop and compile question banks, learning materials, and textbooks for the Medical Laboratory Technology specialty.",
+  "ktyh.overview.resp_item3_title": "Community Service",
+  "ktyh.overview.resp_item3_desc": "Organize Continuous Medical Education (CME) classes, technical training transfer, and voluntary medical screening programs.",
   "ktyh.overview.dev_title": "Development Direction",
   "ktyh.overview.dev_desc": "The Medical Technology Department aims to improve training quality, innovate technology, and develop scientific research serving clinical diagnosis.",
   "ktyh.overview.dev_item1_title": "Modernizing Facilities",
@@ -417,7 +417,7 @@ export default {
   "ktyh.overview.dev_item3_desc": "Promote applied research projects introducing new laboratory testing techniques for screening and early diagnosis of disease among students and the community.",
 
   "ktyh.lecturers.hero_title": "Faculty Team",
-  "ktyh.lecturers.hero_summary": "List of teaching staff and professional management personnel at the Medical Technology Department.",
+  "ktyh.lecturers.hero_summary": "A team of young, dynamic lecturers in the department of Medical Laboratory Technology & Environmental Health, who always update with modern teaching methods.",
   "ktyh.lecturers.hero_image_caption": "KTXN & HAYH Department lecturers in 2026",
   "ktyh.lecturers.aria_label": "List of Medical Technology Department lecturers",
   "ktyh.lecturers.branch1_title": "Dedicated Lecturers",
@@ -560,5 +560,8 @@ export default {
   "ktyh.community.cta_kicker": "Cooperation Contact",
   "ktyh.community.cta_title": "Partnering on Health Screening Programs",
   "ktyh.community.cta_desc": "Local healthcare facilities, schools, or charitable organizations may contact us to coordinate rapid screening tests and community health advocacy events.",
-  "ktyh.community.cta_link": "Contact Information"
+  "ktyh.community.cta_link": "Contact Information",
+  "ktyh.community.gallery_kicker": "Course Images",
+  "ktyh.community.gallery_title": "Theoretical and Practical Classrooms for CME Class",
+  "ktyh.community.gallery_aria_label": "CME Training Class Activity Images"
 };

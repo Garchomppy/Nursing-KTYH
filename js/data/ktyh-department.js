@@ -148,6 +148,7 @@ export function getDepartmentOverview() {
         {
           title: t("ktyh.overview.resp_item3_title"),
           description: t("ktyh.overview.resp_item3_desc"),
+          href: "#/bo-mon-ktxn-hayh/phuc-vu-cong-dong",
         },
       ],
     },
@@ -534,14 +535,20 @@ export function getCommunityProcess() {
 export function getCommunityImages() {
   return {
     hero: {
-      src: "./assets/images/KTYH-Nghien cuu sinh/Nhom NCKH .jpg",
+      src: "./assets/images/4. Khác ( CME, Hợp tác, hội nghị...)/Lớp CME _Ứng dụng SHPT trong chẩn đoán_/XN - CME Ung dung SHPT.jpg",
       alt: t("ktyh.img.community_hero_alt"),
       width: 1280,
       height: 960,
     },
     learning: {
-      src: "./assets/images/KTYH-Giang day/SV TT lấy máu_.jpg",
+      src: "./assets/images/4. Khác ( CME, Hợp tác, hội nghị...)/Lớp CME _Ứng dụng SHPT trong chẩn đoán_/XN-CME Ung dung SHPT 1.jpg",
       alt: t("ktyh.img.community_learning_alt"),
+      width: 1280,
+      height: 960,
+    },
+    certificate: {
+      src: "./assets/images/4. Khác ( CME, Hợp tác, hội nghị...)/Lớp CME _Ứng dụng SHPT trong chẩn đoán_/XN-CME Ung dung SHPT.jpg",
+      alt: t("ktyh.img.community_certificate_alt", "Trao chứng nhận hoàn thành khóa học CME cho học viên"),
       width: 1280,
       height: 960,
     },
