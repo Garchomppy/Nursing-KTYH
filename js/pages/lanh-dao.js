@@ -3,28 +3,6 @@ import { t } from "../i18n.js";
 export function lanhDao() {
   return `
     <style>
-      .nav-tabs {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 15px;
-          margin-bottom: var(--spacing-xl);
-      }
-      .nav-tabs a {
-          padding: 8px 16px;
-          background-color: var(--surface);
-          border: 1px solid var(--primary);
-          border-radius: 4px;
-          color: var(--primary);
-          font-weight: bold;
-          transition: all 0.2s;
-          flex-shrink: 0;
-      }
-      .nav-tabs a:hover {
-          background-color: var(--primary);
-          color: white;
-      }
-
       /* ORG CHART STYLES */
       .org-tree {
           display: flex;
@@ -33,6 +11,7 @@ export function lanhDao() {
           width: 100%;
           overflow-x: auto;
           padding-bottom: 40px;
+          margin-top: 30px;
       }
       .org-node-container {
           display: flex;
@@ -42,23 +21,35 @@ export function lanhDao() {
       }
       .org-card {
           width: 250px;
-          background: transparent;
+          background: #ffffff;
+          border-radius: 8px;
+          padding: 20px 15px;
           margin: 0 10px;
           z-index: 2;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          text-align: center;
+      }
+      .org-card-text-only {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 80px;
       }
       
       /* Connecting Lines */
       .org-line-v {
-          width: 2px;
+          width: 1px;
           height: 30px;
-          background-color: var(--primary);
+          background-color: #dcdcdc;
           margin: 0 auto;
       }
       .org-line-fork {
           height: 20px;
-          border-top: 2px solid var(--primary);
-          border-left: 2px solid var(--primary);
-          border-right: 2px solid var(--primary);
+          border-top: 1px solid #dcdcdc;
+          border-left: 1px solid #dcdcdc;
+          border-right: 1px solid #dcdcdc;
           margin: 0 auto;
           position: relative;
       }
@@ -71,22 +62,30 @@ export function lanhDao() {
           gap: 20px;
       }
 
-      /* Hover effects */
-      .profile-card {
-          transition: transform 0.3s ease;
+      .profile-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: center;
+          background-color: #f0f0f0;
+          margin: 0 auto 15px auto;
+          border: 2px solid #fff;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       }
-      .profile-card:hover {
-          transform: translateY(-5px);
+
+      .org-card h3 {
+          font-size: 14px;
+          color: var(--primary-strong, #1e3a8a);
+          margin-bottom: 5px;
+          font-weight: 700;
       }
-      .profile-card .avatar {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          display: block; 
-          margin-left: auto;
-          margin-right: auto;
-      }
-      .profile-card .avatar:hover {
-          transform: scale(1.05);
-          box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      
+      .org-card p.role {
+          font-size: 12px;
+          color: #666;
+          margin: 0;
+          line-height: 1.4;
       }
 
       /* Responsive for all phones while keeping the tree structure */
@@ -94,20 +93,22 @@ export function lanhDao() {
           .org-card {
               width: 160px;
               margin: 0 5px;
+              padding: 15px 10px;
           }
-          .placeholder-avatar {
-              width: 70px;
-              height: 70px;
+          .org-card-text-only {
+              padding: 10px;
+              min-height: 60px;
           }
-          .profile-card h3 {
+          .profile-avatar {
+              width: 50px;
+              height: 50px;
+              margin-bottom: 10px;
+          }
+          .org-card h3 {
               font-size: 13px;
           }
-          .profile-card .role {
+          .org-card p.role {
               font-size: 11px;
-          }
-          .nav-tabs a {
-              padding: 6px 10px;
-              font-size: 12px;
           }
       }
 
@@ -116,14 +117,10 @@ export function lanhDao() {
               width: 130px;
               padding: 10px 5px;
           }
-          .placeholder-avatar {
-              width: 55px;
-              height: 55px;
-          }
-          .profile-card h3 {
+          .org-card h3 {
               font-size: 11px;
           }
-          .profile-card .role {
+          .org-card p.role {
               font-size: 9px;
           }
           .level-3-container {
@@ -143,24 +140,18 @@ export function lanhDao() {
       @media (max-width: 480px) { .fork-3 { width: 140px; /* 130px card + 10px gap */ } }
     </style>
 
-    <section id="lanh-dao" class="section bg-muted">
+    <section id="lanh-dao" class="section bg-muted" style="background-color: #f8fafc;">
         <div class="container">
-            <h2 class="section-title">${t("leadership.title") || "Ban Lãnh Đạo Khoa"}</h2>
-            
-            <div class="nav-tabs">
-                <a href="#/gioi-thieu">${t("nav.about") || "Giới thiệu chung"}</a>
-                <a href="#/chuc-nang">${t("nav.functions") || "Chức năng - Nhiệm vụ"}</a>
-                <a href="#/so-do">${t("nav.org") || "Sơ đồ cơ cấu tổ chức"}</a>
-            </div>
+            <h2 class="section-title" style="margin-bottom: 10px;">${t("leadership.title") || "Ban Lãnh Đạo Khoa"}</h2>
 
             <!-- SƠ ĐỒ LÃNH ĐẠO (ORG CHART) -->
             <div class="org-tree">
                 
                 <!-- TẦNG 1: Trưởng Khoa -->
                 <div class="org-node-container">
-                    <div class="card profile-card org-card">
-                        <div class="avatar placeholder-avatar" style="background-image: url('assets/images/BLD/ts-nguyen-van-song.png')" title="TS Nguyễn Văn Song"></div>
-                        <h3>TS Nguyễn Văn Song</h3>
+                    <div class="org-card">
+                        <div class="profile-avatar" style="background-image: url('assets/images/BLD/ts-nguyen-van-song.png')" title="TS. Nguyễn Văn Song"></div>
+                        <h3>TS. Nguyễn Văn Song</h3>
                         <p class="role">Trưởng khoa ĐD - KTYH<br>Trưởng Bộ môn XN và HAYH</p>
                     </div>
                 </div>
@@ -170,9 +161,8 @@ export function lanhDao() {
 
                 <!-- TẦNG 2: Phó Khoa -->
                 <div class="org-node-container">
-                    <div class="card profile-card org-card">
-                        <div class="avatar placeholder-avatar" style="background-image: url('assets/images/BLD/ths-truong-thi-my-phuong.jpg')" title="ThS Trương Thị Mỹ Phượng"></div>
-                        <h3>ThS Trương Thị Mỹ Phượng</h3>
+                    <div class="org-card org-card-text-only">
+                        <h3>ThS. Trương Thị Mỹ Phượng</h3>
                         <p class="role">Phó khoa ĐD - KTYH<br>Trưởng Bộ môn Điều Dưỡng</p>
                     </div>
                 </div>
@@ -183,16 +173,14 @@ export function lanhDao() {
 
                 <!-- TẦNG 3: Phó Bộ Môn -->
                 <div class="level-3-container">
-                    <div class="card profile-card org-card" style="margin:0;">
-                        <div class="avatar placeholder-avatar" style="background-image: url('assets/images/BLD/ths-do-thi-thuy-duy.jpg')" title="ThS Đỗ Thị Thuý Duy"></div>
-                        <h3>ThS Đỗ Thị Thuý Duy</h3>
-                        <p class="role">Phó trưởng Bộ môn<br>Điều Dưỡng</p>
+                    <div class="org-card org-card-text-only" style="margin:0;">
+                        <h3>ThS. Đỗ Thị Thuý Duy</h3>
+                        <p class="role">Phó trưởng Bộ môn Điều Dưỡng</p>
                     </div>
                     
-                    <div class="card profile-card org-card" style="margin:0;">
-                        <div class="avatar placeholder-avatar" style="background-image: url('assets/images/BLD/ths-pham-thi-anh-nguyet.jpg')" title="ThS Phạm Thị Ánh Nguyệt"></div>
-                        <h3>ThS Phạm Thị Ánh Nguyệt</h3>
-                        <p class="role">Phó trưởng Bộ môn<br>XN và HAYH</p>
+                    <div class="org-card org-card-text-only" style="margin:0;">
+                        <h3>ThS. Phạm Thị Ánh Nguyệt</h3>
+                        <p class="role">Phó trưởng Bộ môn Bộ môn XN và HAYH</p>
                     </div>
                 </div>
 
