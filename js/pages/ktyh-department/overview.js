@@ -8,10 +8,11 @@ export function ktyhOverview() {
 
   const responsibilityItems = responsibilities.items
     .map(
-      ({ title, description }) => `
+      ({ title, description, href }) => `
       <article class="department-responsibility">
         <h3>${title}</h3>
         <p>${description}</p>
+        ${href ? `<a href="${href}" class="department-text-link">Xem chi tiết &rarr;</a>` : ""}
       </article>`,
     )
     .join("");
@@ -35,7 +36,7 @@ export function ktyhOverview() {
         ${introduction.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
       </div>
       <figure class="department-feature-image">
-        <img src="${DEPARTMENT_IMAGES.departmentActivity.src}" alt="${DEPARTMENT_IMAGES.departmentActivity.alt}" width="${DEPARTMENT_IMAGES.departmentActivity.width}" height="${DEPARTMENT_IMAGES.departmentActivity.height}" loading="lazy">
+        <img src="${DEPARTMENT_IMAGES.facultyGroup.src}" alt="${DEPARTMENT_IMAGES.facultyGroup.alt}" width="${DEPARTMENT_IMAGES.facultyGroup.width}" height="${DEPARTMENT_IMAGES.facultyGroup.height}" loading="lazy">
         <figcaption>${introduction.imageCaption}</figcaption>
       </figure>
     </div>
