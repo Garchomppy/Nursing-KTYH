@@ -98,6 +98,13 @@ export function soDo() {
         .bracket-item:not(:last-child)::before {
             height: calc(50% + 15px + 100%);
         }
+        .bracket-item:first-child::before {
+            top: 50%;
+            height: 50%;
+        }
+        .bracket-item:first-child:not(:last-child)::before {
+            height: calc(15px + 100%);
+        }
         .bracket-item .custom-node {
             width: 100%;
         }
