@@ -67,6 +67,29 @@ export function ktyhCommunity() {
     </div>
   </section>
 
+  <section class="department-section teaching-gallery" aria-label="${t("ktyh.community.gallery_aria_label", "Hình ảnh hoạt động lớp đào tạo CME")}">
+    <div class="department-shell">
+      <div class="teaching-gallery__heading">
+        <p class="department-kicker">${t("ktyh.community.gallery_kicker", "Hình ảnh khóa học")}</p>
+        <h3>${t("ktyh.community.gallery_title", "Không gian giảng dạy lý thuyết và thực hành lớp CME")}</h3>
+      </div>
+      <div class="teaching-gallery__grid">
+        <figure>
+          <img src="${COMMUNITY_IMAGES.hero.src}" alt="${COMMUNITY_IMAGES.hero.alt}" width="${COMMUNITY_IMAGES.hero.width}" height="${COMMUNITY_IMAGES.hero.height}" loading="lazy">
+          <figcaption>${COMMUNITY_IMAGES.hero.alt}</figcaption>
+        </figure>
+        <figure>
+          <img src="${COMMUNITY_IMAGES.learning.src}" alt="${COMMUNITY_IMAGES.learning.alt}" width="${COMMUNITY_IMAGES.learning.width}" height="${COMMUNITY_IMAGES.learning.height}" loading="lazy">
+          <figcaption>${COMMUNITY_IMAGES.learning.alt}</figcaption>
+        </figure>
+        <figure>
+          <img src="${COMMUNITY_IMAGES.certificate.src}" alt="${COMMUNITY_IMAGES.certificate.alt}" width="${COMMUNITY_IMAGES.certificate.width}" height="${COMMUNITY_IMAGES.certificate.height}" loading="lazy">
+          <figcaption>${COMMUNITY_IMAGES.certificate.alt}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section class="department-section community-records-section" aria-labelledby="community-records-title">
     <div class="department-shell community-records-layout">
       <div>
@@ -74,7 +97,7 @@ export function ktyhCommunity() {
         <p>${t("ktyh.community.records_desc")}</p>
       </div>
       <aside class="community-records-status" aria-label="${t("ktyh.community.records_status_label")}">
-        <p class="department-status">${t("ktyh.community.records_status")}</p>
+        <p class="department-status" style="background-color: #e6f7ed; color: #1f7a40; border-color: #a3e0be;">${t("ktyh.community.records_status")}</p>
         <h3>${t("ktyh.community.records_status_title")}</h3>
         <p>${t("ktyh.community.records_status_desc")}</p>
       </aside>

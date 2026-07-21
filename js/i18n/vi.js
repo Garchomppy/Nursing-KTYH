@@ -551,9 +551,9 @@ export default {
   "ktyh.overview.resp_item2_title": "Nghiên cứu khoa học & cải tiến",
   "ktyh.overview.resp_item2_desc":
     "Thực hiện nghiên cứu khoa học, cải tiến các kỹ thuật xét nghiệm phục vụ chẩn đoán bệnh lý và hỗ trợ chăm sóc người bệnh và bảo vệ sức khỏe cộng đồng.",
-  "ktyh.overview.resp_item3_title": "Biên soạn tài liệu & phát triển",
+  "ktyh.overview.resp_item3_title": "Phục vụ cộng đồng",
   "ktyh.overview.resp_item3_desc":
-    "Phát triển và biên soạn ngân hàng đề thi, tài liệu học tập, sách giáo trình chuyên ngành Kỹ thuật Xét nghiệm Y học.",
+    "Tổ chức các lớp đào tạo liên tục (CME) cập nhật công nghệ y học, tập huấn chuyển giao kỹ thuật và thực hiện các chương trình xét nghiệm sàng lọc thiện nguyện.",
   "ktyh.overview.dev_title": "Định hướng phát triển",
   "ktyh.overview.dev_desc":
     "Bộ môn Kỹ thuật Y học hướng tới nâng cao chất lượng đào tạo, đổi mới công nghệ và phát triển nghiên cứu khoa học phục vụ chẩn đoán lâm sàng.",
@@ -569,7 +569,7 @@ export default {
 
   "ktyh.lecturers.hero_title": "Đội ngũ giảng viên",
   "ktyh.lecturers.hero_summary":
-    "Danh sách nhân sự giảng dạy và quản lý chuyên môn tại Bộ môn Kỹ thuật Y học.",
+    "Đội ngũ giảng viên bộ môn xét nghiệm & HAYH trẻ trung, năng động và luôn cập nhật phương pháp giảng dạy mới.",
   "ktyh.lecturers.hero_image_caption":
     "Tập thể giảng viên Bộ môn Kỹ thuật Y học năm 2026",
   "ktyh.lecturers.aria_label": "Danh sách giảng viên Bộ môn Kỹ thuật Y học",
@@ -717,76 +717,79 @@ export default {
   "ktyh.research.category_updating_desc":
     "Thông tin đề tài, tác giả, năm báo cáo và công bố chính thức đang được bộ môn tổng hợp và thẩm định.",
 
-  "ktyh.community.hero_title": "Phục vụ cộng đồng",
+  "ktyh.community.hero_title": "Đào tạo liên tục (CME)",
   "ktyh.community.hero_summary":
-    "Ứng dụng chuyên môn Kỹ thuật Y học vào các chương trình sàng lọc bệnh tật, chăm sóc sức khỏe ban đầu và nâng cao nhận thức an toàn sinh học trong cộng đồng.",
+    "Hoạt động Lớp CME _Ứng dụng Sinh học phân tử trong chẩn đoán_ cập nhật công nghệ xét nghiệm y học hiện đại và nâng cao tay nghề thực hành lâm sàng.",
   "ktyh.community.hero_image_caption":
-    "Sinh viên và giảng viên Bộ môn tham gia các hoạt động chuyên môn hỗ trợ xã hội.",
-  "ktyh.community.area1_title": "Xét nghiệm thiện nguyện",
+    "Giảng viên và học viên lớp CME chụp hình lưu niệm ngày khai khóa.",
+  "ktyh.community.area1_title": "Nguyên lý Sinh học phân tử",
   "ktyh.community.area1_desc":
-    "Đo huyết áp, sàng lọc đường huyết nhanh và tư vấn sức khỏe cơ bản cho bà con vùng sâu, vùng khó khăn.",
+    "Hệ thống hóa kiến thức về cấu trúc DNA/RNA, nguyên lý các phản ứng khuếch đại gen (PCR, Real-time PCR) và ứng dụng lâm sàng.",
   "ktyh.community.area1_focus":
-    "Sàng lọc đường huyết, kiểm tra huyết áp và tư vấn lối sống phòng bệnh.",
-  "ktyh.community.area2_title": "Tư vấn & Tuyên truyền",
+    "Cấu trúc hạt nhân tế bào, cơ chế nhân bản gen và thiết kế mồi (primer) chuyên biệt.",
+  "ktyh.community.area2_title": "Kỹ thuật Real-time PCR",
   "ktyh.community.area2_desc":
-    "Hướng dẫn cộng đồng phòng tránh bệnh truyền nhiễm, cách xem kết quả xét nghiệm định kỳ và chăm sóc bản thân.",
+    "Quy trình thực hành thiết lập phản ứng, chạy máy Real-time PCR và phân tích kết quả chẩn đoán các tác nhân gây bệnh truyền nhiễm, đột biến gen.",
   "ktyh.community.area2_focus":
-    "Vệ sinh phòng dịch và giải thích các chỉ số xét nghiệm thường gặp.",
-  "ktyh.community.area3_title": "Tập huấn và Chuyển giao",
+    "Phân tích đồ thị khuếch đại, xác định giá trị chu kỳ ngưỡng Ct và diễn giải kết quả xét nghiệm.",
+  "ktyh.community.area3_title": "Giải trình tự gen",
   "ktyh.community.area3_desc":
-    "Hỗ trợ đào tạo kỹ thuật viên cơ bản và tập huấn quy trình lấy mẫu an toàn cho các cơ sở y tế tuyến dưới.",
+    "Giới thiệu nguyên lý giải trình tự gen Sanger và giải trình tự thế hệ mới (NGS) ứng dụng trong tầm soát đột biến và kháng thuốc.",
   "ktyh.community.area3_focus":
-    "Quy trình lấy mẫu chuẩn xác, bảo quản mẫu bệnh phẩm lâm sàng.",
-  "ktyh.community.area4_title": "Bảo vệ môi trường y tế",
+    "Đọc bản đồ giải trình tự gen, phát hiện các điểm đột biến và đối chiếu cơ sở dữ liệu NCBI.",
+  "ktyh.community.area4_title": "An toàn sinh học phòng Lab",
   "ktyh.community.area4_desc":
-    "Tuyên truyền an toàn sinh học và nâng cao nhận thức xử lý chất thải y tế trong cộng đồng.",
+    "Nguyên tắc thiết kế phòng xét nghiệm SHPT, phân luồng công việc một chiều tránh nhiễm chéo và xử lý sự cố tràn đổ mẫu sinh học.",
   "ktyh.community.area4_focus":
-    "Phòng chống lây nhiễm chéo và phân loại rác thải y tế.",
-  "ktyh.community.process1_title": "Lắng nghe nhu cầu",
+    "Trang bị bảo hộ cá nhân (PPE) chuẩn, quy trình tiệt trùng dụng cụ và an toàn vận hành thiết bị.",
+  "ktyh.community.process1_title": "Khảo sát nhu cầu",
   "ktyh.community.process1_desc":
-    "Phối hợp với địa phương xác định nhu cầu sàng lọc xét nghiệm (đường huyết, ký sinh trùng...).",
-  "ktyh.community.process2_title": "Chuẩn bị chuyên môn",
+    "Tiếp nhận đăng ký từ các y bác sĩ, kỹ thuật viên xét nghiệm tại các cơ sở y tế khu vực Miền Trung - Tây Nguyên.",
+  "ktyh.community.process2_title": "Đào tạo lý thuyết",
   "ktyh.community.process2_desc":
-    "Chuẩn bị máy đo cầm tay, sinh phẩm xét nghiệm nhanh và các trang thiết bị bảo hộ an toàn sinh học.",
-  "ktyh.community.process3_title": "Thực hiện sàng lọc",
+    "Trang bị lý thuyết nền tảng về sinh học phân tử, nguyên lý hoạt động của hệ thống máy xét nghiệm tự động hóa.",
+  "ktyh.community.process3_title": "Thực hành phòng Lab",
   "ktyh.community.process3_desc":
-    "Tổ chức các trạm lấy mẫu và đo đạc nhanh tại chỗ, đảm bảo an toàn sinh học tuyệt đối cho người dân.",
-  "ktyh.community.process4_title": "Tư vấn và phản hồi",
+    "Học viên trực tiếp tiến hành ly trích mẫu bệnh phẩm, thiết lập phản ứng PCR và thao tác vận hành hệ thống Real-time PCR.",
+  "ktyh.community.process4_title": "Đánh giá & Cấp chứng chỉ",
   "ktyh.community.process4_desc":
-    "Giải thích ý nghĩa kết quả xét nghiệm trực tiếp cho người dân, hướng dẫn chế độ ăn uống và theo dõi y tế phù hợp.",
+    "Thực hiện bài kiểm tra đánh giá năng lực lý thuyết và thực hành để cấp chứng chỉ đào tạo liên tục (CME) đạt chuẩn Bộ Y tế.",
   "ktyh.community.activities_title":
-    "Chuyên môn KTXN & HAYH đóng góp cho sức khỏe xã hội",
+    "Nâng cao chuyên môn y khoa thông qua lớp CME",
   "ktyh.community.activities_desc":
-    "Bộ môn định hướng hoạt động theo nhu cầu sàng lọc sức khỏe thực tiễn của cộng đồng, phối hợp chặt chẽ cùng các bệnh viện và các ban ngành địa phương.",
+    "Bộ môn Kỹ thuật Y học thường xuyên tổ chức các lớp Đào tạo liên tục (CME) nhằm cập nhật công nghệ xét nghiệm y học hiện đại, đáp ứng nhu cầu thực tiễn của các cơ sở y tế.",
   "ktyh.community.process_title":
-    "Cách thức chúng tôi tổ chức chương trình cộng đồng",
+    "Quy trình triển khai khóa đào tạo CME",
   "ktyh.community.process_desc":
-    "Mỗi hoạt động chăm sóc sức khỏe cộng đồng đều tuân thủ chặt chẽ các yêu cầu về an toàn sinh học, từ khâu khảo sát nhu cầu, thu thập mẫu xét nghiệm cho đến tư vấn phản hồi.",
+    "Để đảm bảo hiệu quả học tập cao nhất, quy trình tổ chức lớp học được thiết kế khoa học, kết hợp chặt chẽ giữa giảng dạy lý thuyết chuyên sâu và thực hành thực tế phòng Lab.",
   "ktyh.community.learning_image_caption":
-    "Sinh viên chuẩn bị năng lực thao tác lấy mẫu và kiểm định chất lượng xét nghiệm kỹ lưỡng trước khi tham gia hoạt động cộng đồng.",
+    "Thao tác chuẩn xác trên thiết bị hiện đại tại phòng Lab là yêu cầu bắt buộc của khóa học.",
   "ktyh.community.learning_title":
-    "Phục vụ cộng đồng nâng cao tay nghề thực tiễn",
+    "Lớp CME: Ứng dụng Sinh học phân tử trong chẩn đoán",
   "ktyh.community.learning_desc":
-    "Các chương trình thiện nguyện mang lại trải nghiệm thực tiễn quý giá cho sinh viên KTXN & HAYH, rèn luyện kỹ năng lấy mẫu hiện trường, xử lý dữ liệu và giao tiếp chuyên nghiệp.",
+    "Chương trình được xây dựng chuyên sâu nhằm trang bị cho học viên năng lực làm chủ các kỹ nghệ chẩn đoán phân tử tiên tiến, có thể ứng dụng ngay tại các đơn vị công tác:",
   "ktyh.community.learning_li1":
-    "Nhận diện vấn đề sức khỏe ưu tiên cần xét nghiệm sàng lọc.",
+    "Nắm vững lý thuyết phản ứng nhân bản gen PCR và Real-time PCR.",
   "ktyh.community.learning_li2":
-    "Thực hành kỹ thuật xét nghiệm trong môi trường lưu động dã ngoại.",
+    "Thực hành thành thạo kỹ thuật tách chiết DNA/RNA từ mẫu bệnh phẩm lâm sàng.",
   "ktyh.community.learning_li3":
-    "Phát triển đạo đức nghề nghiệp và ý thức trách nhiệm xã hội.",
-  "ktyh.community.records_title": "Tính minh bạch trong hoạt động cộng đồng",
+    "Phân tích kết quả chạy máy Real-time PCR và phát hiện đột biến gen kháng thuốc.",
+  "ktyh.community.records_title": "Kiểm chuẩn & Cấp chứng chỉ chính thức",
   "ktyh.community.records_desc":
-    "Bộ môn KTXN & HAYH chỉ công bố số liệu và hình ảnh khi có hồ sơ báo cáo tổng kết được nghiệm thu chính thức.",
+    "Khóa học đào tạo liên tục (CME) của Bộ môn Kỹ thuật Y học được thiết kế và kiểm soát chất lượng nghiêm ngặt theo đúng quy định của Bộ Y tế và Đại học Đà Nẵng.",
   "ktyh.community.records_status_label":
-    "Trạng thái dữ liệu hoạt động cộng đồng KTXN & HAYH",
-  "ktyh.community.records_status": "Đang bổ sung dữ liệu",
+    "Trạng thái đào tạo lớp CME",
+  "ktyh.community.records_status": "Đã hoàn thành",
   "ktyh.community.records_status_title":
-    "Đang tổng hợp hồ sơ các đợt khám sàng lọc thiện nguyện",
+    "Đã trao chứng chỉ hoàn thành CME cho học viên",
   "ktyh.community.records_status_desc":
-    "Hình ảnh và số liệu chi tiết sẽ được công bố sau khi được thẩm định hoàn tất.",
-  "ktyh.community.cta_kicker": "Kết nối hợp tác",
-  "ktyh.community.cta_title": "Phối hợp xây dựng chương trình sàng lọc y tế",
+    "Học viên tham dự đầy đủ thời lượng và đạt kết quả kiểm tra lý thuyết - thực hành cuối khóa đều được nhận chứng nhận CME chính thức có giá trị toàn quốc.",
+  "ktyh.community.cta_kicker": "Đăng ký khóa học",
+  "ktyh.community.cta_title": "Nhận thông tin tuyển sinh lớp CME tiếp theo",
   "ktyh.community.cta_desc":
-    "Các cơ sở y tế địa phương, trường học hoặc hội từ thiện có thể liên hệ để phối hợp tổ chức các buổi xét nghiệm nhanh sàng lọc và tuyên truyền y tế cộng đồng.",
-  "ktyh.community.cta_link": "Thông tin liên hệ",
+    "Các y bác sĩ, kỹ thuật viên xét nghiệm hoặc cơ sở y tế có nhu cầu đào tạo, chuyển giao kỹ thuật sinh học phân tử vui lòng liên hệ bộ môn để nhận lịch tuyển sinh mới nhất.",
+  "ktyh.community.cta_link": "Đăng ký ngay",
+  "ktyh.community.gallery_kicker": "Hình ảnh khóa học",
+  "ktyh.community.gallery_title": "Không gian giảng dạy lý thuyết và thực hành lớp CME",
+  "ktyh.community.gallery_aria_label": "Hình ảnh hoạt động lớp đào tạo CME",
 };
