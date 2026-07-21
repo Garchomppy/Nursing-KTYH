@@ -50,10 +50,14 @@ export default {
   // Functions - Duties
   "func.title": "Functions - Duties",
   "func.section1.title": "I. Functions",
-  "func.section1.intro": "The Faculty of Nursing and Medical Technology is a professional unit of the University, under the direct direction of the Rector, with the following functions:",
-  "func.section1.item1": "Assist the Rector in building the Faculty's training strategy in line with the University's overall strategic direction.",
-  "func.section1.item2": "Manage and operate the professional activities of the affiliated departments.",
-  "func.section1.item3": "Be responsible for managing the training disciplines assigned to the Faculty.",
+  "func.section1.intro":
+    "The Faculty of Nursing and Medical Technology is a professional unit <strong>belonging to</strong> the University, under the direct <strong>management</strong> and direction of the Rector, with the following functions:",
+  "func.section1.item1":
+    "<strong>Advise</strong> the Rector in building the Faculty's training strategy in line with the University's overall strategic direction.",
+  "func.section1.item2":
+    "<strong>Organize,</strong> manage, and operate the professional activities of the affiliated departments.",
+  "func.section1.item3":
+    "<strong>Comprehensively</strong> manage the training disciplines assigned to the Faculty.",
   "func.section2.title": "II. Duties and Powers",
   "func.section2.item1.label": "Personnel and organizational management:",
   "func.section2.item1.text": "Manage all departments under the Faculty of Nursing and Medical Technology, and manage lecturers, other staff, and students under the Faculty according to the Rector's delegation.",
@@ -94,7 +98,8 @@ export default {
   "contact.info_title": "Faculty Information",
   "contact.intro": "If you have any questions about training programs, admissions, or cooperation, feel free to contact the Faculty of Nursing - Medical Technology. We are always ready to support you!",
   "contact.address.label": "Address",
-  "contact.address.text": "Danang University Urban Area, Hoa Quy Ward, Ngu Hanh Son District, Da Nang City",
+  "contact.address.text":
+    "Room B.303, University of Medicine and Pharmacy, Nam Ky Khoi Nghia, Hoa Quy, Ngu Hanh Son, Da Nang City",
   "contact.phone.label": "Phone",
   "contact.email.label": "Email",
   "contact.form_title": "Send a Message",

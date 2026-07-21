@@ -1,5 +1,42 @@
 import { t } from "../i18n.js";
 
+if (!window.submitContactForm) {
+  window.submitContactForm = function (event, form) {
+    event.preventDefault();
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    const prevText = btn.innerText;
+    btn.innerText = "Đang gửi...";
+    fetch("https://sheetdb.io/api/v1/lu9nwkzztz4h9", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        data: [
+          {
+            "Họ và tên": form.name.value,
+            "Email": form.email.value,
+            "Nội dung": form.message.value,
+            "Date": new Date().toLocaleString(),
+          },
+        ],
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(form.dataset.successMsg);
+        form.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Có lỗi xảy ra, vui lòng thử lại sau.");
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerText = prevText;
+      });
+  };
+}
+
 export function lienHe() {
   return `
         <!-- Liên hệ -->
@@ -48,18 +85,18 @@ export function lienHe() {
                     <!-- Form Liên hệ -->
                     <div style="background-color: var(--surface); padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border);">
                         <h3 style="color: var(--primary-strong); margin-bottom: 20px; font-size: 24px;">${t("contact.form_title")}</h3>
-                        <form onsubmit='event.preventDefault(); alert(${JSON.stringify(t("contact.form.success"))});'>
+                        <form onsubmit="window.submitContactForm(event, this)" data-success-msg="${t("contact.form.success")}">
                             <div style="margin-bottom: 15px;">
                                 <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--on-surface);">${t("contact.form.name_label")}</label>
-                                <input type="text" placeholder="${t("contact.form.name_placeholder")}" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box;" required>
+                                <input type="text" name="name" placeholder="${t("contact.form.name_placeholder")}" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box;" required>
                             </div>
                             <div style="margin-bottom: 15px;">
                                 <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--on-surface);">${t("contact.form.email_label")}</label>
-                                <input type="email" placeholder="${t("contact.form.email_placeholder")}" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box;" required>
+                                <input type="email" name="email" placeholder="${t("contact.form.email_placeholder")}" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; box-sizing: border-box;" required>
                             </div>
                             <div style="margin-bottom: 20px;">
                                 <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--on-surface);">${t("contact.form.message_label")}</label>
-                                <textarea placeholder="${t("contact.form.message_placeholder")}" rows="4" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; resize: vertical; box-sizing: border-box;" required></textarea>
+                                <textarea name="message" placeholder="${t("contact.form.message_placeholder")}" rows="4" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 15px; resize: vertical; box-sizing: border-box;" required></textarea>
                             </div>
                             <button type="submit" style="background-color: var(--primary); color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; transition: background-color 0.3s; margin-top: 10px;">${t("contact.form.submit")}</button>
                         </form>
