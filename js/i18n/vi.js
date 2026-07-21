@@ -569,7 +569,7 @@ export default {
 
   "ktyh.lecturers.hero_title": "Đội ngũ giảng viên",
   "ktyh.lecturers.hero_summary":
-    "Danh sách nhân sự giảng dạy và quản lý chuyên môn tại Bộ môn Kỹ thuật Y học.",
+    "Đội ngũ giảng viên bộ môn xét nghiệm & HAYH trẻ trung, năng động và luôn cập nhật phương pháp giảng dạy mới.",
   "ktyh.lecturers.hero_image_caption":
     "Tập thể giảng viên Bộ môn Kỹ thuật Y học năm 2026",
   "ktyh.lecturers.aria_label": "Danh sách giảng viên Bộ môn Kỹ thuật Y học",
