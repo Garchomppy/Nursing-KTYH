@@ -8,9 +8,9 @@ class SiteHero extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <div class="container" style="padding-top: 10px;">
-        <header class="hero" style="border-radius: 8px; overflow: hidden; height: 400px;">
-            <div class="hero-overlay" style="border-radius: 12px;"></div>
+    <div class="container" style="padding: 10px 0;">
+        <header class="hero" style="overflow: hidden; height: 400px;">
+            <div class="hero-overlay" style=""></div>
             <div class="hero-content">
                 <h1>${t('hero.title')}</h1>
                 <p>${t('hero.desc')}</p>

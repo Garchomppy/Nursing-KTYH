@@ -153,7 +153,7 @@ export function soDo() {
             top: 100%;
             left: 50%;
             width: 2px;
-            height: 60px;
+            height: 64px;
             background: var(--primary);
             z-index: 1;
         }
