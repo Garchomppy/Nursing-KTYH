@@ -134,7 +134,7 @@ export function getDepartmentOverview() {
       primary: {
         title: t("ktyh.overview.resp_primary_title"),
         description: t("ktyh.overview.resp_primary_desc"),
-        image: DEPARTMENT_IMAGES.departmentActivity,
+        image: DEPARTMENT_IMAGES.facultyGroup,
       },
       items: [
         {
