@@ -67,7 +67,7 @@ export function lienHe() {
                             </div>
                             <div>
                                 <h4 style="margin-bottom: 5px; color: var(--on-surface);">${t("contact.phone.label")}</h4>
-                                <p style="color: var(--on-surface-variant);"><a href="tel:+842363xxxxxx" style="color: inherit; text-decoration: none;">(+84) 0236 3 xxx xxx</a></p>
+                                <p style="color: var(--on-surface-variant);"><a href="tel:+842367109357" style="color: inherit; text-decoration: none;">(+84) 02367109357</a></p>
                             </div>
                         </div>
 

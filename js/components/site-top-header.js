@@ -64,6 +64,9 @@ class SiteTopHeader extends HTMLElement {
             <div class="search-icon">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
+            <div class="mobile-menu-toggle" style="display:none;" aria-label="Toggle menu">
+              <i class="fa-solid fa-bars"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -78,6 +81,38 @@ class SiteTopHeader extends HTMLElement {
         setLang(e.target.value);
       });
     }
+    
+    // Add event listener for mobile menu toggle
+    const menuToggle = this.querySelector('.mobile-menu-toggle');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const navLinks = document.querySelector('.nav-links');
+        const navOverlay = document.querySelector('.nav-overlay');
+        if (navLinks) navLinks.classList.add('active');
+        if (navOverlay) navOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent background scrolling
+      });
+    }
+    
+    // Close mobile menu when clicking outside or on a link
+    document.addEventListener('click', (e) => {
+      const navLinks = document.querySelector('.nav-links');
+      const navOverlay = document.querySelector('.nav-overlay');
+      
+      const closeMenu = () => {
+        if (navLinks) navLinks.classList.remove('active');
+        if (navOverlay) navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      if (navLinks && navLinks.classList.contains('active')) {
+        // If clicked on the overlay, close icon, or a link
+        if (e.target.closest('.nav-overlay') || e.target.closest('.nav-close') || e.target.tagName === 'A') {
+          closeMenu();
+        }
+      }
+    });
   }
 
   updateDate() {

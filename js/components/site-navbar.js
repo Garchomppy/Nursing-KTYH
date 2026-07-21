@@ -9,6 +9,9 @@ class SiteNavbar extends HTMLElement {
   render() {
     this.innerHTML = `
     <nav class="navbar">
+        <div class="nav-overlay">
+            <div class="nav-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
         <div class="container nav-container">
             <ul class="nav-links">
                 <li><a href="#/gioi-thieu">${t('nav.about')}</a></li>
