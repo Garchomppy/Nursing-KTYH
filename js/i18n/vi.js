@@ -33,7 +33,7 @@ export default {
   // Hero
   "hero.title": "Khoa Điều Dưỡng và Kỹ Thuật Y Học",
   "hero.desc":
-    "Chung tay đào tạo nguồn nhân lực Y tế chất lượng cao, nâng cao năng lực nghiên cứu khoa học, hội nhập khu vực và quốc tế, góp phần chăm sóc sức khỏe cộng đồng.",
+    "Chung tay đào tạo nguồn nhân lực Y tế chất lượng cao, nâng cao năng lực nghiên cứu khoa học, hợp tác quốc tế, góp phần chăm sóc sức khỏe cộng đồng",
 
   // Footer
   "footer.contact_title": "THÔNG TIN LIÊN HỆ",
@@ -61,13 +61,7 @@ export default {
   "func.title": "Chức năng - Nhiệm vụ",
   "func.section1.title": "I. Chức năng",
   "func.section1.intro":
-    "Khoa Điều dưỡng và Kỹ thuật Y học là đơn vị chuyên môn <strong> thuộc </strong> Trường, chịu sự <strong>quản lý</strong> và chỉ đạo trực tiếp của Hiệu trưởng, có chức năng:",
-  "func.section1.item1":
-    "<strong>Tham mưu</strong> Hiệu trưởng xây dựng chiến lược đào tạo của Khoa theo định hướng chiến lược chung của Nhà trường.",
-  "func.section1.item2":
-    "<strong>Tổ chức,</strong> quản lý và điều hành các hoạt động chuyên môn của các bộ môn trực thuộc.",
-  "func.section1.item3":
-    "Quản lý <strong>toàn diện các</strong>  ngành đào tạo do Khoa phụ trách.",
+    "Khoa Điều dưỡng và Kỹ thuật Y học là đơn vị chuyên môn thuộc Trường, chịu sự quản lý và chỉ đạo trực tiếp của Hiệu trưởng, có chức năng tham mưu, tổ chức, triển khai phát triển đội ngũ, chương trình đào tạo, hoạt động giảng dạy, NCKH, hợp tác quốc tế và phục vụ cộng đồng",
   "func.section2.title": "II. Nhiệm vụ và quyền hạn",
   "func.section2.item1.label": "Quản lý nhân sự và tổ chức:",
   "func.section2.item1.text":
@@ -93,7 +87,9 @@ export default {
   "func.section2.item8.label": "Mở rộng mạng lưới thực hành:",
   "func.section2.item8.text":
     "Phối hợp với Phòng Hành chính – Tổng hợp, Phòng Đào tạo trong việc kết nối quan hệ hợp tác Viện – Trường với các cơ sở thực hành. Phân công nhân sự công tác khám chữa bệnh tại Trung tâm Y khoa.",
-
+  "func.section2.item9.label": "Tổ chức hoạt động cộng đồng: ",
+  "func.section2.item9.text":
+    "Huy động lực lượng giảng viên, sinh viên tham gia nhằm nâng cao ý thức trách nhiệm xã hội, rèn luyện kỹ năng thực hành và góp phần nâng cao chất lượng chăm sóc sức khỏe nhân dân.",
   // Giới thiệu chung
   "about.title": "Giới thiệu chung",
   "about.p1":
@@ -758,8 +754,7 @@ export default {
     "Nâng cao chuyên môn y khoa thông qua lớp CME",
   "ktyh.community.activities_desc":
     "Bộ môn Kỹ thuật Y học thường xuyên tổ chức các lớp Đào tạo liên tục (CME) nhằm cập nhật công nghệ xét nghiệm y học hiện đại, đáp ứng nhu cầu thực tiễn của các cơ sở y tế.",
-  "ktyh.community.process_title":
-    "Quy trình triển khai khóa đào tạo CME",
+  "ktyh.community.process_title": "Quy trình triển khai khóa đào tạo CME",
   "ktyh.community.process_desc":
     "Để đảm bảo hiệu quả học tập cao nhất, quy trình tổ chức lớp học được thiết kế khoa học, kết hợp chặt chẽ giữa giảng dạy lý thuyết chuyên sâu và thực hành thực tế phòng Lab.",
   "ktyh.community.learning_image_caption":
@@ -777,8 +772,7 @@ export default {
   "ktyh.community.records_title": "Kiểm chuẩn & Cấp chứng chỉ chính thức",
   "ktyh.community.records_desc":
     "Khóa học đào tạo liên tục (CME) của Bộ môn Kỹ thuật Y học được thiết kế và kiểm soát chất lượng nghiêm ngặt theo đúng quy định của Bộ Y tế và Đại học Đà Nẵng.",
-  "ktyh.community.records_status_label":
-    "Trạng thái đào tạo lớp CME",
+  "ktyh.community.records_status_label": "Trạng thái đào tạo lớp CME",
   "ktyh.community.records_status": "Đã hoàn thành",
   "ktyh.community.records_status_title":
     "Đã trao chứng chỉ hoàn thành CME cho học viên",
@@ -790,6 +784,7 @@ export default {
     "Các y bác sĩ, kỹ thuật viên xét nghiệm hoặc cơ sở y tế có nhu cầu đào tạo, chuyển giao kỹ thuật sinh học phân tử vui lòng liên hệ bộ môn để nhận lịch tuyển sinh mới nhất.",
   "ktyh.community.cta_link": "Đăng ký ngay",
   "ktyh.community.gallery_kicker": "Hình ảnh khóa học",
-  "ktyh.community.gallery_title": "Không gian giảng dạy lý thuyết và thực hành lớp CME",
+  "ktyh.community.gallery_title":
+    "Không gian giảng dạy lý thuyết và thực hành lớp CME",
   "ktyh.community.gallery_aria_label": "Hình ảnh hoạt động lớp đào tạo CME",
 };

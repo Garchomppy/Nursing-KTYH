@@ -16,11 +16,6 @@ export function chucNang() {
                     <div  style="margin-bottom: 30px;">
                         <h3 style="color: var(--secondary); font-size: 28px; margin-bottom: 15px;">${t("func.section1.title")}</h3>
                         <p style="text-align: justify; margin-bottom: 12px; font-size: 16px;">${t("func.section1.intro")}</p>
-                        <ul style="text-align: justify; list-style-type: square; margin-left: 20px; font-size: 16px;">
-                            <li style="margin-bottom: 8px;">${t("func.section1.item1")}</li>
-                            <li style="margin-bottom: 8px;">${t("func.section1.item2")}</li>
-                            <li>${t("func.section1.item3")}</li>
-                        </ul>
                     </div>
 
                     <div >
@@ -34,7 +29,9 @@ export function chucNang() {
                             <li style="margin-bottom: 14px;"><strong>${t("func.section2.item6.label")}</strong> ${t("func.section2.item6.text")}</li>
                             <li style="margin-bottom: 14px;"><strong>${t("func.section2.item7.label")}</strong> ${t("func.section2.item7.text")}</li>
                             <li style="margin-bottom: 14px;"><strong>${t("func.section2.item8.label")}</strong> ${t("func.section2.item8.text")}</li>
-                        </ul>
+                            <li style="margin-bottom: 14px;"><strong>${t("func.section2.item9.label")}</strong> ${t("func.section2.item9.text")}</li>
+
+                            </ul>
                     </div>
                 </div>
             </div>

@@ -2,11 +2,31 @@ import { t } from "../i18n.js";
 
 export function getDepartmentRoutes() {
   return [
-    { key: "overview", label: t("ktyh.route.overview"), href: "#/bo-mon-ktxn-hayh" },
-    { key: "lecturers", label: t("ktyh.route.lecturers"), href: "#/bo-mon-ktxn-hayh/danh-sach-giang-vien" },
-    { key: "teaching", label: t("ktyh.route.teaching"), href: "#/bo-mon-ktxn-hayh/giang-day" },
-    { key: "research", label: t("ktyh.route.research"), href: "#/bo-mon-ktxn-hayh/nghien-cuu-khoa-hoc" },
-    { key: "community", label: t("ktyh.route.community"), href: "#/bo-mon-ktxn-hayh/phuc-vu-cong-dong" },
+    {
+      key: "overview",
+      label: t("ktyh.route.overview"),
+      href: "#/bo-mon-ktxn-hayh",
+    },
+    {
+      key: "lecturers",
+      label: t("ktyh.route.lecturers"),
+      href: "#/bo-mon-ktxn-hayh/danh-sach-giang-vien",
+    },
+    {
+      key: "teaching",
+      label: t("ktyh.route.teaching"),
+      href: "#/bo-mon-ktxn-hayh/giang-day",
+    },
+    {
+      key: "research",
+      label: t("ktyh.route.research"),
+      href: "#/bo-mon-ktxn-hayh/nghien-cuu-khoa-hoc",
+    },
+    {
+      key: "community",
+      label: t("ktyh.route.community"),
+      href: "#/bo-mon-ktxn-hayh/phuc-vu-cong-dong",
+    },
   ];
 }
 
@@ -238,7 +258,7 @@ export function getLecturers() {
       order: 8,
       fullName: "ThS. Phạm Trịnh Trúc Phượng",
       position: t("ktyh.lecturer.position_lecturer"),
-      profileUrl: "https://scv.udn.vn/ptpthuong",
+      profileUrl: "https://scv.udn.vn/pttphuong",
       profileStatus: "available",
     },
     {
@@ -359,7 +379,8 @@ export function getResearchGroups() {
           title: t("ktyh.research.group1_cat3"),
           items: [
             {
-              title: "Thực trạng nhiễm Helicobacter pylori trên người có triệu chứng viêm loét dạ dày, tá tràng và sự phân bố genotype",
+              title:
+                "Thực trạng nhiễm Helicobacter pylori trên người có triệu chứng viêm loét dạ dày, tá tràng và sự phân bố genotype",
               authors: "Nguyễn Văn Song",
               period: "2025-2026",
             },
@@ -369,13 +390,15 @@ export function getResearchGroups() {
           title: t("ktyh.research.group1_cat4"),
           items: [
             {
-              title: "Frequency Of Helicobacter Pylori Infection And Associated Factors Among Patients With Peptic Ulcer Disease At Hospital 199, Da Nang, Viet Nam.",
+              title:
+                "Frequency Of Helicobacter Pylori Infection And Associated Factors Among Patients With Peptic Ulcer Disease At Hospital 199, Da Nang, Viet Nam.",
               authors: "Nguyễn Văn Song",
               period: "2026",
               url: "https://doi.org/10.31130/ud-jst.2026.24(5A).193E",
             },
             {
-              title: "Saccharomyces cerevisiae’s culture conditions for heterologous expression: A detailed investigation using reporter gene eGFP and Escherichia coli’s heat-labile toxin B subunit.",
+              title:
+                "Saccharomyces cerevisiae’s culture conditions for heterologous expression: A detailed investigation using reporter gene eGFP and Escherichia coli’s heat-labile toxin B subunit.",
               authors: "Nguyễn Văn Song",
               period: "2026",
               url: "https://doi.org/10.26459/hueunijns.v135i1B.8195",
@@ -394,25 +417,29 @@ export function getResearchGroups() {
           title: t("ktyh.research.group2_cat1"),
           items: [
             {
-              title: "Khảo sát trị số triglyceride-glucose (TyG) trong đánh giá tình trạng kiểm soát đường huyết ở bệnh nhân đái tháo đường típ 2.",
+              title:
+                "Khảo sát trị số triglyceride-glucose (TyG) trong đánh giá tình trạng kiểm soát đường huyết ở bệnh nhân đái tháo đường típ 2.",
               authors: "Bùi Đức Độ",
               period: "2026-2027",
               note: t("dept.research.ongoing_note"),
             },
             {
-              title: "Sàng lọc kháng thể bất thường ở người bệnh thalassemia tại Bệnh viện Đà Nẵng.",
+              title:
+                "Sàng lọc kháng thể bất thường ở người bệnh thalassemia tại Bệnh viện Đà Nẵng.",
               authors: "Lương Thị Hòa",
               period: "2026-2027",
               note: t("dept.research.ongoing_note"),
             },
             {
-              title: "Mối liên quan giữa đa dạng thực phẩm tối thiểu và thiếu máu ở thai phụ 3 tháng cuối.",
+              title:
+                "Mối liên quan giữa đa dạng thực phẩm tối thiểu và thiếu máu ở thai phụ 3 tháng cuối.",
               authors: "Nguyễn Hà Như Ý",
               period: "2026-2027",
               note: t("dept.research.ongoing_note"),
             },
             {
-              title: "Khảo sát tỷ lệ nhiễm Helicobacter pylori ở sinh viên bằng kỹ thuật PCR trên mảng bám vôi răng và một số yếu tố liên quan.",
+              title:
+                "Khảo sát tỷ lệ nhiễm Helicobacter pylori ở sinh viên bằng kỹ thuật PCR trên mảng bám vôi răng và một số yếu tố liên quan.",
               authors: "Bùi Hoàng Nhân",
               period: "2026-2027",
               note: t("dept.research.ongoing_note"),
@@ -423,12 +450,14 @@ export function getResearchGroups() {
           title: t("ktyh.research.group2_cat2"),
           items: [
             {
-              title: "Nghiên cứu tỷ lệ nhiễm Helicobacter pylori trên người bệnh có triệu chứng viêm loét dạ dày, tá tràng và các yếu tố liên quan.",
+              title:
+                "Nghiên cứu tỷ lệ nhiễm Helicobacter pylori trên người bệnh có triệu chứng viêm loét dạ dày, tá tràng và các yếu tố liên quan.",
               authors: "Nguyễn Thanh Phong",
               period: "2025-2026",
             },
             {
-              title: "Khảo sát kiến thức, thái độ, thực hành phòng chống bệnh viêm gan vi rút B của sinh viên Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn năm 2025 và một số yếu tố liên quan.",
+              title:
+                "Khảo sát kiến thức, thái độ, thực hành phòng chống bệnh viêm gan vi rút B của sinh viên Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn năm 2025 và một số yếu tố liên quan.",
               authors: "Ngô Thị Minh Thời",
               period: "2025-2026",
             },
@@ -536,19 +565,16 @@ export function getCommunityImages() {
   return {
     hero: {
       src: "./assets/images/4. Khác ( CME, Hợp tác, hội nghị...)/Lớp CME _Ứng dụng SHPT trong chẩn đoán_/XN - CME Ung dung SHPT.jpg",
-      alt: t("ktyh.img.community_hero_alt"),
       width: 1280,
       height: 960,
     },
     learning: {
       src: "./assets/images/4. Khác ( CME, Hợp tác, hội nghị...)/Lớp CME _Ứng dụng SHPT trong chẩn đoán_/XN-CME Ung dung SHPT 1.jpg",
-      alt: t("ktyh.img.community_learning_alt"),
       width: 1280,
       height: 960,
     },
     certificate: {
       src: "./assets/images/4. Khác ( CME, Hợp tác, hội nghị...)/Lớp CME _Ứng dụng SHPT trong chẩn đoán_/XN-CME Ung dung SHPT.jpg",
-      alt: t("ktyh.img.community_certificate_alt", "Trao chứng nhận hoàn thành khóa học CME cho học viên"),
       width: 1280,
       height: 960,
     },
