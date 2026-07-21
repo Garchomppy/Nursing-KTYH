@@ -51,13 +51,7 @@ export default {
   "func.title": "Functions - Duties",
   "func.section1.title": "I. Functions",
   "func.section1.intro":
-    "The Faculty of Nursing and Medical Technology is a professional unit <strong>belonging to</strong> the University, under the direct <strong>management</strong> and direction of the Rector, with the following functions:",
-  "func.section1.item1":
-    "<strong>Advise</strong> the Rector in building the Faculty's training strategy in line with the University's overall strategic direction.",
-  "func.section1.item2":
-    "<strong>Organize,</strong> manage, and operate the professional activities of the affiliated departments.",
-  "func.section1.item3":
-    "<strong>Comprehensively</strong> manage the training disciplines assigned to the Faculty.",
+    "The Faculty of Nursing and Medical Technology is a professional unit belonging to the University, under the direct management and direction of the Rector, with the functions of advising, organizing, and implementing the development of staff, training programs, teaching activities, scientific research, international cooperation, and community service.",
   "func.section2.title": "II. Duties and Powers",
   "func.section2.item1.label": "Personnel and organizational management:",
   "func.section2.item1.text": "Manage all departments under the Faculty of Nursing and Medical Technology, and manage lecturers, other staff, and students under the Faculty according to the Rector's delegation.",

@@ -29,7 +29,7 @@ export function ktyhCommunity() {
   ).join("");
 
   const content = `
-  <section class="department-section department-section--muted community-activities-section" aria-labelledby="community-activities-title">
+  <section style="padding-block: clamp(34px, 4vw, 56px);" class="department-section department-section--muted community-activities-section" aria-labelledby="community-activities-title">
     <div class="department-shell">
       <div class="department-section-heading community-section-heading">
         <h2 id="community-activities-title">${t("ktyh.community.activities_title")}</h2>
@@ -39,7 +39,7 @@ export function ktyhCommunity() {
     </div>
   </section>
 
-  <section class="department-section community-process-section" aria-labelledby="community-process-title">
+  <section style="padding-block: clamp(34px, 4vw, 56px);" class="department-section community-process-section" aria-labelledby="community-process-title">
     <div class="department-shell community-process-layout">
       <div class="community-process-intro">
         <h2 id="community-process-title">${t("ktyh.community.process_title")}</h2>
@@ -49,7 +49,7 @@ export function ktyhCommunity() {
     </div>
   </section>
 
-  <section class="department-section department-section--muted community-learning-section" aria-labelledby="community-learning-title">
+  <section style="padding-block: clamp(34px, 4vw, 56px);" class="department-section department-section--muted community-learning-section" aria-labelledby="community-learning-title">
     <div class="department-shell community-learning-layout">
       <figure class="community-learning-media">
         <img src="${COMMUNITY_IMAGES.learning.src}" alt="${COMMUNITY_IMAGES.learning.alt}" width="${COMMUNITY_IMAGES.learning.width}" height="${COMMUNITY_IMAGES.learning.height}" loading="lazy">
@@ -67,30 +67,24 @@ export function ktyhCommunity() {
     </div>
   </section>
 
-  <section class="department-section teaching-gallery" aria-label="${t("ktyh.community.gallery_aria_label", "Hình ảnh hoạt động lớp đào tạo CME")}">
+  <section style="padding-block: clamp(34px, 4vw, 56px);" class="department-section teaching-gallery" aria-label="${t("ktyh.community.gallery_aria_label", "Hình ảnh hoạt động lớp đào tạo CME")}">
     <div class="department-shell">
       <div class="teaching-gallery__heading">
         <p class="department-kicker">${t("ktyh.community.gallery_kicker", "Hình ảnh khóa học")}</p>
         <h3>${t("ktyh.community.gallery_title", "Không gian giảng dạy lý thuyết và thực hành lớp CME")}</h3>
       </div>
-      <div class="teaching-gallery__grid">
+      <div class="teaching-gallery__grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
         <figure>
-          <img src="${COMMUNITY_IMAGES.hero.src}" alt="${COMMUNITY_IMAGES.hero.alt}" width="${COMMUNITY_IMAGES.hero.width}" height="${COMMUNITY_IMAGES.hero.height}" loading="lazy">
-          <figcaption>${COMMUNITY_IMAGES.hero.alt}</figcaption>
+          <img src="${COMMUNITY_IMAGES.hero.src}" width="${COMMUNITY_IMAGES.hero.width}" height="${COMMUNITY_IMAGES.hero.height}" loading="lazy">
         </figure>
         <figure>
-          <img src="${COMMUNITY_IMAGES.learning.src}" alt="${COMMUNITY_IMAGES.learning.alt}" width="${COMMUNITY_IMAGES.learning.width}" height="${COMMUNITY_IMAGES.learning.height}" loading="lazy">
-          <figcaption>${COMMUNITY_IMAGES.learning.alt}</figcaption>
-        </figure>
-        <figure>
-          <img src="${COMMUNITY_IMAGES.certificate.src}" alt="${COMMUNITY_IMAGES.certificate.alt}" width="${COMMUNITY_IMAGES.certificate.width}" height="${COMMUNITY_IMAGES.certificate.height}" loading="lazy">
-          <figcaption>${COMMUNITY_IMAGES.certificate.alt}</figcaption>
+          <img src="${COMMUNITY_IMAGES.certificate.src}" width="${COMMUNITY_IMAGES.certificate.width}" height="${COMMUNITY_IMAGES.certificate.height}" loading="lazy">
         </figure>
       </div>
     </div>
   </section>
 
-  <section class="department-section community-records-section" aria-labelledby="community-records-title">
+  <section style="padding-block: clamp(34px, 4vw, 56px);" class="department-section community-records-section" aria-labelledby="community-records-title">
     <div class="department-shell community-records-layout">
       <div>
         <h2 id="community-records-title">${t("ktyh.community.records_title")}</h2>
@@ -104,7 +98,7 @@ export function ktyhCommunity() {
     </div>
   </section>
 
-  <section class="department-section department-community-cta" aria-labelledby="community-contact-title">
+  <section style="padding-block: clamp(34px, 4vw, 56px);" class="department-section department-community-cta" aria-labelledby="community-contact-title">
     <div class="department-shell department-community-cta__inner">
       <div>
         <p class="department-kicker">${t("ktyh.community.cta_kicker")}</p>
