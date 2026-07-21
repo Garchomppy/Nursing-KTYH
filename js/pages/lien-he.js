@@ -7,23 +7,74 @@ if (!window.submitContactForm) {
     btn.disabled = true;
     const prevText = btn.innerText;
     btn.innerText = "Đang gửi...";
-    fetch("https://sheetdb.io/api/v1/lu9nwkzztz4h9", {
+    fetch("https://sheetdb.io/api/v1/cw54bknpl9sq4", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         data: [
           {
             "Họ và tên": form.name.value,
-            "Email": form.email.value,
+            Email: form.email.value,
             "Nội dung": form.message.value,
-            "Date": new Date().toLocaleString(),
+            Date: new Date().toLocaleString(),
           },
         ],
       }),
     })
       .then((res) => res.json())
       .then((data) => {
-        alert(form.dataset.successMsg);
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.zIndex = '9999';
+
+        const modal = document.createElement('div');
+        modal.style.backgroundColor = '#fff';
+        modal.style.padding = '30px';
+        modal.style.borderRadius = '12px';
+        modal.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+        modal.style.maxWidth = '400px';
+        modal.style.width = '90%';
+        modal.style.textAlign = 'center';
+
+        const icon = document.createElement('div');
+        icon.innerHTML = '<i class="fas fa-check-circle"></i>';
+        icon.style.color = '#4CAF50';
+        icon.style.fontSize = '48px';
+        icon.style.marginBottom = '15px';
+
+        const text = document.createElement('p');
+        text.textContent = form.dataset.successMsg;
+        text.style.fontSize = '16px';
+        text.style.color = '#333';
+        text.style.marginBottom = '20px';
+        text.style.lineHeight = '1.5';
+
+        const closeBtn = document.createElement('button');
+        closeBtn.textContent = 'Đóng';
+        closeBtn.style.backgroundColor = 'var(--primary, #0056b3)';
+        closeBtn.style.color = 'white';
+        closeBtn.style.border = 'none';
+        closeBtn.style.padding = '10px 24px';
+        closeBtn.style.borderRadius = '6px';
+        closeBtn.style.fontSize = '15px';
+        closeBtn.style.cursor = 'pointer';
+        
+        closeBtn.onclick = () => document.body.removeChild(overlay);
+
+        modal.appendChild(icon);
+        modal.appendChild(text);
+        modal.appendChild(closeBtn);
+        overlay.appendChild(modal);
+        document.body.appendChild(overlay);
+
         form.reset();
       })
       .catch((err) => {
