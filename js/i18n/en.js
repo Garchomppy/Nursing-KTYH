@@ -560,5 +560,8 @@ export default {
   "ktyh.community.cta_kicker": "Cooperation Contact",
   "ktyh.community.cta_title": "Partnering on Health Screening Programs",
   "ktyh.community.cta_desc": "Local healthcare facilities, schools, or charitable organizations may contact us to coordinate rapid screening tests and community health advocacy events.",
-  "ktyh.community.cta_link": "Contact Information"
+  "ktyh.community.cta_link": "Contact Information",
+  "ktyh.community.gallery_kicker": "Course Images",
+  "ktyh.community.gallery_title": "Theoretical and Practical Classrooms for CME Class",
+  "ktyh.community.gallery_aria_label": "CME Training Class Activity Images"
 };

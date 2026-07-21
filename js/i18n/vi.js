@@ -789,4 +789,7 @@ export default {
   "ktyh.community.cta_desc":
     "Các y bác sĩ, kỹ thuật viên xét nghiệm hoặc cơ sở y tế có nhu cầu đào tạo, chuyển giao kỹ thuật sinh học phân tử vui lòng liên hệ bộ môn để nhận lịch tuyển sinh mới nhất.",
   "ktyh.community.cta_link": "Đăng ký ngay",
+  "ktyh.community.gallery_kicker": "Hình ảnh khóa học",
+  "ktyh.community.gallery_title": "Không gian giảng dạy lý thuyết và thực hành lớp CME",
+  "ktyh.community.gallery_aria_label": "Hình ảnh hoạt động lớp đào tạo CME",
 };

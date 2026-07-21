@@ -560,5 +560,8 @@ export default {
   "ktyh.community.cta_kicker": "ເຊື່ອມໂຍງການຮ່ວມມື",
   "ktyh.community.cta_title": "ຮ່ວມມືສ້າງໂຄງການສາງກອງສຸຂະພາບ",
   "ktyh.community.cta_desc": "ສະຖານທີ່ການແພດທ້ອງຖິ່ນ, ໂຮງຮຽນ ຫຼື ສະມາຄົມການກຸສົນສາມາດຕິດຕໍ່ເພື່ອປະສານຈັດຕັ້ງກອງກວດວິເຄາະໄວ ແລະ ໂຄສະນາສຸຂະພາບຊຸມຊົນ.",
-  "ktyh.community.cta_link": "ຂໍ້ມູນຕິດຕໍ່"
+  "ktyh.community.cta_link": "ຂໍ້ມູນຕິດຕໍ່",
+  "ktyh.community.gallery_kicker": "ຮູບພາບຫຼັກສູດ",
+  "ktyh.community.gallery_title": "ຫ້ອງຮຽນທິດສະດີ ແລະ ພາກປະຕິບັດຕົວຈິງຂອງຫ້ອງຮຽນ CME",
+  "ktyh.community.gallery_aria_label": "ຮູບພາບການເຄື່ອນໄຫວຂອງຫ້ອງຝຶກອົບຮົມ CME"
 };
