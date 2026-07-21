@@ -69,15 +69,17 @@ function renderSocialLinks() {
 }
 
 function renderFooterLinkGroups() {
-  return getFooterLinkGroups().map(
-    ({ title, id, links }) => `
+  return getFooterLinkGroups()
+    .map(
+      ({ title, id, links }) => `
       <nav class="footer-column" aria-labelledby="${id}">
         <h2 id="${id}">${title}</h2>
         <ul>
           ${links.map(({ label, href }) => `<li><a href="${href}">${label}</a></li>`).join("")}
         </ul>
       </nav>`,
-  ).join("");
+    )
+    .join("");
 }
 
 function getFooterTemplate() {
@@ -93,7 +95,7 @@ function getFooterTemplate() {
             <nav class="social-links" aria-label="Mạng xã hội">
               ${renderSocialLinks()}
             </nav>
-            <a class="contact-button" href="mailto:khoadieuduong@smp.udn.vn">${t('footer.contact_btn') || "LIÊN HỆ"}</a>
+            <a class="contact-button" href="mailto:khoa.dieuduong.ktyh@smp.udn.vn">${t("footer.contact_btn") || "LIÊN HỆ"}</a>
           </div>
         </div>
       </div>
@@ -101,9 +103,9 @@ function getFooterTemplate() {
       <div class="footer-main">
         <div class="container footer-grid">
           <section class="footer-column footer-contact" aria-labelledby="footer-contact-title">
-            <h2 id="footer-contact-title">${t('footer.contact_title') || "THÔNG TIN LIÊN HỆ"}</h2>
-            <p class="school-name">${t('hero.title') || "KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC"}</p>
-            <p class="footer-school-parent">${t('footer.school') || "Trường Y Dược - Đại học Đà Nẵng"}</p>
+            <h2 id="footer-contact-title">${t("footer.contact_title") || "THÔNG TIN LIÊN HỆ"}</h2>
+            <p class="school-name">${t("hero.title") || "KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC"}</p>
+            <p class="footer-school-parent">${t("footer.school") || "Trường Y Dược - Đại học Đà Nẵng"}</p>
             <p>Khu đô thị Đại học Đà Nẵng, P.Ngũ Hành Sơn, TP. Đà Nẵng</p>
             <p class="footer-contact-row">
               <i class="fas fa-phone" aria-hidden="true"></i>
@@ -111,14 +113,14 @@ function getFooterTemplate() {
             </p>
             <p class="footer-contact-row">
               <i class="fas fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:khoadieuduong@smp.udn.vn">khoadieuduong@smp.udn.vn</a>
+              <a href="mailto:khoa.dieuduong.ktyh@smp.udn.vn">khoa.dieuduong.ktyh@smp.udn.vn</a>
             </p>
           </section>
 
           ${renderFooterLinkGroups()}
 
           <section class="footer-column footer-map" aria-labelledby="footer-map-title">
-            <h2 id="footer-map-title">${t('footer.map_title') || "Đường Đi Đến UD-SMP"}</h2>
+            <h2 id="footer-map-title">${t("footer.map_title") || "Đường Đi Đến UD-SMP"}</h2>
             <div class="map-frame">
               <iframe
                 title="Bản đồ Trường Y Dược - Đại học Đà Nẵng"
@@ -133,7 +135,7 @@ function getFooterTemplate() {
       </div>
 
       <div class="footer-copyright">
-        <p>${t('footer.copyright') || "BẢN QUYỀN THUỘC VỀ KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC | TRƯỜNG Y DƯỢC - ĐẠI HỌC ĐÀ NẴNG"}</p>
+        <p>${t("footer.copyright") || "BẢN QUYỀN THUỘC VỀ KHOA ĐIỀU DƯỠNG - KỸ THUẬT Y HỌC | TRƯỜNG Y DƯỢC - ĐẠI HỌC ĐÀ NẴNG"}</p>
       </div>
 
       <button class="back-to-top" type="button" aria-label="Lên đầu trang" title="Lên đầu trang">
@@ -147,13 +149,16 @@ class SiteFooter extends HTMLElement {
     this.render();
     window.addEventListener("languageChanged", () => this.render());
   }
-  
+
   render() {
     this.innerHTML = getFooterTemplate();
     this.backToTopButton = this.querySelector(".back-to-top");
 
     this.handleScroll = () => {
-      this.backToTopButton?.classList.toggle("is-visible", window.scrollY > 300);
+      this.backToTopButton?.classList.toggle(
+        "is-visible",
+        window.scrollY > 300,
+      );
     };
 
     this.handleBackToTop = () => {
