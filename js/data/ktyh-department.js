@@ -148,7 +148,7 @@ export function getDepartmentOverview() {
         {
           title: t("ktyh.overview.resp_item3_title"),
           description: t("ktyh.overview.resp_item3_desc"),
-          href: "#/bo-mon-ktyh/phuc-vu-cong-dong",
+          href: "#/bo-mon-ktxn-hayh/phuc-vu-cong-dong",
         },
       ],
     },
