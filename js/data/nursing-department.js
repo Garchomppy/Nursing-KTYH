@@ -2,11 +2,31 @@ import { t } from "../i18n.js";
 
 export function getDepartmentRoutes() {
   return [
-    { key: "overview", label: t("nursing.route.overview"), href: "#/bo-mon-dieu-duong" },
-    { key: "lecturers", label: t("nursing.route.lecturers"), href: "#/bo-mon-dieu-duong/danh-sach-giang-vien" },
-    { key: "teaching", label: t("nursing.route.teaching"), href: "#/bo-mon-dieu-duong/giang-day" },
-    { key: "research", label: t("nursing.route.research"), href: "#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc" },
-    { key: "community", label: t("nursing.route.community"), href: "#/bo-mon-dieu-duong/phuc-vu-cong-dong" },
+    {
+      key: "overview",
+      label: t("nursing.route.overview"),
+      href: "#/bo-mon-dieu-duong",
+    },
+    {
+      key: "lecturers",
+      label: t("nursing.route.lecturers"),
+      href: "#/bo-mon-dieu-duong/danh-sach-giang-vien",
+    },
+    {
+      key: "teaching",
+      label: t("nursing.route.teaching"),
+      href: "#/bo-mon-dieu-duong/giang-day",
+    },
+    {
+      key: "research",
+      label: t("nursing.route.research"),
+      href: "#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc",
+    },
+    {
+      key: "community",
+      label: t("nursing.route.community"),
+      href: "#/bo-mon-dieu-duong/phuc-vu-cong-dong",
+    },
   ];
 }
 
@@ -42,7 +62,7 @@ export function getDepartmentImages() {
     },
     teaching: {
       lecture: {
-        src: "./assets/images/BMDD/kiểm định.png",
+        src: "./assets/images/BMDD/kiểm định.png",
         alt: t("nursing.img.teaching_lecture_alt"),
         width: 1600,
         height: 1067,
@@ -125,7 +145,10 @@ export function getDepartmentOverview() {
     introduction: {
       label: t("nursing.overview.intro_label"),
       title: t("nursing.overview.intro_title"),
-      paragraphs: [t("nursing.overview.intro_p1"), t("nursing.overview.intro_p2")],
+      paragraphs: [
+        t("nursing.overview.intro_p1"),
+        t("nursing.overview.intro_p2"),
+      ],
       imageCaption: t("nursing.overview.intro_image_caption"),
     },
     responsibilities: {
@@ -277,7 +300,11 @@ export function getTeachingAreas() {
       title: t("nursing.teaching.area1_title"),
       description: t("nursing.teaching.area1_desc"),
       secondaryDescription: t("nursing.teaching.area1_desc2"),
-      points: [t("nursing.teaching.area1_point1"), t("nursing.teaching.area1_point2"), t("nursing.teaching.area1_point3")],
+      points: [
+        t("nursing.teaching.area1_point1"),
+        t("nursing.teaching.area1_point2"),
+        t("nursing.teaching.area1_point3"),
+      ],
       image: DEPARTMENT_IMAGES.teaching.lecture,
       imageCaption: t("nursing.teaching.area1_image_caption"),
       details: [
@@ -303,7 +330,11 @@ export function getTeachingAreas() {
       title: t("nursing.teaching.area2_title"),
       description: t("nursing.teaching.area2_desc"),
       secondaryDescription: t("nursing.teaching.area2_desc2"),
-      points: [t("nursing.teaching.area2_point1"), t("nursing.teaching.area2_point2"), t("nursing.teaching.area2_point3")],
+      points: [
+        t("nursing.teaching.area2_point1"),
+        t("nursing.teaching.area2_point2"),
+        t("nursing.teaching.area2_point3"),
+      ],
       image: DEPARTMENT_IMAGES.teaching.lab,
       imageCaption: t("nursing.teaching.area2_image_caption"),
       details: [
@@ -329,7 +360,11 @@ export function getTeachingAreas() {
       title: t("nursing.teaching.area3_title"),
       description: t("nursing.teaching.area3_desc"),
       secondaryDescription: t("nursing.teaching.area3_desc2"),
-      points: [t("nursing.teaching.area3_point1"), t("nursing.teaching.area3_point2"), t("nursing.teaching.area3_point3")],
+      points: [
+        t("nursing.teaching.area3_point1"),
+        t("nursing.teaching.area3_point2"),
+        t("nursing.teaching.area3_point3"),
+      ],
       image: DEPARTMENT_IMAGES.teaching.clinical,
       imageCaption: t("nursing.teaching.area3_image_caption"),
       details: [
@@ -363,12 +398,14 @@ export function getResearchGroups() {
           title: t("nursing.research.group1_cat2"),
           items: [
             {
-              title: "Tuân thủ điều trị dự phòng trước phơi nhiễm HIV (PrEP) ở nhóm nam quan hệ tình dục đồng giới tại Đà Nẵng: vai trò của sức khỏe tâm thần, hỗ trợ xã hội và tự kỳ thị tình dục",
+              title:
+                "Tuân thủ điều trị dự phòng trước phơi nhiễm HIV (PrEP) ở nhóm nam quan hệ tình dục đồng giới tại Đà Nẵng: vai trò của sức khỏe tâm thần, hỗ trợ xã hội và tự kỳ thị tình dục",
               authors: "Trương Thị Mỹ Phượng",
               period: t("dept.research.not_updated"),
             },
             {
-              title: "Thực trạng suy yếu theo tiêu chuẩn đánh giá lão khoa toàn diện ở người cao tuổi tại thành phố Đà Nẵng và thí điểm mô hình chăm sóc toàn diện",
+              title:
+                "Thực trạng suy yếu theo tiêu chuẩn đánh giá lão khoa toàn diện ở người cao tuổi tại thành phố Đà Nẵng và thí điểm mô hình chăm sóc toàn diện",
               authors: "Nguyễn Thị Hà",
               period: "8/2025 đến 7/2027",
             },
@@ -388,7 +425,8 @@ export function getResearchGroups() {
           title: t("nursing.research.group2_cat1"),
           items: [
             {
-              title: "Đánh giá tự kỳ thị tính dục ở nhóm nam quan hệ tình dục đồng giới đang điều trị dự phòng trước phơi nhiễm HIV (PrEP).",
+              title:
+                "Đánh giá tự kỳ thị tính dục ở nhóm nam quan hệ tình dục đồng giới đang điều trị dự phòng trước phơi nhiễm HIV (PrEP).",
               authors: "Trần Thị Như Quỳnh",
               period: "2026-2027",
               note: t("dept.research.ongoing_note"),
@@ -399,12 +437,14 @@ export function getResearchGroups() {
           title: t("nursing.research.group2_cat2"),
           items: [
             {
-              title: "Sức khỏe tâm thần và các yếu tố liên quan đến tuân thủ điều trị dự phòng trước lây nhiễm HIV ở nam quan hệ đồng giới tại thành phố Đà Nẵng.",
+              title:
+                "Sức khỏe tâm thần và các yếu tố liên quan đến tuân thủ điều trị dự phòng trước lây nhiễm HIV ở nam quan hệ đồng giới tại thành phố Đà Nẵng.",
               authors: "Hà Thị Huệ",
               period: "2025-2026",
             },
             {
-              title: "Hiểu biết về sức khỏe tâm thần và các yếu tố liên quan ở người bệnh HIV đang điều trị ARV tại Bệnh viện Da Liễu Đà Nẵng.",
+              title:
+                "Hiểu biết về sức khỏe tâm thần và các yếu tố liên quan ở người bệnh HIV đang điều trị ARV tại Bệnh viện Da Liễu Đà Nẵng.",
               authors: "Hoàng Quốc Vương Ánh",
               period: "2025-2026",
             },
