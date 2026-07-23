@@ -107,13 +107,16 @@ export default {
   "contact.form.success": "ຂອບໃຈທີ່ຕິດຕໍ່ພວກເຮົາ! ຂໍ້ຄວາມຂອງທ່ານໄດ້ຖືກສົ່ງໄປຫາຄະນະແລ້ວ.",
 
   // ໂຄງສ້າງການຈັດຕັ້ງ
+  // ໂຄງສ້າງການຈັດຕັ້ງ
   "orgchart.title": "ໂຄງສ້າງການຈັດຕັ້ງ",
   "orgchart.root": "ຄະນະພະຍາບານສາດ - ເຕັກນິກການແພດ",
   "orgchart.intro": "ແນະນຳ",
   "orgchart.functions": "ໜ້າທີ່ - ວຽກງານ",
   "orgchart.self": "ໂຄງສ້າງການຈັດຕັ້ງ",
   "orgchart.leadership": "ຄະນະນຳ",
-  "orgchart.union": "ສະຫະພັນຄະນະ",
+  "orgchart.union": "ອົງການຈັດຕັ້ງມະຫາຊົນ",
+  "orgchart.cong_doan": "ກຳມະບານ",
+  "orgchart.doan_thanh_nien": "ຊາວໜຸ່ມ",
   "orgchart.dieuduong": "ພະແນກພະຍາບານ",
   "orgchart.ktxnhayh": "ພະແນກ KTXN & HAYH",
   "orgchart.lecturer_list": "ລາຍຊື່ອາຈານ",
