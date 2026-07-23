@@ -180,7 +180,7 @@ export function lanhDao() {
                     
                     <div class="org-card org-card-text-only" style="margin:0;">
                         <h3>ThS. Phạm Thị Ánh Nguyệt</h3>
-                        <p class="role">Phó trưởng Bộ môn Bộ môn XN và HAYH</p>
+                        <p class="role">Phó trưởng Bộ môn XN và HAYH</p>
                     </div>
                 </div>
 

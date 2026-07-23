@@ -28,6 +28,7 @@ export default {
   "nav.functions": "Chức năng - Nhiệm vụ",
   "nav.org": "Cơ cấu tổ chức",
   "nav.leadership": "Ban lãnh đạo",
+  "nav.lecturers": "Danh sách giảng viên",
   "nav.contact": "Liên hệ",
 
   // Hero
@@ -93,14 +94,14 @@ export default {
   // Giới thiệu chung
   "about.title": "Giới thiệu chung",
   "about.p1":
-    "Bộ môn Kỹ thuật xét nghiệm và Hình ảnh y học thuộc Khoa Điều dưỡng và Kỹ thuật y học, Trường Y Dược - Đại học Đà Nẵng. Khoa được hình thành và phát triển nhằm đáp ứng nhu cầu cấp thiết về nguồn nhân lực y tế chất lượng cao cho khu vực miền Trung - Tây Nguyên và cả nước.",
+    "Khoa Điều dưỡng và Kỹ thuật y học thuộc Trường Y Dược - Đại học Đà Nẵng. Khoa được hình thành và phát triển nhằm đáp ứng nhu cầu cấp thiết về nguồn nhân lực y tế chất lượng cao cho khu vực miền Trung - Tây Nguyên và cả nước.",
   "about.image_alt": "Tập thể giảng viên Khoa Điều dưỡng và Kỹ thuật y học",
   "about.p2":
     "Trải qua quá trình phát triển, Khoa đã khẳng định được vị thế là một trong những đơn vị đào tạo trọng điểm. Khoa luôn tiên phong trong việc đổi mới chương trình đào tạo Cử nhân Điều dưỡng, Cử nhân Kỹ thuật Xét nghiệm Y học và các chuyên ngành kỹ thuật y học khác theo chuẩn năng lực, đáp ứng yêu cầu hội nhập quốc tế.",
   "about.p3":
     "Đặc biệt, Khoa có mối liên hệ chặt chẽ với các tổ chức y tế và mạng lưới các bệnh viện lớn trên địa bàn như Bệnh viện Đà Nẵng, Bệnh viện C Đà Nẵng, Bệnh viện Phụ sản - Nhi Đà Nẵng. Việc đẩy mạnh mô hình gắn kết Viện – Trường với hàng chục cơ sở thực hành chất lượng giúp sinh viên có môi trường rèn luyện lâm sàng chuyên sâu, sát với thực tế nhất.",
   "about.p4":
-    "Từ khi thành lập đến nay, Khoa Điều dưỡng và Kỹ thuật y học luôn hoàn thành xuất sắc nhiệm vụ giảng dạy và nghiên cứu khoa học. Tập thể giảng viên và sinh viên của Khoa đã liên tục đạt nhiều thành tích đáng tự hào, nhận được các bằng khen, giấy khen của Giám đốc Đại học Đà Nẵng, UBND Thành phố Đà Nẵng và Bộ Giáo dục & Đào tạo.",
+    "Từ khi thành lập đến nay, Khoa Điều dưỡng và Kỹ  thuật y học luôn hoàn thành xuất sắc nhiệm vụ giảng dạy và nghiên cứu khoa học. Tập thể giảng viên và sinh viên của Khoa đã liên tục đạt nhiều thành tích đáng tự hào, nhận được các bằng khen, giấy khen của Giám đốc Đại học Đà Nẵng, UBND Thành phố Đà Nẵng và Bộ Giáo dục & Đào tạo.",
 
   // Ban lãnh đạo
   "leadership.title": "Ban lãnh đạo",
@@ -139,10 +140,12 @@ export default {
   "orgchart.functions": "Chức năng - Nhiệm vụ",
   "orgchart.self": "Cơ cấu tổ chức",
   "orgchart.leadership": "Lãnh đạo khoa",
-  "orgchart.union": "Liên đoàn khoa",
-  "orgchart.dieuduong": "Bộ môn điều dưỡng",
+  "orgchart.union": "Tổ chức đoàn thể",
+  "orgchart.cong_doan": "Công đoàn",
+  "orgchart.doan_thanh_nien": "Đoàn thanh niên",
+  "orgchart.dieuduong": "Bộ môn Điều dưỡng",
   "orgchart.ktxnhayh": "Bộ môn KTXN & HAYH",
-  "orgchart.lecturer_list": "Danh sách GV",
+  "orgchart.lecturer_list": "Danh sách giảng viên",
   "orgchart.main_tasks": "Nhiệm vụ chính",
   "orgchart.teaching": "Giảng dạy",
   "orgchart.research": "Nghiên cứu KH",
@@ -482,7 +485,7 @@ export default {
 
   // ===== Bộ môn KTXN & HAYH (ktyh-department) =====
   "ktyh.unit_context":
-    "Bộ môn Kỹ thuật xét nghiệm và Hình ảnh y học thuộc Khoa Điều dưỡng và Kỹ thuật y học",
+    "Khoa Điều dưỡng và Kỹ thuật y học",
   "ktyh.route.overview": "Bộ môn KTXN & HAYH",
   "ktyh.route.lecturers": "Danh sách giảng viên",
   "ktyh.route.teaching": "Giảng dạy",

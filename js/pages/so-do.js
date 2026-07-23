@@ -6,221 +6,256 @@ export function soDo() {
         <style>
         .custom-tree {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: var(--font-primary);
-            padding: 40px 20px;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: var(--font-primary, sans-serif);
+            padding: 50px 20px;
             overflow-x: auto;
+            background: #ffffff;
+            width: 100%;
         }
-        .custom-node {
-            border: 2px solid var(--primary);
-            padding: 10px 15px;
-            border-radius: 4px;
-            background: white;
-            font-weight: 500;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            z-index: 2;
-        }
-        .custom-node.main {
-            font-weight: bold;
-        }
-        a.custom-node {
-            display: block;
-            color: inherit;
-            text-decoration: none;
-            transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
-        }
-        a.custom-node:hover {
-            background-color: var(--primary);
-            color: white !important;
-            transform: translateY(-1px);
-        }
-        a.custom-node:focus-visible {
-            outline: 3px solid rgba(22, 143, 153, 0.35);
-            outline-offset: 3px;
-        }
-        a.custom-node:active {
-            transform: translateY(0);
-        }
-        .tree-row {
+
+        .custom-tree-inner {
             display: flex;
+            align-items: flex-start;
             justify-content: center;
             position: relative;
-            gap: 40px;
+            width: 820px;
+            padding: 10px 0;
+            margin-right: 300px; /* Shift diagram left so Lãnh đạo khoa is centered under title */
+            box-sizing: border-box;
         }
-        .line-down {
+
+        /* Node styling */
+        .custom-node {
+            border: 2px solid var(--primary, #03135e);
+            padding: 10px 16px;
+            border-radius: 4px;
+            background: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+            z-index: 2;
+            box-sizing: border-box;
+            color: var(--primary, #03135e);
+            display: block;
+            line-height: 1.4;
+        }
+
+        .custom-node.main {
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        a.custom-node {
+            color: var(--primary, #03135e);
+            text-decoration: none;
+            transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        a.custom-node:hover {
+            background-color: var(--primary, #03135e);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(3, 19, 94, 0.2);
+        }
+
+        a.custom-node:focus-visible {
+            outline: 3px solid rgba(3, 19, 94, 0.35);
+            outline-offset: 2px;
+        }
+
+        /* LEFT BRANCH: Tổ chức đoàn thể */
+        .tree-branch-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 240px;
+            flex-shrink: 0;
+        }
+
+        .node-union {
+            width: 100%;
+        }
+
+        .line-stem-v-short {
             width: 2px;
             height: 30px;
-            background-color: var(--primary);
-            margin: 0 auto;
+            background-color: var(--primary, #03135e);
+            flex-shrink: 0;
             z-index: 1;
         }
-        .horizontal-line {
+
+        .union-sub-box {
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid var(--primary, #03135e);
+            border-radius: 4px;
+            padding: 16px 14px;
+            background: #f8fafc;
+        }
+
+        /* Top Horizontal Connector Line */
+        .top-line-horizontal {
+            position: absolute;
+            top: 31px; /* 10px padding + 21px half node height */
+            left: 240px;
+            width: 210px;
+            height: 2px;
+            background-color: var(--primary, #03135e);
+            z-index: 1;
+        }
+
+        /* RIGHT BRANCH: Lãnh đạo khoa & Departments */
+        .tree-branch-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 520px;
+            margin-left: 60px; /* Gap between left branch (240px) and right branch (520px) */
+            flex-shrink: 0;
+        }
+
+        .node-leader-wrapper {
+            width: 220px;
+        }
+
+        .node-leader {
+            width: 100%;
+        }
+
+        .line-stem-v-long {
+            width: 2px;
+            height: 170px; /* Long vertical stem dropping past Đoàn thanh niên bottom */
+            background-color: var(--primary, #03135e);
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        /* Department Columns Container */
+        .dept-columns-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+        }
+
+        .dept-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 240px;
+            position: relative;
+            padding-top: 30px;
+        }
+
+        /* T-Split Connector lines above departments */
+        .dept-column::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 30px;
+            background-color: var(--primary, #03135e);
+            z-index: 1;
+        }
+
+        .dept-column::after {
+            content: '';
             position: absolute;
             top: 0;
             height: 2px;
-            background-color: var(--primary);
+            background-color: var(--primary, #03135e);
             z-index: 1;
         }
-        /* Bracket list */
-        .bracket-list {
-            padding-left: 15px;
-            position: relative;
-            margin-top: 10px;
+
+        .dept-column:first-child::after {
+            left: 50%;
+            right: -20px; /* Extends to exact midpoint between columns (gap 40px) */
         }
+
+        .dept-column:last-child::after {
+            left: -20px; /* Extends from exact midpoint between columns */
+            right: 50%;
+        }
+
+        /* Task Bracket Box */
+        .task-bracket-box {
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid var(--primary, #03135e);
+            border-radius: 4px;
+            padding: 14px 14px 16px 14px;
+            background: #f8fafc;
+        }
+
+        .bracket-title {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--primary, #03135e);
+            text-align: left;
+        }
+
+        /* Tree Bracket List */
+        .bracket-list {
+            position: relative;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
         .bracket-item {
             position: relative;
-            margin-bottom: 15px;
+            width: 100%;
         }
+
+        /* Bracket line - vertical stem */
         .bracket-item::before {
             content: '';
             position: absolute;
-            left: -15px;
+            left: -14px;
             top: 0;
+            bottom: 0;
             width: 2px;
-            height: 50%;
-            background-color: var(--primary);
+            background-color: var(--primary, #03135e);
         }
+
+        .bracket-item:first-child::before {
+            top: 50%;
+        }
+
+        .bracket-item:last-child::before {
+            bottom: 50%;
+        }
+
+        .bracket-item:first-child:last-child::before {
+            display: none;
+        }
+
+        /* Bracket line - horizontal branch */
         .bracket-item::after {
             content: '';
             position: absolute;
-            left: -15px;
+            left: -14px;
             top: 50%;
-            width: 15px;
+            transform: translateY(-50%);
+            width: 14px;
             height: 2px;
-            background-color: var(--primary);
+            background-color: var(--primary, #03135e);
         }
-        .bracket-item:last-child {
-            margin-bottom: 0;
-        }
-        .bracket-item:not(:last-child)::before {
-            height: calc(50% + 15px + 100%);
-        }
-        .bracket-item:first-child::before {
-            top: 50%;
-            height: 50%;
-        }
-        .bracket-item:first-child:not(:last-child)::before {
-            height: calc(15px + 100%);
-        }
+
         .bracket-item .custom-node {
-            width: 100%;
-        }
-        .bracket-label {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: var(--primary);
+            font-weight: 500;
+            font-size: 13.5px;
+            padding: 7px 12px;
             text-align: left;
             width: 100%;
-        }
-        .branch-col {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 220px;
-        }
-        .branch-col.solo {
-            width: 200px;
-            justify-content: flex-start;
-            padding-top: 0;
-        }
-        .branch-col > .custom-node {
-            width: 100%;
-        }
-        .task-bracket {
-            width: 100%;
-            box-sizing: border-box;
-            border: 2px solid var(--primary);
-            border-radius: 4px;
-            padding: 12px 15px;
-            background: rgba(22, 143, 153, 0.04);
-        }
-        .task-bracket .custom-node {
-            font-weight: normal;
-            font-size: 14px;
-            padding: 6px 10px;
-            text-align: left;       
-        }
-        .root-node {
-            width: 320px;
-            position: relative;
-        }
-        .root-node::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            width: 2px;
-            height: 64px;
-            background: var(--primary);
-            z-index: 1;
-        }
-        .branch-row {
-            display: flex;
-            justify-content: center;
-        }
-        .branch-row + .branch-row {
-            margin-top: 60px;
-        }
-        .branch-item {
-            position: relative;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            padding-top: 30px;
-        }
-        .branch-item.branch-item-anchor::before {
-            top: 0px;
-            height: 141px;
-        }
-        .branch-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 2px;
-            height: 30px;
-            background: var(--primary);
-            z-index: 1;
-        }
-        .branch-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--primary);
-            z-index: 1;
-        }
-        .branch-item:first-child::after {
-            left: 50%;
-        }
-        .branch-item:last-child::after {
-            right: 50%;
-        }
-        .branch-row > .branch-item:only-child::after {
-            display: none;
-        }
-        .top-row {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        .top-row .custom-node {
-            width: 200px;
-        }
-        .top-row a.custom-node {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .top-row a.custom-node:hover {
-            background: var(--primary-container, #eef4ff);
         }
         </style>
 
@@ -228,67 +263,92 @@ export function soDo() {
             <div class="container">
                 <h2 class="section-title">${t("orgchart.title")}</h2>
                 <div class="custom-tree">
+                    <div class="custom-tree-inner">
 
-                    <!-- Root level -->
-                    <div class="custom-node main root-node">${t("orgchart.root")}</div>
-
-                    <!-- Top-level nav row, branched from root -->
-                    <div class="branch-row" style="width: 100%; max-width: 900px; margin-top: 60px;">
-                        <div class="branch-item"><a href="#/gioi-thieu" class="custom-node">${t("orgchart.intro")}</a></div>
-                        <div class="branch-item"><a href="#/chuc-nang" class="custom-node">${t("orgchart.functions")}</a></div>
-                        <div class="branch-item branch-item-anchor"><div class="custom-node main">${t("orgchart.self")}</div></div>
-                        <div class="branch-item"><a href="#/lanh-dao" class="custom-node">${t("orgchart.leadership")}</a></div>
-                    </div>
-
-                    <!-- Branches level, branched from Cơ cấu tổ chức -->
-                    <div class="branch-row" style="width: 100%; max-width: 800px;">
-
-                        <!-- Col 1 -->
-                        <div class="branch-item">
-                            <div class="branch-col solo">
-                                <div class="custom-node">${t("orgchart.union")}</div>
-                            </div>
-                        </div>
-
-                        <!-- Col 2 -->
-                        <div class="branch-item">
-                            <div class="branch-col">
-                                <a class="custom-node main" href="#/bo-mon-dieu-duong">${t("orgchart.dieuduong")}</a>
-                                <div class="line-down"></div>
-                                <a class="custom-node" href="#/bo-mon-dieu-duong/danh-sach-giang-vien">${t("orgchart.lecturer_list")}</a>
-                                <div class="line-down"></div>
-                                <div class="task-bracket">
-                                    <div class="bracket-label">${t("orgchart.main_tasks")}</div>
-                                    <div class="bracket-list">
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/giang-day">${t("orgchart.teaching")}</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc">${t("orgchart.research")}</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong">${t("orgchart.community")}</a></div>
+                        <!-- LEFT BRANCH: Tổ chức đoàn thể -->
+                        <div class="tree-branch-left">
+                            <div class="custom-node main node-union">${t("orgchart.union")}</div>
+                            <div class="line-stem-v-short"></div>
+                            <div class="union-sub-box">
+                                <div class="bracket-list">
+                                    <div class="bracket-item">
+                                        <div class="custom-node">${t("orgchart.cong_doan")}</div>
+                                    </div>
+                                    <div class="bracket-item">
+                                        <div class="custom-node">${t("orgchart.doan_thanh_nien")}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Col 3 -->
-                        <div class="branch-item">
-                            <div class="branch-col">
-                                <a class="custom-node main" href="#/bo-mon-ktxn-hayh">${t("orgchart.ktxnhayh")}</a>
-                                <div class="line-down"></div>
-                                <a class="custom-node" href="#/bo-mon-ktxn-hayh/danh-sach-giang-vien">${t("orgchart.lecturer_list")}</a>
-                                <div class="line-down"></div>
-                                <div class="task-bracket">
-                                    <div class="bracket-label">${t("orgchart.main_tasks")}</div>
-                                    <div class="bracket-list">
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktxn-hayh/giang-day">${t("orgchart.teaching")}</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktxn-hayh/nghien-cuu-khoa-hoc">${t("orgchart.research")}</a></div>
-                                        <div class="bracket-item"><a class="custom-node" href="#/bo-mon-ktxn-hayh/phuc-vu-cong-dong">${t("orgchart.community")}</a></div>
+                        <!-- TOP HORIZONTAL CONNECTOR LINE -->
+                        <div class="top-line-horizontal"></div>
+
+                        <!-- RIGHT BRANCH: Lãnh đạo khoa & Departments -->
+                        <div class="tree-branch-right">
+                            
+                            <!-- Node Lãnh đạo Khoa -->
+                            <div class="node-leader-wrapper">
+                                <a href="#/lanh-dao" class="custom-node main node-leader">${t("orgchart.leadership")}</a>
+                            </div>
+
+                            <!-- Long vertical stem dropping past Đoàn thanh niên bottom -->
+                            <div class="line-stem-v-long"></div>
+
+                            <!-- Department Columns Split Container -->
+                            <div class="dept-columns-container">
+
+                                <!-- Column 1: Bộ môn Điều dưỡng -->
+                                <div class="dept-column">
+                                    <a class="custom-node main" href="#/bo-mon-dieu-duong" style="width: 100%;">${t("orgchart.dieuduong")}</a>
+                                    <div class="line-stem-v-short"></div>
+                                    <div class="task-bracket-box">
+                                        <div class="bracket-title">${t("orgchart.main_tasks")}</div>
+                                        <div class="bracket-list">
+                                            <div class="bracket-item">
+                                                <a class="custom-node" href="#/bo-mon-dieu-duong/giang-day">${t("orgchart.teaching")}</a>
+                                            </div>
+                                            <div class="bracket-item">
+                                                <a class="custom-node" href="#/bo-mon-dieu-duong/nghien-cuu-khoa-hoc">${t("orgchart.research")}</a>
+                                            </div>
+                                            <div class="bracket-item">
+                                                <a class="custom-node" href="#/bo-mon-dieu-duong/phuc-vu-cong-dong">${t("orgchart.community")}</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- Column 2: Bộ môn KTXN & HAYH -->
+                                <div class="dept-column">
+                                    <a class="custom-node main" href="#/bo-mon-ktxn-hayh" style="width: 100%;">${t("orgchart.ktxnhayh")}</a>
+                                    <div class="line-stem-v-short"></div>
+                                    <div class="task-bracket-box">
+                                        <div class="bracket-title">${t("orgchart.main_tasks")}</div>
+                                        <div class="bracket-list">
+                                            <div class="bracket-item">
+                                                <a class="custom-node" href="#/bo-mon-ktxn-hayh/giang-day">${t("orgchart.teaching")}</a>
+                                            </div>
+                                            <div class="bracket-item">
+                                                <a class="custom-node" href="#/bo-mon-ktxn-hayh/nghien-cuu-khoa-hoc">${t("orgchart.research")}</a>
+                                            </div>
+                                            <div class="bracket-item">
+                                                <a class="custom-node" href="#/bo-mon-ktxn-hayh/phuc-vu-cong-dong">${t("orgchart.community")}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </div>
+
                         </div>
 
                     </div>
                 </div>
             </div>
         </section>
-`;
+  `;
 }
+
+
+

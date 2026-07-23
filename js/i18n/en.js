@@ -20,6 +20,7 @@ export default {
   "nav.functions": "Functions",
   "nav.org": "Organization",
   "nav.leadership": "Leadership",
+  "nav.lecturers": "Lecturers",
   "nav.contact": "Contact",
 
   // Hero
@@ -113,7 +114,9 @@ export default {
   "orgchart.functions": "Functions - Duties",
   "orgchart.self": "Organization Chart",
   "orgchart.leadership": "Faculty Leadership",
-  "orgchart.union": "Faculty Union",
+  "orgchart.union": "Mass Organizations",
+  "orgchart.cong_doan": "Trade Union",
+  "orgchart.doan_thanh_nien": "Youth Union",
   "orgchart.dieuduong": "Nursing Department",
   "orgchart.ktxnhayh": "KTXN & HAYH Department",
   "orgchart.lecturer_list": "Lecturer List",
