@@ -20,6 +20,7 @@ export default {
   "nav.functions": "Functions",
   "nav.org": "Organization",
   "nav.leadership": "Leadership",
+  "nav.lecturers": "Lecturers",
   "nav.contact": "Contact",
 
   // Hero

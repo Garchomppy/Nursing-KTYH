@@ -20,6 +20,7 @@ export default {
   "nav.functions": "ໜ້າທີ່ - ວຽກງານ",
   "nav.org": "ໂຄງສ້າງການຈັດຕັ້ງ",
   "nav.leadership": "ການນຳພາ",
+  "nav.lecturers": "ອາຈານ",
   "nav.contact": "ຕິດຕໍ່",
 
   // Hero

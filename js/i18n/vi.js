@@ -28,6 +28,7 @@ export default {
   "nav.functions": "Chức năng - Nhiệm vụ",
   "nav.org": "Cơ cấu tổ chức",
   "nav.leadership": "Ban lãnh đạo",
+  "nav.lecturers": "Danh sách giảng viên",
   "nav.contact": "Liên hệ",
 
   // Hero
@@ -100,7 +101,7 @@ export default {
   "about.p3":
     "Đặc biệt, Khoa có mối liên hệ chặt chẽ với các tổ chức y tế và mạng lưới các bệnh viện lớn trên địa bàn như Bệnh viện Đà Nẵng, Bệnh viện C Đà Nẵng, Bệnh viện Phụ sản - Nhi Đà Nẵng. Việc đẩy mạnh mô hình gắn kết Viện – Trường với hàng chục cơ sở thực hành chất lượng giúp sinh viên có môi trường rèn luyện lâm sàng chuyên sâu, sát với thực tế nhất.",
   "about.p4":
-    "Từ khi thành lập đến nay, Khoa Điều dưỡng và Kỹ thuật y học luôn hoàn thành xuất sắc nhiệm vụ giảng dạy và nghiên cứu khoa học. Tập thể giảng viên và sinh viên của Khoa đã liên tục đạt nhiều thành tích đáng tự hào, nhận được các bằng khen, giấy khen của Giám đốc Đại học Đà Nẵng, UBND Thành phố Đà Nẵng và Bộ Giáo dục & Đào tạo.",
+    "Từ khi thành lập đến nay, Khoa Điều dưỡng và Kỹ  thuật y học luôn hoàn thành xuất sắc nhiệm vụ giảng dạy và nghiên cứu khoa học. Tập thể giảng viên và sinh viên của Khoa đã liên tục đạt nhiều thành tích đáng tự hào, nhận được các bằng khen, giấy khen của Giám đốc Đại học Đà Nẵng, UBND Thành phố Đà Nẵng và Bộ Giáo dục & Đào tạo.",
 
   // Ban lãnh đạo
   "leadership.title": "Ban lãnh đạo",

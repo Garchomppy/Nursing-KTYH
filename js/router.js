@@ -3,6 +3,7 @@ import { chucNang } from "./pages/chuc-nang.js";
 import { soDo } from "./pages/so-do.js";
 import { lanhDao } from "./pages/lanh-dao.js";
 import { lienHe } from "./pages/lien-he.js";
+import { giangVien } from "./pages/giang-vien.js";
 import { initBackToTop } from "./components/back-to-top.js";
 import { t } from "./i18n.js";
 import { nursingOverview } from "./pages/nursing-department/overview.js";
@@ -23,6 +24,7 @@ const pages = {
   "chuc-nang": chucNang,
   "so-do": soDo,
   "lanh-dao": lanhDao,
+  "giang-vien": giangVien,
   "lien-he": lienHe,
   "bo-mon-dieu-duong": nursingOverview,
   "bo-mon-dieu-duong/gioi-thieu": nursingOverview,

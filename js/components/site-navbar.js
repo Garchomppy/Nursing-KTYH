@@ -18,6 +18,7 @@ class SiteNavbar extends HTMLElement {
                 <li><a href="#/chuc-nang">${t('nav.functions')}</a></li>
                 <li><a href="#/so-do">${t('nav.org')}</a></li>
                 <li><a href="#/lanh-dao">${t('nav.leadership')}</a></li>
+                <li><a href="#/giang-vien">${t('nav.lecturers')}</a></li>
                 <li><a href="#/lien-he">${t('nav.contact')}</a></li>
             </ul>
         </div>

@@ -336,6 +336,7 @@ export function soDo() {
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
@@ -346,7 +347,7 @@ export function soDo() {
                 </div>
             </div>
         </section>
-`;
+  `;
 }
 
 
