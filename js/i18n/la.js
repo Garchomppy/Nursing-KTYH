@@ -20,6 +20,7 @@ export default {
   "nav.functions": "ໜ້າທີ່ - ວຽກງານ",
   "nav.org": "ໂຄງສ້າງການຈັດຕັ້ງ",
   "nav.leadership": "ການນຳພາ",
+  "nav.lecturers": "ອາຈານ",
   "nav.contact": "ຕິດຕໍ່",
 
   // Hero
@@ -113,7 +114,9 @@ export default {
   "orgchart.functions": "ໜ້າທີ່ - ວຽກງານ",
   "orgchart.self": "ໂຄງສ້າງການຈັດຕັ້ງ",
   "orgchart.leadership": "ຄະນະນຳ",
-  "orgchart.union": "ສະຫະພັນຄະນະ",
+  "orgchart.organizations": "ໂຄງສ້າງມະຫາຊົນ",
+  "orgchart.cong_doan": "ສະຫະພັນແມ່ຍິງ - ກຳມະບານ",
+  "orgchart.doan_thanh_nien": "ຊາວໜຸ່ມ",
   "orgchart.dieuduong": "ພະແນກພະຍາບານ",
   "orgchart.ktxnhayh": "ພະແນກ KTXN & HAYH",
   "orgchart.lecturer_list": "ລາຍຊື່ອາຈານ",
