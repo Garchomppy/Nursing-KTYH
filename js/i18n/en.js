@@ -114,7 +114,7 @@ export default {
   "orgchart.functions": "Functions - Duties",
   "orgchart.self": "Organization Chart",
   "orgchart.leadership": "Faculty Leadership",
-  "orgchart.organizations": "Organizations",
+  "orgchart.union": "Mass Organizations",
   "orgchart.cong_doan": "Trade Union",
   "orgchart.doan_thanh_nien": "Youth Union",
   "orgchart.dieuduong": "Nursing Department",

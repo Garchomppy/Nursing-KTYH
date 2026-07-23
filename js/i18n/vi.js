@@ -139,13 +139,13 @@ export default {
   "orgchart.intro": "Giới thiệu",
   "orgchart.functions": "Chức năng - Nhiệm vụ",
   "orgchart.self": "Cơ cấu tổ chức",
-  "orgchart.leadership": "Lãnh đạo Khoa",
-  "orgchart.organizations": "Tổ chức đoàn thể",
+  "orgchart.leadership": "Lãnh đạo khoa",
+  "orgchart.union": "Tổ chức đoàn thể",
   "orgchart.cong_doan": "Công đoàn",
   "orgchart.doan_thanh_nien": "Đoàn thanh niên",
-  "orgchart.dieuduong": "Bộ môn điều dưỡng",
+  "orgchart.dieuduong": "Bộ môn Điều dưỡng",
   "orgchart.ktxnhayh": "Bộ môn KTXN & HAYH",
-  "orgchart.lecturer_list": "Danh sách GV",
+  "orgchart.lecturer_list": "Danh sách giảng viên",
   "orgchart.main_tasks": "Nhiệm vụ chính",
   "orgchart.teaching": "Giảng dạy",
   "orgchart.research": "Nghiên cứu KH",
@@ -485,7 +485,7 @@ export default {
 
   // ===== Bộ môn KTXN & HAYH (ktyh-department) =====
   "ktyh.unit_context":
-    "Bộ môn Kỹ thuật xét nghiệm và Hình ảnh y học thuộc Khoa Điều dưỡng và Kỹ thuật y học",
+    "Khoa Điều dưỡng và Kỹ thuật y học",
   "ktyh.route.overview": "Bộ môn KTXN & HAYH",
   "ktyh.route.lecturers": "Danh sách giảng viên",
   "ktyh.route.teaching": "Giảng dạy",
