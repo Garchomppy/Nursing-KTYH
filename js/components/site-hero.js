@@ -12,8 +12,8 @@ class SiteHero extends HTMLElement {
         <header class="hero" style="overflow: hidden; height: 400px;">
             <div class="hero-overlay" style=""></div>
             <div class="hero-content">
-                <h1>${t('hero.title')}</h1>
-                <p>${t('hero.desc')}</p>
+                <h1>${t("hero.title")}</h1>
+                <p>${t("hero.desc")}</p>
             </div>
         </header>
     </div>

@@ -1,8 +1,10 @@
 import {
-  getLecturers,
+  getLecturers as getKTYHLecturers,
   getDepartmentImages,
 } from "../../data/ktyh-department.js";
+import { getLecturers as getNursingLecturers } from "../../data/nursing-department.js";
 import { renderDepartmentPage } from "../../components/department-body.js";
+import "../../components/teaching-tabs.js";
 import { t } from "../../i18n.js";
 
 function renderProfileAction(lecturer) {
@@ -13,18 +15,17 @@ function renderProfileAction(lecturer) {
   return `<a class="department-text-link" href="${lecturer.profileUrl}" target="_blank" rel="noopener noreferrer">${t("dept.view_scientific_profile")}</a>`;
 }
 
-export function ktyhLecturers() {
-  const LECTURERS = getLecturers();
-  const DEPARTMENT_IMAGES = getDepartmentImages();
-
-  const directoryItems = LECTURERS.map(
-    (lecturer) => `
+function renderLecturerItems(lecturers, deptName, deptClass) {
+  return lecturers
+    .map(
+      (lecturer) => `
     <article class="lecturer-directory-item" role="listitem">
       <p class="lecturer-directory-item__number" aria-label="${t("dept.order_label")} ${lecturer.order}">${String(lecturer.order).padStart(2, "0")}</p>
       <div class="lecturer-directory-item__identity">
-        <span class="lecturer-dept-tag lecturer-dept-tag--ktyh">Bộ môn Kỹ thuật Y học</span>
+        <span class="lecturer-dept-tag ${deptClass}">${deptName}</span>
         <div class="lecturer-directory-item__title">
           <h3>${lecturer.fullName}</h3>
+          ${lecturer.isSample ? `<span class="lecturer-sample-badge">${t("dept.sample_data_badge")}</span>` : ""}
         </div>
         <p>${lecturer.position}</p>
       </div>
@@ -33,19 +34,69 @@ export function ktyhLecturers() {
         ${renderProfileAction(lecturer)}
       </div>
     </article>`,
-  ).join("");
+    )
+    .join("");
+}
+
+export function ktyhLecturers() {
+  const ktyhLecturers = getKTYHLecturers();
+  const nursingLecturers = getNursingLecturers();
+  const DEPARTMENT_IMAGES = getDepartmentImages();
 
   const content = `
-  <section class="department-section department-section--muted lecturer-directory-section" aria-label="${t("ktyh.lecturers.aria_label")}">
+  <section class="department-section department-section--muted teaching-experience-section" aria-label="${t("ktyh.lecturers.aria_label")}">
     <div class="department-shell">
-      <div class="department-switch-link-bar">
-        <span>Đang hiển thị: <strong>Bộ môn Kỹ thuật Y học</strong> (${LECTURERS.length} giảng viên)</span>
-        <a href="#/bo-mon-dieu-duong/danh-sach-giang-vien" class="department-switch-link">Xem danh sách Bộ môn Điều dưỡng →</a>
-      </div>
-
-      <div class="lecturer-directory" role="list" aria-label="${t("ktyh.lecturers.aria_label")}">
-        ${directoryItems}
-      </div>
+      <teaching-tabs class="teaching-tabs">
+        <div class="teaching-tabs__list teaching-tabs__list--2cols" role="tablist" aria-label="${t("ktyh.lecturers.aria_label")}">
+          <button
+            class="teaching-tabs__tab"
+            id="ktyh-tab-ktyh"
+            type="button"
+            role="tab"
+            aria-controls="ktyh-panel-ktyh"
+            aria-selected="true"
+            tabindex="0"
+          >
+            Bộ môn KTXN-HAYH (${ktyhLecturers.length})
+          </button>
+          <button
+            class="teaching-tabs__tab"
+            id="ktyh-tab-dd"
+            type="button"
+            role="tab"
+            aria-controls="ktyh-panel-dd"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Bộ môn Điều dưỡng (${nursingLecturers.length})
+          </button>
+        </div>
+        <div class="teaching-tabs__panels">
+          <article
+            class="teaching-tab-panel teaching-tab-panel--lecturers"
+            id="ktyh-panel-ktyh"
+            role="tabpanel"
+            aria-labelledby="ktyh-tab-ktyh"
+            tabindex="0"
+          >
+            <div class="lecturer-directory" role="list">
+              ${renderLecturerItems(ktyhLecturers, "Bộ môn KTXN-HAYH", "lecturer-dept-tag--ktyh")}
+            </div>
+          </article>
+          <article
+            class="teaching-tab-panel teaching-tab-panel--lecturers"
+            id="ktyh-panel-dd"
+            role="tabpanel"
+            aria-labelledby="ktyh-tab-dd"
+            tabindex="0"
+            hidden
+          >
+            <div class="lecturer-directory" role="list">
+              ${renderLecturerItems(nursingLecturers, "Bộ môn Điều dưỡng", "lecturer-dept-tag--dd")}
+            </div>
+          </article>
+        </div>
+      </teaching-tabs>
     </div>
   </section>`;
 
@@ -61,3 +112,4 @@ export function ktyhLecturers() {
     content,
   });
 }
+

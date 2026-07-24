@@ -642,6 +642,29 @@ body.is-department-page {
   border-bottom: 1px solid #b9cdd0;
 }
 
+.teaching-tabs__list--2cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.teaching-tab-panel--lecturers {
+  padding-block: clamp(40px, 5vw, 64px);
+  padding-inline: 0;
+}
+
+.teaching-tab-panel--lecturers .lecturer-directory {
+  border-top: 0;
+}
+
+.department-page[data-department-page="lecturer-directory"]
+  .department-hero__grid {
+  padding-block: clamp(38px, 4.5vw, 56px);
+}
+
+.department-page[data-department-page="lecturer-directory"]
+  .lecturer-directory-item__identity {
+  align-self: start;
+}
+
 .teaching-tabs__tab {
   position: relative;
   min-height: 72px;
@@ -651,6 +674,7 @@ body.is-department-page {
   gap: 14px;
   padding: 16px 22px;
   border: 0;
+  border-top: 3px solid transparent;
   background: transparent;
   color: #4d586c;
   font: inherit;
@@ -663,22 +687,13 @@ body.is-department-page {
   border-left: 1px solid #b9cdd0;
 }
 
-.teaching-tabs__tab::after {
-  position: absolute;
-  right: 0;
-  bottom: -1px;
-  left: 0;
-  height: 3px;
-  background: transparent;
-  content: "";
-}
-
 .teaching-tabs__tab[aria-selected="true"] {
   color: var(--department-navy);
-}
-
-.teaching-tabs__tab[aria-selected="true"]::after {
-  background: var(--department-accent);
+  background: var(--department-surface);
+  border-top: 3px solid var(--department-accent);
+  margin-bottom: -1px;
+  border-bottom: 1px solid var(--department-surface);
+  z-index: 2;
 }
 
 .teaching-tabs__tab:hover {
@@ -1502,7 +1517,11 @@ body.is-department-page {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x proximity;
-    scrollbar-width: thin;
+    scrollbar-width: none;
+  }
+
+  .teaching-tabs__list::-webkit-scrollbar {
+    display: none;
   }
 
   .teaching-tabs__tab {

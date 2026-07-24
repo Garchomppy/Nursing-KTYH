@@ -43,6 +43,7 @@ const pages = {
 };
 
 const departmentPageTitles = {
+  "giang-vien": "nav.lecturers",
   "bo-mon-dieu-duong": "dept.dieuduong.title.overview",
   "bo-mon-dieu-duong/gioi-thieu": "dept.dieuduong.title.overview",
   "bo-mon-dieu-duong/danh-sach-giang-vien": "dept.dieuduong.title.lecturers",
@@ -68,6 +69,7 @@ function renderPage() {
 
   const appDiv = document.getElementById("app");
   const isDepartmentPage =
+    hash === "giang-vien" ||
     hash === "bo-mon-dieu-duong" || hash.startsWith("bo-mon-dieu-duong/") ||
     hash === "bo-mon-ktxn-hayh" || hash.startsWith("bo-mon-ktxn-hayh/");
   document.body.classList.toggle("is-department-page", isDepartmentPage);
