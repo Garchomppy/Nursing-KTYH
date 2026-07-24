@@ -9,7 +9,7 @@ export function soDo() {
             justify-content: center;
             align-items: flex-start;
             font-family: var(--font-primary, sans-serif);
-            padding: 50px 20px;
+            padding: 10px 20px;
             overflow-x: auto;
             background: #ffffff;
             width: 100%;
@@ -128,7 +128,7 @@ export function soDo() {
 
         .line-stem-v-long {
             width: 2px;
-            height: 170px; /* Long vertical stem dropping past Đoàn thanh niên bottom */
+            height: 50px; /* Long vertical stem dropping past Đoàn thanh niên bottom */
             background-color: var(--primary, #03135e);
             flex-shrink: 0;
             z-index: 1;
