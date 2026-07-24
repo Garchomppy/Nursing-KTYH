@@ -647,12 +647,22 @@ body.is-department-page {
 }
 
 .teaching-tab-panel--lecturers {
-  padding-block: clamp(24px, 4vw, 40px);
+  padding-block: clamp(40px, 5vw, 64px);
   padding-inline: 0;
 }
 
 .teaching-tab-panel--lecturers .lecturer-directory {
   border-top: 0;
+}
+
+.department-page[data-department-page="lecturer-directory"]
+  .department-hero__grid {
+  padding-block: clamp(38px, 4.5vw, 56px);
+}
+
+.department-page[data-department-page="lecturer-directory"]
+  .lecturer-directory-item__identity {
+  align-self: start;
 }
 
 .teaching-tabs__tab {
@@ -1507,7 +1517,11 @@ body.is-department-page {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x proximity;
-    scrollbar-width: thin;
+    scrollbar-width: none;
+  }
+
+  .teaching-tabs__list::-webkit-scrollbar {
+    display: none;
   }
 
   .teaching-tabs__tab {
