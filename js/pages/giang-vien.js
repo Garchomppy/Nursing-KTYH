@@ -99,7 +99,7 @@ export function giangVien() {
     hero: {
       title: t("nav.lecturers") || "Danh sách giảng viên",
       summary:
-        "Danh sách giảng viên của khoa được tổ chức phân công ở 2 Bộ môn chính:",
+        "Danh sách giảng viên của khoa được phân công ở 2 Bộ môn chính:",
     },
     content,
   });
