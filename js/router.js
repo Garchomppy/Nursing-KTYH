@@ -69,6 +69,7 @@ function renderPage() {
 
   const appDiv = document.getElementById("app");
   const isDepartmentPage =
+    hash === "giang-vien" ||
     hash === "bo-mon-dieu-duong" || hash.startsWith("bo-mon-dieu-duong/") ||
     hash === "bo-mon-ktxn-hayh" || hash.startsWith("bo-mon-ktxn-hayh/");
   document.body.classList.toggle("is-department-page", isDepartmentPage);

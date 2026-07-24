@@ -1,6 +1,7 @@
 import { t } from "../i18n.js";
 import { getLecturers as getNursingLecturers } from "../data/nursing-department.js";
 import { getLecturers as getKTYHLecturers } from "../data/ktyh-department.js";
+import { renderDepartmentPage } from "../components/department-body.js";
 import "../components/teaching-tabs.js";
 
 function renderProfileAction(lecturer) {
@@ -10,14 +11,13 @@ function renderProfileAction(lecturer) {
   return `<a class="department-text-link" href="${lecturer.profileUrl}" target="_blank" rel="noopener noreferrer">${t("dept.view_scientific_profile") || "Xem hồ sơ khoa học"}</a>`;
 }
 
-function renderLecturerItems(lecturers, deptName, deptClass) {
+function renderLecturerItems(lecturers) {
   return lecturers
     .map(
       (lecturer) => `
     <article class="lecturer-directory-item" role="listitem">
       <p class="lecturer-directory-item__number" aria-label="${t("dept.order_label") || "STT"} ${lecturer.order}">${String(lecturer.order).padStart(2, "0")}</p>
       <div class="lecturer-directory-item__identity">
-        <span class="lecturer-dept-tag ${deptClass}">${deptName}</span>
         <div class="lecturer-directory-item__title">
           <h3>${lecturer.fullName}</h3>
           ${lecturer.isSample ? `<span class="lecturer-sample-badge">${t("dept.sample_data_badge") || "Dữ liệu mẫu"}</span>` : ""}
@@ -37,16 +37,9 @@ export function giangVien() {
   const nursingLecturers = getNursingLecturers();
   const ktyhLecturers = getKTYHLecturers();
 
-  return `
-  <section class="department-section department-section--muted teaching-experience-section" style="padding-top: 40px;" aria-label="${t("nav.lecturers") || "Danh sách giảng viên"}">
+  const content = `
+  <section class="department-section department-section--muted teaching-experience-section lecturer-directory-section" aria-label="${t("nav.lecturers") || "Danh sách giảng viên"}">
     <div class="department-shell">
-      <div class="department-section-heading" style="margin: 0 auto 36px auto; text-align: center;">
-        <h2 style="font-size: clamp(24px, 3vw, 32px); color: var(--department-navy, #03135e); margin-bottom: 10px; text-align: center;">${t("nav.lecturers") || "Danh sách giảng viên"}</h2>
-        <p style="color: var(--department-muted, #5b6476); font-size: 15px; margin: 0 auto; text-align: center;">
-          Danh sách giảng viên của khoa được phân chia ở 2 Bộ môn chính: <strong>Điều dưỡng</strong> và <strong>Kỹ thuật Y học</strong>
-        </p>
-      </div>
-
       <teaching-tabs class="teaching-tabs">
         <div class="teaching-tabs__list teaching-tabs__list--2cols" role="tablist" aria-label="${t("nav.lecturers") || "Danh sách giảng viên"}">
           <button
@@ -81,7 +74,7 @@ export function giangVien() {
             tabindex="0"
           >
             <div class="lecturer-directory" role="list">
-              ${renderLecturerItems(nursingLecturers, "Bộ môn Điều dưỡng", "lecturer-dept-tag--dd")}
+              ${renderLecturerItems(nursingLecturers)}
             </div>
           </article>
           <article
@@ -93,11 +86,21 @@ export function giangVien() {
             hidden
           >
             <div class="lecturer-directory" role="list">
-              ${renderLecturerItems(ktyhLecturers, "Bộ môn KTXN-HAYH", "lecturer-dept-tag--ktyh")}
+              ${renderLecturerItems(ktyhLecturers)}
             </div>
           </article>
         </div>
       </teaching-tabs>
     </div>
   </section>`;
+
+  return renderDepartmentPage({
+    activeKey: "lecturer-directory",
+    hero: {
+      title: t("nav.lecturers") || "Danh sách giảng viên",
+      summary:
+        "Đội ngũ giảng viên của khoa được tổ chức theo hai bộ môn: Điều dưỡng và Kỹ thuật Y học.",
+    },
+    content,
+  });
 }
