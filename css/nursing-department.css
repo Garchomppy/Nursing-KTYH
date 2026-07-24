@@ -1733,3 +1733,59 @@ body.is-department-page {
     gap: 30px;
   }
 }
+
+/* ==========================================================================
+   LECTURER DIRECTORY - UNIFIED SIMPLE STYLES
+   ========================================================================== */
+
+.lecturer-dept-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+
+.lecturer-dept-tag--dd {
+  border-color: #b9e6e1;
+}
+
+.lecturer-dept-tag--ktyh {
+  border-color: #c7d2fe;
+}
+
+.department-switch-link-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #ffffff;
+  border: 1px solid #b9cdd0;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  font-size: 14.5px;
+  color: var(--department-navy, #1e293b);
+}
+
+.department-switch-link {
+  color: var(--department-accent, #167f8d);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.department-switch-link:hover {
+  text-decoration: underline;
+  color: var(--department-accent-strong, #0d5c66);
+}

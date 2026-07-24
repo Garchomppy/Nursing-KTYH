@@ -14,12 +14,14 @@ export function giangVien() {
   const nursingLecturers = getNursingLecturers();
   const ktyhLecturers = getKTYHLecturers();
 
-  const renderLecturers = (lecturers) => {
-    const directoryItems = lecturers.map(
-      (lecturer) => `
+  const renderLecturers = (lecturers, deptName, deptClass) => {
+    const directoryItems = lecturers
+      .map(
+        (lecturer) => `
       <article class="lecturer-directory-item" role="listitem">
         <p class="lecturer-directory-item__number" aria-label="${t("dept.order_label") || "STT"} ${lecturer.order}">${String(lecturer.order).padStart(2, "0")}</p>
         <div class="lecturer-directory-item__identity">
+          <span class="lecturer-dept-tag ${deptClass}">${deptName}</span>
           <div class="lecturer-directory-item__title">
             <h3>${lecturer.fullName}</h3>
             ${lecturer.isSample ? `<span class="lecturer-sample-badge">${t("dept.sample_data_badge") || "Dữ liệu mẫu"}</span>` : ""}
@@ -31,7 +33,8 @@ export function giangVien() {
           ${renderProfileAction(lecturer)}
         </div>
       </article>`
-    ).join("");
+      )
+      .join("");
 
     return `
       <div class="department-shell" style="padding: 0; background: transparent; box-shadow: none;">
@@ -43,25 +46,28 @@ export function giangVien() {
   };
 
   return `
-    <section class="section bg-muted" style="background-color: #f8fafc; padding-top: 40px; padding-bottom: 40px;">
+    <section class="section bg-muted" style="background-color: #f8fafc; padding-top: 40px; padding-bottom: 50px;">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 30px;">${t("nav.lecturers") || "Danh sách giảng viên"}</h2>
+            <h2 class="section-title" style="margin-bottom: 10px;">${t("nav.lecturers") || "Danh sách giảng viên"}</h2>
+            <p style="text-align: center; color: #64748b; margin-bottom: 30px; font-size: 15px;">
+              Phân loại danh sách giảng viên theo 2 Bộ môn chuyên ngành: <strong>Điều dưỡng</strong> và <strong>Kỹ thuật Y học</strong>
+            </p>
             
             <teaching-tabs class="teaching-tabs">
               <div class="teaching-tabs__list" style="grid-template-columns: repeat(2, 1fr);" role="tablist" aria-label="${t("nav.lecturers") || "Danh sách giảng viên"}">
                 <button class="teaching-tabs__tab" id="tab-dieu-duong" role="tab" aria-selected="true" tabindex="0">
-                  Điều dưỡng
+                  Bộ môn Điều dưỡng (${nursingLecturers.length})
                 </button>
                 <button class="teaching-tabs__tab" id="tab-ktyh" role="tab" aria-selected="false" tabindex="-1">
-                  Kỹ thuật Y học
+                  Bộ môn Kỹ thuật Y học (${ktyhLecturers.length})
                 </button>
               </div>
               <div class="teaching-tabs__panels">
                 <div class="teaching-tab-panel" role="tabpanel" aria-labelledby="tab-dieu-duong" tabindex="0">
-                  ${renderLecturers(nursingLecturers)}
+                  ${renderLecturers(nursingLecturers, "Bộ môn Điều dưỡng", "lecturer-dept-tag--dd")}
                 </div>
                 <div class="teaching-tab-panel" role="tabpanel" aria-labelledby="tab-ktyh" tabindex="0" hidden>
-                  ${renderLecturers(ktyhLecturers)}
+                  ${renderLecturers(ktyhLecturers, "Bộ môn Kỹ thuật Y học", "lecturer-dept-tag--ktyh")}
                 </div>
               </div>
             </teaching-tabs>
@@ -70,3 +76,6 @@ export function giangVien() {
     </section>
   `;
 }
+
+
+

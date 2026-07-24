@@ -19,6 +19,7 @@ export function nursingLecturers() {
     <article class="lecturer-directory-item" role="listitem">
       <p class="lecturer-directory-item__number" aria-label="${t("dept.order_label")} ${lecturer.order}">${String(lecturer.order).padStart(2, "0")}</p>
       <div class="lecturer-directory-item__identity">
+        <span class="lecturer-dept-tag lecturer-dept-tag--dd">Bộ môn Điều dưỡng</span>
         <div class="lecturer-directory-item__title">
           <h3>${lecturer.fullName}</h3>
           ${lecturer.isSample ? `<span class="lecturer-sample-badge">${t("dept.sample_data_badge")}</span>` : ""}
@@ -35,6 +36,11 @@ export function nursingLecturers() {
   const content = `
   <section class="department-section department-section--muted lecturer-directory-section" aria-label="${t("nursing.route.overview")} - ${t("nursing.route.lecturers")}">
     <div class="department-shell">
+      <div class="department-switch-link-bar">
+        <span>Đang hiển thị: <strong>Bộ môn Điều dưỡng</strong> (${LECTURERS.length} giảng viên)</span>
+        <a href="#/bo-mon-ktxn-hayh/danh-sach-giang-vien" class="department-switch-link">Xem danh sách Bộ môn KTYH →</a>
+      </div>
+
       <div class="lecturer-directory" role="list" aria-label="${t("nursing.route.overview")} - ${t("nursing.route.lecturers")}">
         ${directoryItems}
       </div>
@@ -52,3 +58,5 @@ export function nursingLecturers() {
     content,
   });
 }
+
+
