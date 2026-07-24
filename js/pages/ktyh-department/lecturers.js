@@ -1,4 +1,7 @@
-import { getLecturers, getDepartmentImages } from "../../data/ktyh-department.js";
+import {
+  getLecturers,
+  getDepartmentImages,
+} from "../../data/ktyh-department.js";
 import { renderDepartmentPage } from "../../components/department-body.js";
 import { t } from "../../i18n.js";
 
@@ -19,6 +22,7 @@ export function ktyhLecturers() {
     <article class="lecturer-directory-item" role="listitem">
       <p class="lecturer-directory-item__number" aria-label="${t("dept.order_label")} ${lecturer.order}">${String(lecturer.order).padStart(2, "0")}</p>
       <div class="lecturer-directory-item__identity">
+        <span class="lecturer-dept-tag lecturer-dept-tag--ktyh">Bộ môn Kỹ thuật Y học</span>
         <div class="lecturer-directory-item__title">
           <h3>${lecturer.fullName}</h3>
         </div>
@@ -34,6 +38,11 @@ export function ktyhLecturers() {
   const content = `
   <section class="department-section department-section--muted lecturer-directory-section" aria-label="${t("ktyh.lecturers.aria_label")}">
     <div class="department-shell">
+      <div class="department-switch-link-bar">
+        <span>Đang hiển thị: <strong>Bộ môn Kỹ thuật Y học</strong> (${LECTURERS.length} giảng viên)</span>
+        <a href="#/bo-mon-dieu-duong/danh-sach-giang-vien" class="department-switch-link">Xem danh sách Bộ môn Điều dưỡng →</a>
+      </div>
+
       <div class="lecturer-directory" role="list" aria-label="${t("ktyh.lecturers.aria_label")}">
         ${directoryItems}
       </div>
