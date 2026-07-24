@@ -99,7 +99,7 @@ export function giangVien() {
     hero: {
       title: t("nav.lecturers") || "Danh sách giảng viên",
       summary:
-        "Đội ngũ giảng viên của khoa được tổ chức theo hai bộ môn: Điều dưỡng và Kỹ thuật Y học.",
+        "Danh sách giảng viên của khoa được tổ chức phân công ở 2 Bộ môn chính:",
     },
     content,
   });
