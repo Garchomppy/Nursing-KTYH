@@ -43,6 +43,7 @@ const pages = {
 };
 
 const departmentPageTitles = {
+  "giang-vien": "nav.lecturers",
   "bo-mon-dieu-duong": "dept.dieuduong.title.overview",
   "bo-mon-dieu-duong/gioi-thieu": "dept.dieuduong.title.overview",
   "bo-mon-dieu-duong/danh-sach-giang-vien": "dept.dieuduong.title.lecturers",
